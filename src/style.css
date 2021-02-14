@@ -45,3 +45,10 @@ a{
     color: white;
     text-decoration: none;
 }
+figure{
+    background-color: rgb(255, 255, 255);
+    width: 300px;
+    height: 400px;
+    margin: 20px;
+    
+}
