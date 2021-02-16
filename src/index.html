@@ -1,42 +1,69 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <link rel="shortcut icon" type="image/x-icon" href="img/logo/pokebola-icon.png">
     <meta charset="utf-8">
-    <title>POKEPLANNET- Data Lovers</title>
+    <meta name="viewport" content="width=device-with, user-scalable=no, initial-scale=1.0, minimum-scale=1.0">
+    <title>POKEPLANET</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
      <!-- Menú -->
-     <header>
+    <header>      
       <h1>POKEPLANNET</h1>
+      
+      <!-- Inicio - botones -->
+    <article>
+        <button type="button" class="button">Home</button>
+        
+        <select  class="button">
+          <option value disabled selected>Type Pokémon</option>
+          <option value="steel">Acero</option>
+          <option value="water">Agua</option>
+          <option value="bug">Bicho</option>
+          <option value="dragon">Dragón</option>
+          <option value="electric">Eléctrico</option>
+          <option value="ghost">Fantasma</option>
+          <option value="fire">Fuego</option>
+          <option value="fairy">Hada</option>
+          <option value="ice">Hielo</option>
+          <option value="normal">Normal</option>
+          <option value="fighting">Pelea</option>
+          <option value="grass">Planta</option>
+          <option value="psychic">Psíquico</option>
+          <option value="rock">Roca</option>
+          <option value="dark">Siniestro</option>
+          <option value="ground">Tierra</option>
+          <option value="poison">Veneno</option>
+          <option value="flying">Volador</option>
+        </select>
 
-      <!-- botones -->
-      <article class="search-box">
-        <input type="text" placeholder="Search name here">
-      </article>
-
-      <button type="button">Home</button>
-      <button type="button">Type</button>
-      <button type="button">Glossary </button>
-
-     
-      <select>
-        <option value="Order"> Sort By </option>
-        <option value="Num"> Num </option>
+        <button type="button" class="button">Glossary </button>
+        
+      <select class="button">
+        <option value="Order"> Stor By </option>
         <option value="Cp"> Cp </option>
         <option value="Hp"> Hp</option>
       </select>
-     </header>
+
+      <span>
+        <input type="search" placeholder="Search name here" class="Search" id="search">
+      </span>
+
+    </article>
+    </header>
   
-<!-- Cards -->
-    <section id="card"> 
-      
-    </section>
+    <main>
+      <!-- Cards -->
+      <section id="card" >
 
-    <!-- Modal -->
-    <aside> </aside>
+      </section>
 
-    
+      <!-- Modal -->
+      <aside> 
+
+      </aside>
+    </main>
 
     <!-- Pie de página -->
     <footer>
@@ -44,8 +71,7 @@
         <a href="https://pokemongolive.com/es/" target="blank">App Pokémon GO</a>
       </nav>
     </footer>
-
-    <div id="root"></div>
+    
     <script src="main.js" type="module"></script>
   </body>
 </html>
