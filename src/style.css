@@ -12,13 +12,19 @@ header{
     background-position: center left;
     background-color: black;
     width: 100%;
-    height: 150px;
+    height: 200px;
     color:white;
     text-shadow: 0 0 20px #f3f3f3;
 } 
 
+.pokebotones {
+    margin-top: 25px;
+
+}
+
 header > h1{
 text-align:center;
+margin-top: 5px;
 }
 
 section{
@@ -46,9 +52,66 @@ a{
     text-decoration: none;
 }
 figure{
-    background-color: rgb(255, 255, 255);
-    width: 300px;
+    background-image: url("./img/menu/card.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    margin-top: 0px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+    margin-right: auto;
+    width: 200px;
     height: 400px;
-    margin: 20px;
+    
+    
+    
+    /* flex-wrap: wrap; */
+    /* padding: 90px; */
+    
+    /* justify-content: space-evently;
+    padding: 40px 20px 40px 20px;
+    /* background-color: white; */
+    
+    /* margin: 50px; */
+    
+    
+   
+    /* z-index: 0; */
+    /* max-width: 500px; */
+    
+
+}
+
+figure > img {
+    /* display: flex; */
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    padding-top: 60px;
+}
+
+figcaption {
+    position: absolute;
+    padding-top: 160px;
+    text-align: center;
     
 }
+
+.btn-az {
+    background-image: url('img/menu/alfabetical3.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: 55px;
+    margin-right: 40px;
+    width: 45px;
+    height: 45px;
+    float: right;
+
+    /* display: flex;
+    flex-flow: row wrap; */
+
+}
+
