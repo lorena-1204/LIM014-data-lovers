@@ -6,13 +6,18 @@ import { pokemonOrder} from "./data.js";
 
 
 const dataContainer = document.getElementById("card");
-
+const btnAz = document.querySelector('.btn-az');
+let btnSort = false;
 //variable que llama a toda la data
 let everyPokemon = datapoke.pokemon;
+
+-------       ---------  
 
 let cardPokemon = (dataPokemon) => {
   
   dataPokemon.forEach((pokemon) => {
+
+----    ---- ------
 
     const container = document.createElement('article');
     dataContainer.appendChild(container).innerHTML =
@@ -48,32 +53,50 @@ differentOrder.addEventListener("change", () => {
   const selected = differentOrder.value;
   const dataOrder = pokemonOrder.differentOrder(everyPokemon, selected);
   cardPokemon(dataOrder);
-  // console.log("DatAORder", cardPokemon(dataOrder))
+  
+  // console.log("dataOrder", cardPokemon(dataOrder))
 
 })
 
+//ordenar la data según el tipo seleccionado
+document.getElementById("pokemonType").addEventListener ("change", filterbyType);
 
-//variable para llamar al selector de clase
-// const theCards = document.querySelector("the-Cards")
+//función para filtrar por tipo de pokémons
+function filterbyType() {
+  const filterPokemon = document.getElementById("pokemonType").value;
+  const typesShown = everyPokemon.filter(pokemon =>
+  pokemon.type.includes(filterPokemon));
+  dataContainer.innerHTML = "";
+  cardPokemon(typesShown);
+}
 
-//Función para mostrar a los pokemons
-// const showPokemons = (datapoke) => {
-//   let pokemonPack = "";
+//función para buscar por nombre
+document.querySelector(".search-name").addEventListener("keyup", searchbyName);
 
-//   for (const pokemon in data) {
-//     const lookCard = document.createElement("section");
+function searchbyName() {
+  const searchPokemon = document.getElementById("searchName").value;
+  const pokemonSearched = everyPokemon.filter(pokemon =>
+  pokemon.name.includes(searchPokemon));
+  dataContainer.innerHTML = "";
+  cardPokemon(pokemonSearched); 
+}
 
-//     //template strings
-//     pokemonPack = `
-//     <section id="lookCard"> 
-//       <section class="frontCard">
-//           <p id=""    
-    
-//     </section>
-
-
-
+//botón alfabético
+// btnAz.addEventListener("click",() => {
+//   if  (btnSort === false) {
+//     dataContainer.innerHTML = "";
+//     btnAz.classList.replace("btn-az","btn-za");
+//     const ascendingAz = pokemonOrder.differentOrder(everyPokemon, orderByName);
+//     cardPokemon(ascendingAz);
 //   }
+  
+//   if (btnSort === true) {
+//     dataContainer.innerHTML = "";
+//     btnAz.classList.replace("btn-za","btn-az");
+//     const descendingZa = pokemonOrder.differentOrder(everyPokemon,selected);
+//     cardPokemon(descendingZa);
+//   }
+//   btnSort = !btnSort;
 
+// });
 
-// }

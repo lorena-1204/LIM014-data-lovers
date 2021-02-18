@@ -71,5 +71,6 @@ export const pokemonOrder = {
             return 0;
         }
         return result;
-    }
+
+    },
 };
