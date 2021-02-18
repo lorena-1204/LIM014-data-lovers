@@ -13,56 +13,65 @@
       <h1>POKEPLANNET</h1>
       
       <!-- Inicio - botones -->
-    <article>
+    <section class="all-button">
         <button type="button" class="button">Home</button>
+
+        
         
         <select  class="button">
           <option value disabled selected>Type Pokémon</option>
-          <option value="steel">Acero</option>
-          <option value="water">Agua</option>
-          <option value="bug">Bicho</option>
-          <option value="dragon">Dragón</option>
-          <option value="electric">Eléctrico</option>
-          <option value="ghost">Fantasma</option>
-          <option value="fire">Fuego</option>
-          <option value="fairy">Hada</option>
-          <option value="ice">Hielo</option>
+          <option value="steel">Steel</option>
+          <option value="water">Water</option>
+          <option value="bug">Bug</option>
+          <option value="dragon">Dragon</option>
+          <option value="electric">Electric</option>
+          <option value="ghost">Ghost</option>
+          <option value="fire">Fire</option>
+          <option value="fairy">Fairy</option>
+          <option value="ice">Ice</option>
           <option value="normal">Normal</option>
-          <option value="fighting">Pelea</option>
-          <option value="grass">Planta</option>
-          <option value="psychic">Psíquico</option>
-          <option value="rock">Roca</option>
-          <option value="dark">Siniestro</option>
-          <option value="ground">Tierra</option>
-          <option value="poison">Veneno</option>
-          <option value="flying">Volador</option>
+          <option value="fighting">Fighting</option>
+          <option value="grass">Grass</option>
+          <option value="psychic">Psychic</option>
+          <option value="rock">Rock</option>
+          <option value="dark">Dark</option>
+          <option value="ground">Ground</option>
+          <option value="poison">Poison</option>
+          <option value="flying">Flying</option>
         </select>
 
         <button type="button" class="button">Glossary </button>
         
-      <select class="button">
-        <option value="Order"> Stor By </option>
-        <option value="Cp"> Cp </option>
-        <option value="Hp"> Hp</option>
-      </select>
+        <select id="differentOrder" class="button">
+          <option value disabled selected> Sort by... </option>        
+          <option value="ascendingCp">CP (lowest)</option>
+          <option value="descendingCp">CP (highest)</option>
+          <option value="ascendingCp">HP (lowest)</option>
+          <option value="descendingCp">HP (lowest)</option>
+        </select>
 
-      <span>
-        <input type="search" placeholder="Search name here" class="Search" id="search">
+      <span class="searcher">
+        <input type="search"  placeholder="Search name here">
       </span>
 
-    </article>
+      <section class="btn-az"></section>
+
+    </section>
     </header>
   
     <main>
       <!-- Cards -->
-      <section id="card" >
+      <section  class="container">
+        <article id="card">
+
+        </article>
 
       </section>
 
       <!-- Modal -->
-      <aside> 
+      <section class="container-modal"> 
 
-      </aside>
+      </section>
     </main>
 
     <!-- Pie de página -->

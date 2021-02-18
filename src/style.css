@@ -5,6 +5,7 @@
 section{
     background-color: black;
     width: 100%;
+    height: 100%;
 }
 
 /*logo*/
@@ -29,7 +30,9 @@ header > h1{
 }
 
 /*botones*/
-
+.all-button{
+    width: 100%;
+}
 .button{
     width: 120px;
     height: 30px;
@@ -39,58 +42,60 @@ header > h1{
     margin-right: 30px;
 }
 
-header>article>span>input{
+header>section>span>input{
     background-image: url("/src/img/search/search-icon.png");
     background-size: 20%;
     background-repeat: no-repeat;
     background-position: center right;
     border-radius: 8px;
-    width: 17s0px;
+    width: 170px;
     height: 30px;
-    outline: none;
     margin-left: 160px;
     margin-top: 25px;
 }
 
-/*contenedor de pokemones*/
-
-
-figure{
-    background-image: url("./img/card2.png");
-    background-size: 110%;
+.btn-az {
+    background-image: url('img/menu/alfabetical3.png');
     background-repeat: no-repeat;
-    position: relative;
-    display:inline-flex;
+    background-size: cover;
+    margin-top: 55px;
+    margin-right: 40px;
+    width: 45px;
+    height: 45px;
+    float: right;
 
-    justify-content: center;
-    align-content: center;
+    /* display: flex;
+    flex-flow: row wrap; */
+}
+
+/*contenedor de pokemones*/
+.container{
     
+    display:flex;
+    
+    justify-content: space-around;
+}
+
+
+.container-border{
+    border: solid 5px #08ff14;
+    margin: 20px;
+}
+
+
+
+.container-Card{
+    background-image: url('img/card4.png');
+    background-repeat: no-repeat;
+    background-size: 100%;
     width: 190px;
-    height: 300px;
+    height: 290px;
+    color:greenyellow;
+    align-items: center;
+
+   
 }
 
-.card-poke{
-    margin-top: 50px;
-    margin-left: 15px;
-    margin-right: 15px;
-    margin-bottom: 0px;
-    width: 205px;
-    height: 310px;
-}
-    
-
-figure > img{
-    width:100px;
-    height: 100px;
-    position: absolute;
-    padding-top: 55px;
-}
-
-figcaption{
-    position: absolute;
-    padding-top: 160px;
-    text-align: center;
-}
 
 /*pie de página*/
 footer{
