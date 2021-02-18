@@ -4,33 +4,41 @@
 import datapoke from "./data/pokemon/pokemon.js";
 import { pokemonOrder} from "./data.js";
 
+
 const dataContainer = document.getElementById("card");
 const btnAz = document.querySelector('.btn-az');
 let btnSort = false;
 //variable que llama a toda la data
 let everyPokemon = datapoke.pokemon;
 
+-------       ---------  
 
 let cardPokemon = (dataPokemon) => {
   
   dataPokemon.forEach((pokemon) => {
 
-    const container = document.createElement('figure');
+----    ---- ------
+
+    const container = document.createElement('article');
     dataContainer.appendChild(container).innerHTML =
      //  utilización de template strings (`)
 
-      `
-         <img class="img-poke"  src = "${pokemon.img}" >
-                 
-       <figcaption>
-         <p>#${pokemon.num}</p>
-         <p>${pokemon.name}</p>
-         <p> CP max: ${pokemon.stats["max-cp"]} </p> 
-         <p> HP max: ${pokemon.stats["max-hp"]} </p>
-       </figcaption>
-     
-      `
+      `<figure class="container-border">
+        <div class="container-Card">
+          <img  src = "${pokemon.img}">
+         
+        
+       
+          <p> N° ${pokemon.num}</p>
+          <p>${pokemon.name}</p>
+          <p> CP max: ${pokemon.stats["max-cp"]} </p> 
+          <p> HP max: ${pokemon.stats["max-hp"]} </p>
+       
+        </div>   
+       </figure>`
 
+  // dataContainer.appenChild(openCards);
+  // openCards.innerHTML = cardPokemon;
      
 })
 };
@@ -45,6 +53,7 @@ differentOrder.addEventListener("change", () => {
   const selected = differentOrder.value;
   const dataOrder = pokemonOrder.differentOrder(everyPokemon, selected);
   cardPokemon(dataOrder);
+  
   // console.log("dataOrder", cardPokemon(dataOrder))
 
 })
@@ -90,9 +99,4 @@ function searchbyName() {
 //   btnSort = !btnSort;
 
 // });
-
-
-
-
-
 
