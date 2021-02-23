@@ -47,9 +47,6 @@ header>section>span>input {
   margin-top: 25px;
 }
 
-
-
-
 /*botones*/
 .all-button{
     width: 100%;
@@ -63,20 +60,6 @@ header>section>span>input {
     margin-top: 20px;
     margin-right: 30px;
 }
-
-header>section>span>input{
-    background-image: url("/src/img/search/search-icon.png");
-    background-size: 20%;
-    background-repeat: no-repeat;
-    background-position: center right;
-    border-radius: 8px;
-    width: 170px;
-    height: 30px;
-    margin-left: 160px;
-    margin-top: 25px;
-}
-
-
 
 /* Contenedor Card */
 .container-shining {
@@ -94,11 +77,10 @@ header>section>span>input{
 
 .the-Cards{
    /*clase de html, contenedor padre para usar Flexbox*/
-display: flex;
-flex-wrap: wrap;
-justify-content:space-around;
-align-items: center;
-
+  display: flex;
+  flex-wrap: wrap;
+  justify-content:space-around;
+  align-items: center;
 }
 
 .container-Card{
@@ -128,9 +110,7 @@ align-items: center;
   color: black;
 }
 
-
 /*modal*/
-
 .modal {
   display: none;
   position: fixed;
@@ -157,8 +137,6 @@ align-items: center;
 .modal:target {
   display: flex;
 }
-
-
 
 .modal-hide {
   position: absolute;
@@ -260,9 +238,6 @@ align-items: center;
   border: solid 10px #ffd903;
   border-radius: 10px;
 }
-
-
-
 
 /*pie de página*/
 footer{
