@@ -39,19 +39,6 @@ let cardPokemon = (dataPokemon) => {
        </nav>
      `
 
-      `<figure class="container-border">
-        <div class="container-Card">
-          <img  src = "${pokemon.img}">
-         
-        
-       
-          <p> N° ${pokemon.num}</p>
-          <p>${pokemon.name}</p>
-          <p> CP max: ${pokemon.stats["max-cp"]} </p> 
-          <p> HP max: ${pokemon.stats["max-hp"]} </p>
-       
-        </div>   
-       </figure>`
    
 })
 
