@@ -6,19 +6,14 @@ import { pokemonOrder} from "./data.js";
 
 
 const dataContainer = document.getElementById("card");
-const btnAz = document.querySelector('.btn-az');
-let btnSort = false;
+
 //variable que llama a toda la data
 let everyPokemon = datapoke.pokemon;
-
--------       ---------  
 
 let cardPokemon = (dataPokemon) => {
   
   dataPokemon.forEach((pokemon) => {
-
-----    ---- ------
-
+   
     const container = document.createElement('article');
     dataContainer.appendChild(container).innerHTML =
      //  utilización de template strings (`)
@@ -36,10 +31,7 @@ let cardPokemon = (dataPokemon) => {
        
         </div>   
        </figure>`
-
-  // dataContainer.appenChild(openCards);
-  // openCards.innerHTML = cardPokemon;
-     
+    
 })
 };
 
@@ -81,22 +73,4 @@ function searchbyName() {
   cardPokemon(pokemonSearched); 
 }
 
-//botón alfabético
-// btnAz.addEventListener("click",() => {
-//   if  (btnSort === false) {
-//     dataContainer.innerHTML = "";
-//     btnAz.classList.replace("btn-az","btn-za");
-//     const ascendingAz = pokemonOrder.differentOrder(everyPokemon, orderByName);
-//     cardPokemon(ascendingAz);
-//   }
-  
-//   if (btnSort === true) {
-//     dataContainer.innerHTML = "";
-//     btnAz.classList.replace("btn-za","btn-az");
-//     const descendingZa = pokemonOrder.differentOrder(everyPokemon,selected);
-//     cardPokemon(descendingZa);
-//   }
-//   btnSort = !btnSort;
-
-// });
-
+// console.log (pokemonOrder.differentOrder(everyPokemon, "spawn"));
