@@ -17,9 +17,11 @@ let cardPokemon = (dataPokemon) => {
   
   dataPokemon.forEach((pokemon) => {
 
+
     const container = document.createElement('figure');
 
     container.className= "container-Card "  + pokemon.type[0];
+
 
     dataContainer.appendChild(container).innerHTML =
      //  utilización de template strings (`)
@@ -68,11 +70,6 @@ let cardPokemon = (dataPokemon) => {
        </nav>
       </section>
      `
-
-  // Iconos de type
-  // <p id= "pokemonType"><img class="imgType" alt="" src='img/resistant-weaknesses/${pokemon.type[0]}.png'>
-  //<img class='imgType' alt='' src='img/resistant-weaknesses/${pokemon.type[1]}.png'> 
-     
 })
 
 
@@ -118,4 +115,4 @@ function searchbyName() {
   cardPokemon(pokemonSearched); 
 }
 
-console.log (pokemonOrder.differentOrder(everyPokemon, "spawn"));
+//console.log (pokemonOrder.differentOrder(everyPokemon, "spawn")//
