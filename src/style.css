@@ -1,12 +1,7 @@
-
 * {
   margin: 0%;
 }
 
-section {
-  background-color: black;
-  width: 100%;
-}
 
 /*logo*/
 header {
@@ -30,7 +25,6 @@ header>h1 {
 }
 
 /*botones*/
-
 .button {
   width: 120px;
   height: 30px;
@@ -53,23 +47,9 @@ header>section>span>input {
   margin-top: 25px;
 }
 
-.btn-az {
-  background-image: url('img/menu/ZA.png');
-  background-repeat: no-repeat;
-  background-size: cover;
-  margin-top: 55px;
-  margin-right: 40px;
-  width: 45px;
-  height: 45px;
-  float: right;
-
-  /* display: flex;
-    flex-flow: row wrap; */
-}
-
 /*botones*/
-.all-button {
-  width: 100%;
+.all-button{
+    width: 100%;
 }
 
 .button{
@@ -93,31 +73,189 @@ header>section>span>input{
     margin-top: 25px;
 }
 
-/*contenedor de pokemones*/
-.container{
-    
-    display: inline-flex;
-    
-    justify-content: space-around;
+/* Contenedor Card */
+.container-shining {
+  background-image:
+    url("./img/menu/night3.png");
 }
 
-
-.container-border{
-    border: solid 5px #08ff14;
-    margin: 20px;
+#container-border{
+  /*clase de html*, contenedor general*/
+  width: 80%;
+  background:rgb(0, 0, 0); 
+  margin-left: auto;
+  margin-right: auto;
 }
 
+.the-Cards{
+   /*clase de html, contenedor padre para usar Flexbox*/
+display: flex;
+flex-wrap: wrap;
+justify-content:space-around;
+align-items: center;
+
+}
 
 .container-Card{
-    background-image: url('img/card4.png');
-    background-repeat: no-repeat;
-    background-size: 100%;
-    width: 190px;
-    height: 290px;
-    color:greenyellow;
-    align-items: center;
+  /*clase de mainjs*/
+  background-image:url('img/card4.png');
+  background-repeat:no-repeat;
+  background-position:center center;
+  background-size:120%;
+  width:190px;
+  height:320px;
+  margin:18px;
+}
+
+#img-card{
+  padding: 62px 40px 0px;
+}
+
+.legend{
+  justify-content: center;
+  text-align: center;
+  text-transform: capitalize;
+}
+.modal-card {
+  font-size: 18px;
+  text-decoration: none;
+  height: 16px;
+  color: black;
+}
+
+
+/*modal*/
+
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.7);
+  opacity: 0;
+  animation: modal-show 0.5s 1 forwards;
+}
+
+.modal-content {
+  position: relative;
+  width: 400px;
+  height: 400px;
+  padding: 24px;
+  background-color: rgb(0, 0, 0);
+  color: white;
+}
+
+.modal:target {
+  display: flex;
+}
+
+.modal-hide {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 60px;
+  height: 60px;
+  padding: 0;
+  -webkit-appearance: none;
+  background-color: transparent;
+  border: none;
+  font-size: 48px;
+  text-align: center;
+  color: rgb(250, 250, 250);
+  text-decoration: none;
+}
+
+@keyframes modal-show {
+	0% { opacity: 0; }
+	100% { opacity: 1; }
+}
+
+.imgResistance{
+  width: 30px;
+}
+
+/*clases y colores de Card*/
+.grass{
+  border:  solid 10px #54ff48;
+  border-radius: 10px;
 
 }
+.bug{
+  border: solid 10px #c6ff4c;
+  border-radius: 10px;
+}
+.water{
+  border: solid 10px #67b8ff;
+  border-radius: 10px;
+}
+
+.ice{
+  border: solid 10px #87f0dd;
+  border-radius: 10px;
+}
+.flying{
+  border: solid 10px #abc7ff;
+  border-radius: 10px;
+}
+.dragon{
+  border: solid 10px #188bff;
+  border-radius: 10px;
+}
+.steel{
+  border: solid 10px #89e2f8;
+  border-radius: 10px;
+}
+.ghost{
+  border: solid 10px #8590ff;
+  border-radius: 10px;
+}
+.poison{
+  border: solid 10px #df7efd;
+  border-radius: 10px;
+}
+.fairy{
+  border: solid 10px #fc9ff4;
+  border-radius: 10px;
+}
+
+.normal{
+  border: solid 10px #c9cac8;
+  border-radius: 10px;
+}
+.fighting{
+  border: solid 10px #fd5579;
+  border-radius: 10px;
+}
+.psychic{
+  border: solid 10px #fb8383;
+  border-radius: 10px;
+}
+.rock{
+  border: solid 10px #ffde7d;
+  border-radius: 10px;
+}
+.dark{
+  border: solid 10px #ab69f7;
+  border-radius: 10px;
+}
+.ground{
+  border: solid 10px #ff9060;
+  border-radius: 10px;
+}
+.fire{
+  border: solid 10px #fd0000;
+  border-radius: 10px;
+}
+.electric{
+  border: solid 10px #ffd903;
+  border-radius: 10px;
+}
+
+
 
 /*pie de página*/
 footer{
