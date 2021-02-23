@@ -47,9 +47,6 @@ header>section>span>input {
   margin-top: 25px;
 }
 
-
-
-
 /*botones*/
 .all-button{
     width: 100%;
@@ -75,8 +72,6 @@ header>section>span>input{
     margin-left: 160px;
     margin-top: 25px;
 }
-
-
 
 /* Contenedor Card */
 .container-shining {
@@ -158,8 +153,6 @@ align-items: center;
   display: flex;
 }
 
-
-
 .modal-hide {
   position: absolute;
   top: 12px;
@@ -189,6 +182,7 @@ align-items: center;
 .grass{
   border:  solid 10px #54ff48;
   border-radius: 10px;
+
 }
 .bug{
   border: solid 10px #c6ff4c;
@@ -260,7 +254,6 @@ align-items: center;
   border: solid 10px #ffd903;
   border-radius: 10px;
 }
-
 
 
 

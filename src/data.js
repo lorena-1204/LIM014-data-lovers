@@ -5,7 +5,7 @@ export const pokemonOrder = {
         if (selected === "aZ"){
             result = everyPokemon.sort(orderByName);
         }
-        if (selected === "aZ"){
+        if (selected === "zA"){
             result = everyPokemon.sort(orderByName).reverse();
         }
         if (selected === "ascendingNumber"){
@@ -26,6 +26,9 @@ export const pokemonOrder = {
         if (selected === "descendingHp"){
             result = everyPokemon.sort(orderByHp).reverse();
         }
+        if (selected === "spawn"){
+            result = everyPokemon.sort(orderBySpawn);
+        }
 
         //función para ordenar la data según el nombre
         function orderByName(a,b) {
@@ -33,6 +36,18 @@ export const pokemonOrder = {
                 return -1;
             }
             if (a.name > b.name) {
+                return 1;
+            }
+            return 0;
+        }
+
+
+          //función para ordenar top10
+        function orderBySpawn(a,b) {
+            if (a["spawn-chance"] > b["spawn-chance"]) {
+                return -1;
+            }
+            if (a["spawn-chance"] < b["spawn-chance"]) {
                 return 1;
             }
             return 0;

@@ -17,9 +17,11 @@ let cardPokemon = (dataPokemon) => {
   
   dataPokemon.forEach((pokemon) => {
 
+
     const container = document.createElement('figure');
 
     container.className= "container-Card "  + pokemon.type[0];
+
 
     dataContainer.appendChild(container).innerHTML =
      //  utilización de template strings (`)
@@ -35,14 +37,22 @@ let cardPokemon = (dataPokemon) => {
        <nav> 
          </a>
        </nav>
-    
-     
      `
 
-  // Iconos de type
-  // <p id= "pokemonType"><img class="imgType" alt="" src='img/resistant-weaknesses/${pokemon.type[0]}.png'>
-  //<img class='imgType' alt='' src='img/resistant-weaknesses/${pokemon.type[1]}.png'> 
-     
+      `<figure class="container-border">
+        <div class="container-Card">
+          <img  src = "${pokemon.img}">
+         
+        
+       
+          <p> N° ${pokemon.num}</p>
+          <p>${pokemon.name}</p>
+          <p> CP max: ${pokemon.stats["max-cp"]} </p> 
+          <p> HP max: ${pokemon.stats["max-hp"]} </p>
+       
+        </div>   
+       </figure>`
+   
 })
 
 dataPokemon.forEach((pokemon) => {
@@ -109,17 +119,14 @@ differentOrder.addEventListener("change", () => {
 // const showPokemons = (datapoke) => {
 //   let pokemonPack = "";
 
-//   for (const pokemon in data) {
-//     const lookCard = document.createElement("section");
 
-//     //template strings
-//     pokemonPack = `
-//     <section id="lookCard"> 
-//       <section class="frontCard">
-//           <p id=""    
-    
-//     </section>
+function searchbyName() {
+  const searchPokemon = document.getElementById("searchName").value;
+  const pokemonSearched = everyPokemon.filter(pokemon =>
+  pokemon.name.includes(searchPokemon));
+  dataContainer.innerHTML = "";
+  cardPokemon(pokemonSearched); 
+}
 
-//   }
+// console.log (pokemonOrder.differentOrder(everyPokemon, "spawn"));
 
-// }
