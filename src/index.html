@@ -16,13 +16,8 @@
       <section class="all-button">
         <button type="button" class="button">HOME</button>
         <!-- <button type="button" class="button" > Glossary </button> -->
-        <span class="glossary"> 
-        <a href="https://www.pokemon.com/el/play-pokemon/sobre/glosario-de-videojuegos-pokemon/"
-          target='_blank'> Glossary </a>
-        </span>
         
-        
-        <select  class="button">
+        <select id="pokemonType"  class="button">
           <option value disabled selected>Type Pokémon</option>
           <option value="steel">Steel</option>
           <option value="water">Water</option>
@@ -48,11 +43,11 @@
           <select id="differentOrder" class="button">
             <option value disabled selected> Sort by... </option>
                       
-            <option value="descendingCp">CP ⬆</option>
-            <option value="descendingHp">HP ⬆</option>
-            <option value="descendingNumber">Number ⬆</option>
-            <option value="ascendingCp">CP ⬇</option>
-            <option value="ascendingHp">HP ⬇</option>
+            <option value="descendingCp">CP ⬆ </option>
+            <option value="descendingHp">HP ⬆ </option>
+            <option value="descendingNumber">Number ⬆ </option>
+            <option value="ascendingCp">CP ⬇ </option>
+            <option value="ascendingHp">HP ⬇ </option>
             
           </select>
 
@@ -60,7 +55,6 @@
               <input type="search" id="searchName" class="search-name" placeholder="Search name here" autocomplete="off" spellcheck="false"/> 
                 
             <!-- <img src="./img/gif/pikachu-no.gif" alt="No encontrado"> -->
-
             </span>
           
 
@@ -70,32 +64,36 @@
             <section class="btn-az" ></section>
             <!-- <section class="btn-za"></section> -->
           
-        
       </section>
-    
    </header>
   
-    <main>
+    <main class="container-shining">
       <!-- Cards -->
 
-      <section  class="container">
-        <article id="card" class="the-Cards">
+      <section  id="container-border" >
 
+        <article id="card" class="the-Cards">
+        
+      
         </article>
       </section>
-   
-      <!-- Modal -->
-      <section class="container-modal"> 
+    </main>
+
+      <!-- Modal 
+      <section class="container-modal">
+        <article class="modal modal-close">
+        
+        </article> 
 
       </section>
-    </main>
+    -->
 
     <!-- Pie de página -->
     <footer>
       <nav>
         <a href="https://pokemongolive.com/es/" target="blank">App Pokémon GO</a>
       </nav>
-    </footer>
+    </footer class="container-shining">
     
     <script src="main.js" type="module"></script>
   </body>
