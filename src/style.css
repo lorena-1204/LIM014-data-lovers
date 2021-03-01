@@ -70,7 +70,7 @@ header>section>span>input {
 #container-border{
   /*clase de html*, contenedor general*/
   width: 80%;
-  background:rgb(0, 0, 0); 
+  background:rgb(0, 0, 0);
   margin-left: auto;
   margin-right: auto;
 }

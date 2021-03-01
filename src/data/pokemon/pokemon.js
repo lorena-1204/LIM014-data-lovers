@@ -21,7 +21,7 @@ export default {
       "base-flee-rate": "0.1",
       "base-capture-rate": "0.2"
     },
-    "spawn-chance": "0.69",     
+    "spawn-chance": "0.69",
     "stats": {
       "base-attack": "118",
       "base-defense": "111",
