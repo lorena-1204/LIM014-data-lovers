@@ -61,18 +61,6 @@ header>section>span>input {
     margin-right: 30px;
 }
 
-header>section>span>input{
-    background-image: url("/src/img/search/search-icon.png");
-    background-size: 20%;
-    background-repeat: no-repeat;
-    background-position: center right;
-    border-radius: 8px;
-    width: 170px;
-    height: 30px;
-    margin-left: 160px;
-    margin-top: 25px;
-}
-
 /* Contenedor Card */
 .container-shining {
   background-image:
@@ -82,18 +70,17 @@ header>section>span>input{
 #container-border{
   /*clase de html*, contenedor general*/
   width: 80%;
-  background:rgb(0, 0, 0); 
+  background:rgb(0, 0, 0);
   margin-left: auto;
   margin-right: auto;
 }
 
 .the-Cards{
    /*clase de html, contenedor padre para usar Flexbox*/
-display: flex;
-flex-wrap: wrap;
-justify-content:space-around;
-align-items: center;
-
+  display: flex;
+  flex-wrap: wrap;
+  justify-content:space-around;
+  align-items: center;
 }
 
 .container-Card{
@@ -123,9 +110,7 @@ align-items: center;
   color: black;
 }
 
-
 /*modal*/
-
 .modal {
   display: none;
   position: fixed;
@@ -254,8 +239,6 @@ align-items: center;
   border: solid 10px #ffd903;
   border-radius: 10px;
 }
-
-
 
 /*pie de página*/
 footer{
