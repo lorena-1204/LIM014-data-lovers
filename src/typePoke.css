@@ -1,0 +1,160 @@
+/*clases y colores de border Card*/
+.grass{
+    border:  solid 10px #54ff48;
+    border-radius: 10px;
+  
+  }
+  .bug{
+    border: solid 10px #c6ff4c;
+    border-radius: 10px;
+  }
+  .water{
+    border: solid 10px #67b8ff;
+    border-radius: 10px;
+  }
+  
+  .ice{
+    border: solid 10px #87f0dd;
+    border-radius: 10px;
+  }
+  .flying{
+    border: solid 10px #abc7ff;
+    border-radius: 10px;
+  }
+  .dragon{
+    border: solid 10px #188bff;
+    border-radius: 10px;
+  }
+  .steel{
+    border: solid 10px #89e2f8;
+    border-radius: 10px;
+  }
+  .ghost{
+    border: solid 10px #8590ff;
+    border-radius: 10px;
+  }
+  .poison{
+    border: solid 10px #df7efd;
+    border-radius: 10px;
+  }
+  .fairy{
+    border: solid 10px #fc9ff4;
+    border-radius: 10px;
+  }
+  
+  .normal{
+    border: solid 10px #c9cac8;
+    border-radius: 10px;
+  }
+  .fighting{
+    border: solid 10px #fd5579;
+    border-radius: 10px;
+  }
+  .psychic{
+    border: solid 10px #fb8383;
+    border-radius: 10px;
+  }
+  .rock{
+    border: solid 10px #ffde7d;
+    border-radius: 10px;
+  }
+  .dark{
+    border: solid 10px #ab69f7;
+    border-radius: 10px;
+  }
+  .ground{
+    border: solid 10px #ff9060;
+    border-radius: 10px;
+  }
+  .fire{
+    background-color:  #fd0000;
+    border-radius: 10px;
+  }
+  .electric{
+    border: solid 10px #ffd903;
+    border-radius: 10px;
+  }
+
+
+  /*clases y colores de boton More */
+
+  .xgrass{
+    border: solid 10px #54ff48;
+    background: #54ff48;
+    width: 70px;
+    height: 40px;
+    margin-right: -10;
+    margin-top: 10px;
+    
+  }
+
+  .bug{
+    border: solid 10px #c6ff4c;
+    border-radius: 10px;
+  }
+  .water{
+    border: solid 10px #67b8ff;
+    border-radius: 10px;
+  }
+  
+  .ice{
+    border: solid 10px #87f0dd;
+    border-radius: 10px;
+  }
+  .flying{
+    border: solid 10px #abc7ff;
+    border-radius: 10px;
+  }
+  .dragon{
+    border: solid 10px #188bff;
+    border-radius: 10px;
+  }
+  .steel{
+    border: solid 10px #89e2f8;
+    border-radius: 10px;
+  }
+  .ghost{
+    border: solid 10px #8590ff;
+    border-radius: 10px;
+  }
+  .poison{
+    border: solid 10px #df7efd;
+    border-radius: 10px;
+  }
+  .fairy{
+    border: solid 10px #fc9ff4;
+    border-radius: 10px;
+  }
+  
+  .normal{
+    border: solid 10px #c9cac8;
+    border-radius: 10px;
+  }
+  .fighting{
+    border: solid 10px #fd5579;
+    border-radius: 10px;
+  }
+  .psychic{
+    border: solid 10px #fb8383;
+    border-radius: 10px;
+  }
+  .rock{
+    border: solid 10px #ffde7d;
+    border-radius: 10px;
+  }
+  .dark{
+    border: solid 10px #ab69f7;
+    border-radius: 10px;
+  }
+  .ground{
+    border: solid 10px #ff9060;
+    border-radius: 10px;
+  }
+  .fire{
+    border: solid 10px #fd0000;
+    border-radius: 10px;
+  }
+  .electric{
+    border: solid 10px #ffd903;
+    border-radius: 10px;
+  }

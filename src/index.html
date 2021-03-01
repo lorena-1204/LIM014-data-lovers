@@ -1,92 +1,92 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <link rel="shortcut icon" type="image/x-icon" href="img/logo/pokebola-icon.png">
-    <meta charset="utf-8">
-    <!-- <meta name="viewport" content="width=device-with, user-scalable=no, initial-scale=1.0, minimum-scale=1.0"> -->
-    <title>POKEPLANET</title>
-    <link rel="stylesheet" href="style.css" />
-  </head> 
-  <body>
-     <!-- Menú -->
-    <header>      
-       <h1>POKEPLANET</h1>
-       
-      <!-- Inicio - botones -->
-      <section class="all-button">
-        <button type="button" class="button">HOME</button>
-        <!-- <button type="button" class="button" > Glossary </button> -->
 
-        <select id="pokemonType"  class="button">
+<head>
+  <link rel="shortcut icon" type="image/x-icon" href="img/logo/pokebola-icon.png">
+  <meta charset="utf-8">
+  <!-- <meta name="viewport" content="width=device-with, user-scalable=no, initial-scale=1.0, minimum-scale=1.0"> -->
+  <title>POKEPLANET</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="typePoke.css" />
+</head>
 
- 
-          <option value disabled selected>Type Pokémon</option>
-          <option value="steel">Steel</option>
-          <option value="water">Water</option>
-          <option value="bug">Bug</option>
-          <option value="dragon">Dragon</option>
-          <option value="electric">Electric</option>
-          <option value="ghost">Ghost</option>
-          <option value="fire">Fire</option>
-          <option value="fairy">Fairy</option>
-          <option value="ice">Ice</option>
-          <option value="normal">Normal</option>
-          <option value="fighting">Fighting</option>
-          <option value="grass">Grass</option>
-          <option value="psychic">Psychic</option>
-          <option value="rock">Rock</option>
-          <option value="dark">Dark</option>
-          <option value="ground">Ground</option>
-          <option value="poison">Poison</option>
-          <option value="flying">Flying</option>
-        </select>
-      
-        <!-- Botón Sort by -->
-          <select id="differentOrder" class="button">
-            <option value disabled selected> Sort by... </option>
-                      
-            <option value="descendingCp">CP  </option>
-            <option value="descendingHp">HP  </option>
-           <option value="aZ">A-Z</option>
-           <option value="zA">Z-A</option>
-            
-          </select>
+<body>
+  <!-- Menú -->
+  <header>
+    <h1>POKEPLANET</h1>
 
-            <span class="searcher">
-              <input type="search" id="searchName" class="search-name" placeholder="Search name here" autocomplete="off" spellcheck="false"/> 
-            </span>        
-           
-      </section>
-   </header>
-  
-    <main class="container-shining">
-      <!-- Cards -->
+    <!-- Inicio - botones -->
+    <section class="all-button">
+      <button type="button" class="button">HOME</button>
+      <!-- <button type="button" class="button" > Glossary </button> -->
+
+      <select id="pokemonType" class="button">
 
 
-      <section  id="container-border" >
+        <option value disabled selected>Type Pokémon</option>
+        <option value="steel">Steel</option>
+        <option value="water">Water</option>
+        <option value="bug">Bug</option>
+        <option value="dragon">Dragon</option>
+        <option value="electric">Electric</option>
+        <option value="ghost">Ghost</option>
+        <option value="fire">Fire</option>
+        <option value="fairy">Fairy</option>
+        <option value="ice">Ice</option>
+        <option value="normal">Normal</option>
+        <option value="fighting">Fighting</option>
+        <option value="grass">Grass</option>
+        <option value="psychic">Psychic</option>
+        <option value="rock">Rock</option>
+        <option value="dark">Dark</option>
+        <option value="ground">Ground</option>
+        <option value="poison">Poison</option>
+        <option value="flying">Flying</option>
+      </select>
 
-        <article id="card" class="the-Cards">
+      <!-- Botón Sort by -->
+      <select id="differentOrder" class="button">
+        <option value disabled selected> Sort by... </option>
 
-        </article>
-      </section>
-    </main>
+        <option value="descendingCp">CP </option>
+        <option value="descendingHp">HP </option>
+        <option value="aZ">A-Z</option>
+        <option value="zA">Z-A</option>
 
-      <!-- Modal 
-      <section class="container-modal">
-        <article class="modal modal-close">
-        
-        </article> 
+      </select>
 
-      </section>
-    -->
+      <span class="searcher">
+        <input type="search" id="searchName" class="search-name" placeholder="Search name here" autocomplete="off"
+          spellcheck="false" />
+      </span>
 
-    <!-- Pie de página -->
-    <footer>
-      <nav>
-        <a href="https://pokemongolive.com/es/" target="blank">App Pokémon GO</a>
-      </nav>
-    </footer class="container-shining">
-    
-    <script src="main.js" type="module"></script>
-  </body>
+    </section>
+  </header>
+
+  <main class="container-shining">
+    <!-- Cards -->
+
+
+    <section id="container-border">
+
+      <article id="card" class="the-Cards">
+
+      </article>
+    </section>
+  </main>
+
+  <!-- Modal -->
+  <section class="show-modal hide">
+
+  </section>
+  <!-- Pie de página -->
+  <footer>
+    <nav>
+      <a href="https://pokemongolive.com/es/" target="blank">App Pokémon GO</a>
+    </nav>
+  </footer class="container-shining">
+
+  <script src="main.js" type="module"></script>
+</body>
+
 </html>
