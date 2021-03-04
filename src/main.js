@@ -1,17 +1,11 @@
-// traer data, con forEach, con innerHTML para mostrar la data según le vamos indicando
-
 import datapoke from "./data/pokemon/pokemon.js";
 import { pokemonOrder } from "./data.js";
-
 
 document.getElementById("refresh").addEventListener("click", () => {
   location.reload();
 });
 
-
 const dataContainer = document.getElementById("card");
-
-
 
 //variable que llama a toda la data
 let everyPokemonData = datapoke.pokemon;
@@ -32,25 +26,23 @@ let cardPokemon = (dataPokemon) => {
        </figcaption>
         </section>`
 
-
     const modalContainer = document.querySelector(".show-modal");
 
     const modalButton = container.querySelector("section");
 
-
     let cardNextEvolution;
     let cardPrevEvolutions;
-    // const pokemonNotEvolution = '<p> I don\'t have evolutions</p>';
+    const NotEvolution = '<p> Whithout evolution</p>';
 
     if (pokemon.evolution) {
 
-      if (pokemon.evolution["nex-evolution"]) {
-        let nextEvolutions = getNextEvolution(pokemon.evolution["nex-evolution"]);
+      if (pokemon.evolution["next-evolution"]) {
+        let nextEvolutions = getNextEvolution(pokemon.evolution["next-evolution"]);
 
         cardNextEvolution = nextEvolutions.map(elemento => {
           return `<div>
         <img  class="image-pokemon" src="https://www.serebii.net/pokemongo/pokemon/${elemento.num}.png">
-          <h1 class="subtitle">${elemento.name}</h1>
+          <h2 class="subtitle">${elemento.name}</h2>
           <p> Candy Cost ${elemento['candy-cost']}</p></div>`
         })
       }
@@ -60,22 +52,18 @@ let cardPokemon = (dataPokemon) => {
         cardPrevEvolutions = prevEvolutions.map(elemento => {
           return `<div>
             <img class="image-pokemon"src="https://www.serebii.net/pokemongo/pokemon/${elemento.num}.png">
-            <h1 class="subtitle">${elemento.name}</h1>
+            <h2 class="subtitle">${elemento.name}</h2>
           <p> Candy Cost ${elemento['candy-cost']} </p></div>`
 
         })
       }
-    }
 
+    }
 
     modalButton.addEventListener("click", () => {
 
-
       //modal
       modalContainer.classList.toggle("hide");
-
-
-
       modalContainer.innerHTML =
 
         ` <section class="modal m${pokemon.type[0]}" id="modal">
@@ -106,16 +94,11 @@ let cardPokemon = (dataPokemon) => {
             <img class="imgResistance" alt="" src="img/resistant-weaknesses/${pokemon.weaknesses[3]}.png">
             <img class="imgResistance" alt="" src="img/resistant-weaknesses/${pokemon.weaknesses[4]}.png"></p>
 
-            <table id="stats-table" class="column-5 font">
-            
-                <tbody><tr>
-            </table>
              <h2>Evolution</h2>
-             <td>Prev Evolution${cardPrevEvolutions ? cardPrevEvolutions.join('') : ''} </td>
-             <td> <img  src = "${pokemon.img}" id="img-card"></td>
-             <td> Next Evolution ${cardNextEvolution ? cardNextEvolution.join('') : ''}</td>
-
-            
+             <td>${cardPrevEvolutions ? cardPrevEvolutions.join('') : ''} </td>
+             
+             <td>  ${cardNextEvolution ? cardNextEvolution.join('') : ''}</td>
+             <td> ${cardNextEvolution === undefined && cardPrevEvolutions === undefined ? NotEvolution : ''}</td> 
 
             </figure>
             </nav>
@@ -208,8 +191,7 @@ let cardPokemonTop = (dataPokemon) => {
 
        </figcaption>
 
-       <button class="modal-button x${pokemon.type[0]}" > More </button>
-       `
+       <button class="modal-button x${pokemon.type[0]}" > More </button>  `
 
       const modalContainer = document.querySelector(".show-modal");
       const modalButton = container.querySelector("button");
@@ -245,7 +227,6 @@ let cardPokemonTop = (dataPokemon) => {
             <img class="imgResistance" alt="" src="img/resistant-weaknesses/${pokemon.weaknesses[3]}.png">
             <img class="imgResistance" alt="" src="img/resistant-weaknesses/${pokemon.weaknesses[4]}.png"></p>
 
-            
             </figure>
             </nav>
             <button class="close"> close </button>
