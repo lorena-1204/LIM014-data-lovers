@@ -3,79 +3,126 @@
 import datapoke from "./data/pokemon/pokemon.js";
 import { pokemonOrder } from "./data.js";
 
-//refrescar HOME
-document.getElementById("refresh").addEventListener("click", ()=>{
+
+document.getElementById("refresh").addEventListener("click", () => {
   location.reload();
- });
+});
+
 
 const dataContainer = document.getElementById("card");
 
-//variable que llama a toda la data
 
+
+//variable que llama a toda la data
 let everyPokemonData = datapoke.pokemon;
 let cardPokemon = (dataPokemon) => {
   dataPokemon.forEach((pokemon) => {
 
     const container = document.createElement('figure');
-    container.className= "container-Card "  + pokemon.type[0];
+    container.className = "container-Card " + pokemon.type[0];
     dataContainer.appendChild(container).innerHTML =
-     //  utilización de template strings (`)
-     ` <a class="modal-card " href="#modal">
-
-     <img  src = "${pokemon.img}" id="img-card">
+      //  utilización de template strings (`)
+      `<section class="modal-button"> 
+       <img  src = "${pokemon.img}" id="img-card">
        <figcaption class="legend">
-
         <p> N° ${pokemon.num}</p>
         <p>${pokemon.name}</p>
         <p> CP max: ${pokemon.stats["max-cp"]} </p>
         <p> HP max: ${pokemon.stats["max-hp"]} </p>
+       </figcaption>
+        </section>`
 
-       </figcaption> 
-
-       <button class="modal-button x${pokemon.type[0]}" > More </button>
-       `
 
     const modalContainer = document.querySelector(".show-modal");
-    const modalButton = container.querySelector("button");
+
+    const modalButton = container.querySelector("section");
+
+
+    let cardNextEvolution;
+    let cardPrevEvolutions;
+    // const pokemonNotEvolution = '<p> I don\'t have evolutions</p>';
+
+    if (pokemon.evolution) {
+
+      if (pokemon.evolution["nex-evolution"]) {
+        let nextEvolutions = getNextEvolution(pokemon.evolution["nex-evolution"]);
+
+        cardNextEvolution = nextEvolutions.map(elemento => {
+          return `<div>
+        <img  class="image-pokemon" src="https://www.serebii.net/pokemongo/pokemon/${elemento.num}.png">
+          <h1 class="subtitle">${elemento.name}</h1>
+          <p> Candy Cost ${elemento['candy-cost']}</p></div>`
+        })
+      }
+
+      if (pokemon.evolution["prev-evolution"]) {
+        let prevEvolutions = getPrevEvolution(pokemon.evolution["prev-evolution"]);
+        cardPrevEvolutions = prevEvolutions.map(elemento => {
+          return `<div>
+            <img class="image-pokemon"src="https://www.serebii.net/pokemongo/pokemon/${elemento.num}.png">
+            <h1 class="subtitle">${elemento.name}</h1>
+          <p> Candy Cost ${elemento['candy-cost']} </p></div>`
+
+        })
+      }
+    }
+
+
     modalButton.addEventListener("click", () => {
+
+
+      //modal
       modalContainer.classList.toggle("hide");
+
+
+
       modalContainer.innerHTML =
 
         ` <section class="modal m${pokemon.type[0]}" id="modal">
-  <nav class="modal-content"> 
-   
-  <figure>
-   <img  src = "${pokemon.img}">
-   <p> N° ${pokemon.num}</p>
-  <p>${pokemon.name}</p>
-  <p>${pokemon.about}</p>
-  <p> CP max: ${pokemon.stats["max-cp"]} </p> 
-  <p> HP max: ${pokemon.stats["max-hp"]} </p>
+            <nav class="modal-content">
 
-  <p><b>Resistant: </b></p>
-    <p><img class="imgResistance" alt="" src="img/resistant-weaknesses/${pokemon.resistant[0]}.png">
-    <img class="imgResistance" alt="" src="img/resistant-weaknesses/${pokemon.resistant[1]}.png">
-    <img class="imgResistance" alt="" src="img/resistant-weaknesses/${pokemon.resistant[2]}.png">
-    <img class="imgResistance" alt="" src="img/resistant-weaknesses/${pokemon.resistant[3]}.png">
-    <img class="imgResistance" alt="" src="img/resistant-weaknesses/${pokemon.resistant[4]}.png'>
-    <img class="imgResistance" alt="" src="img/resistant-weaknesses/${pokemon.resistant[5]}.png">
-    <img class="imgResistance" alt="" src="img/resistant-weaknesses/${pokemon.resistant[6]}.png">
-    <img class="imgResistance" alt="" src='img/resistant-weaknesses/${pokemon.resistant[7]}.png'></p>
+            <figure>
+            <img  src = "${pokemon.img}">
+            <p> N° ${pokemon.num}</p>
+            <p>${pokemon.name}</p>
+            <p>${pokemon.about}</p>
+            <p> CP max: ${pokemon.stats["max-cp"]} </p>
+            <p> HP max: ${pokemon.stats["max-hp"]} </p>
 
-  <p ><b>Weaknesses:</b></p>
-   <p id="imageContainer"><img class="imgResistance" alt="" src="img/resistant-weaknesses/${pokemon.weaknesses[0]}.png">
-   <img class="imgResistance" alt="" src="img/resistant-weaknesses/${pokemon.weaknesses[1]}.png">
-   <img class="imgResistance" alt="" src="img/resistant-weaknesses/${pokemon.weaknesses[2]}.png">
-   <img class="imgResistance" alt="" src="img/resistant-weaknesses/${pokemon.weaknesses[3]}.png">
-   <img class="imgResistance" alt="" src="img/resistant-weaknesses/${pokemon.weaknesses[4]}.png"></p>
- 
-   </figure>
-  </nav>
-  <button class="close"> close </button>
-  </section>`
+            <p><b>Resistant: </b></p>
+              <p><img class="imgResistance" alt="" src="img/resistant-weaknesses/${pokemon.resistant[0]}.png">
+              <img class="imgResistance" alt="" src="img/resistant-weaknesses/${pokemon.resistant[1]}.png">
+              <img class="imgResistance" alt="" src="img/resistant-weaknesses/${pokemon.resistant[2]}.png">
+              <img class="imgResistance" alt="" src="img/resistant-weaknesses/${pokemon.resistant[3]}.png">
+              <img class="imgResistance" alt="" src="img/resistant-weaknesses/${pokemon.resistant[4]}.png'>
+              <img class="imgResistance" alt="" src="img/resistant-weaknesses/${pokemon.resistant[5]}.png">
+              <img class="imgResistance" alt="" src="img/resistant-weaknesses/${pokemon.resistant[6]}.png">
+              <img class="imgResistance" alt="" src='img/resistant-weaknesses/${pokemon.resistant[7]}.png'></p>
 
-      const modalClose = modal.querySelector(".close");
+            <p ><b>Weaknesses:</b></p>
+            <p id="imageContainer"><img class="imgResistance" alt="" src="img/resistant-weaknesses/${pokemon.weaknesses[0]}.png">
+            <img class="imgResistance" alt="" src="img/resistant-weaknesses/${pokemon.weaknesses[1]}.png">
+            <img class="imgResistance" alt="" src="img/resistant-weaknesses/${pokemon.weaknesses[2]}.png">
+            <img class="imgResistance" alt="" src="img/resistant-weaknesses/${pokemon.weaknesses[3]}.png">
+            <img class="imgResistance" alt="" src="img/resistant-weaknesses/${pokemon.weaknesses[4]}.png"></p>
 
+            <table id="stats-table" class="column-5 font">
+            
+                <tbody><tr>
+            </table>
+             <h2>Evolution</h2>
+             <td>Prev Evolution${cardPrevEvolutions ? cardPrevEvolutions.join('') : ''} </td>
+             <td> <img  src = "${pokemon.img}" id="img-card"></td>
+             <td> Next Evolution ${cardNextEvolution ? cardNextEvolution.join('') : ''}</td>
+
+            
+
+            </figure>
+            </nav>
+            <p class="close"> X </p>
+            </section>`
+
+      const modalClose = document.querySelector(".close");
       modalClose.addEventListener("click", () => {
         modalContainer.classList.toggle("hide");
       })
@@ -96,7 +143,6 @@ differentOrderButton.addEventListener("change", () => {
   const selection = differentOrderButton.value;
   const dataOrder = pokemonOrder.differentOrder(everyPokemonData, selection);
   cardPokemon(dataOrder);
-
 })
 
 const azOrderButton = document.getElementById("azOrder");
@@ -106,7 +152,6 @@ azOrderButton.addEventListener("change", () => {
   const selectionAz = azOrderButton.value;
   const azOrderData = pokemonOrder.differentOrder(everyPokemonData, selectionAz);
   cardPokemon(azOrderData);
-
 })
 
 //ordenar la data según el tipo seleccionado
@@ -117,7 +162,7 @@ function filterbyType() {
   const filterPokemon = document.getElementById("pokemonType").value;
 
   const typesShown = everyPokemonData.filter(pokemon =>
-  pokemon.type.includes(filterPokemon));
+    pokemon.type.includes(filterPokemon));
 
   dataContainer.innerHTML = "";
   cardPokemon(typesShown);
@@ -130,7 +175,7 @@ function searchbyName() {
   const searchPokemon = document.getElementById("searchName").value;
 
   const pokemonSearched = everyPokemonData.filter(pokemon =>
-  pokemon.name.includes(searchPokemon));
+    pokemon.name.includes(searchPokemon));
 
   dataContainer.innerHTML = "";
   cardPokemon(pokemonSearched);
@@ -143,73 +188,108 @@ let cardPokemonTop = (dataPokemon) => {
 
   dataPokemon.forEach(pokemon => {
 
-  count++;
+    count++;
 
-  if (count < 11 ) {
-    const container = document.createElement('figure');
+    if (count < 11) {
+      const container = document.createElement('figure');
 
-    container.className= "container-Card "  + pokemon.type[0];
+      container.className = "container-Card " + pokemon.type[0];
 
-    dataContainer.appendChild(container).innerHTML =
-     //  utilización de template strings (`)
-     ` <a class="modal-card " href="#modal">
-
+      dataContainer.appendChild(container).innerHTML =
+        //  utilización de template strings (`)
+        `
      <img  src = "${pokemon.img}" id="img-card">
        <figcaption class="legend">
+
         <p> N° ${pokemon.num}</p>
         <p>${pokemon.name}</p>
         <p> CP max: ${pokemon.stats["max-cp"]} </p>
         <p> HP max: ${pokemon.stats["max-hp"]} </p>
+
        </figcaption>
-       <nav>
-         </a>
-       </nav>
 
-       <section class="modal" id="modal">
-       <nav class="modal-content">
-        <a class="modal-hide" href="#">✕</a>
-       <figure>
-        <img  src = "${pokemon.img}">
-        <p> N° ${pokemon.num}</p>
-       <p>${pokemon.name}</p>
-       <p>${pokemon.about}</p>
-       <p> CP max: ${pokemon.stats["max-cp"]} </p>
-       <p> HP max: ${pokemon.stats["max-hp"]} </p>
+       <button class="modal-button x${pokemon.type[0]}" > More </button>
+       `
 
-       <p><b>Resistant: </b></p>
-         <p><img class="imgResistance" alt="" src="img/resistant-weaknesses/${pokemon.resistant[0]}.png">
-         <img class="imgResistance" alt="" src="img/resistant-weaknesses/${pokemon.resistant[1]}.png">
-         <img class="imgResistance" alt="" src="img/resistant-weaknesses/${pokemon.resistant[2]}.png">
-         <img class="imgResistance" alt="" src="img/resistant-weaknesses/${pokemon.resistant[3]}.png">
-         <img class="imgResistance" alt="" src="img/resistant-weaknesses/${pokemon.resistant[4]}.png'>
-         <img class="imgResistance" alt="" src="img/resistant-weaknesses/${pokemon.resistant[5]}.png">
-         <img class="imgResistance" alt="" src="img/resistant-weaknesses/${pokemon.resistant[6]}.png">
-         <img class="imgResistance" alt="" src='img/resistant-weaknesses/${pokemon.resistant[7]}.png'></p>
+      const modalContainer = document.querySelector(".show-modal");
+      const modalButton = container.querySelector("button");
+      modalButton.addEventListener("click", () => {
+        modalContainer.classList.toggle("hide");
+        modalContainer.innerHTML =
 
-       <p ><b>Weaknesses:</b></p>
-        <p id="imageContainer"><img class="imgResistance" alt="" src="img/resistant-weaknesses/${pokemon.weaknesses[0]}.png">
-        <img class="imgResistance" alt="" src="img/resistant-weaknesses/${pokemon.weaknesses[1]}.png">
-        <img class="imgResistance" alt="" src="img/resistant-weaknesses/${pokemon.weaknesses[2]}.png">
-        <img class="imgResistance" alt="" src="img/resistant-weaknesses/${pokemon.weaknesses[3]}.png">
-        <img class="imgResistance" alt="" src="img/resistant-weaknesses/${pokemon.weaknesses[4]}.png"></p>
+          ` <section class="modal m${pokemon.type[0]}" id="modal">
+            <nav class="modal-content">
 
-        </figure>
-       </nav>
-      </section>
-     `
-}});
+            <figure>
+            <img  src = "${pokemon.img}">
+            <p> N° ${pokemon.num}</p>
+            <p>${pokemon.name}</p>
+            <p>${pokemon.about}</p>
+            <p> CP max: ${pokemon.stats["max-cp"]} </p>
+            <p> HP max: ${pokemon.stats["max-hp"]} </p>
+
+            <p><b>Resistant: </b></p>
+              <p><img class="imgResistance" alt="" src="img/resistant-weaknesses/${pokemon.resistant[0]}.png">
+              <img class="imgResistance" alt="" src="img/resistant-weaknesses/${pokemon.resistant[1]}.png">
+              <img class="imgResistance" alt="" src="img/resistant-weaknesses/${pokemon.resistant[2]}.png">
+              <img class="imgResistance" alt="" src="img/resistant-weaknesses/${pokemon.resistant[3]}.png">
+              <img class="imgResistance" alt="" src="img/resistant-weaknesses/${pokemon.resistant[4]}.png'>
+              <img class="imgResistance" alt="" src="img/resistant-weaknesses/${pokemon.resistant[5]}.png">
+              <img class="imgResistance" alt="" src="img/resistant-weaknesses/${pokemon.resistant[6]}.png">
+              <img class="imgResistance" alt="" src='img/resistant-weaknesses/${pokemon.resistant[7]}.png'></p>
+
+            <p ><b>Weaknesses:</b></p>
+            <p id="imageContainer"><img class="imgResistance" alt="" src="img/resistant-weaknesses/${pokemon.weaknesses[0]}.png">
+            <img class="imgResistance" alt="" src="img/resistant-weaknesses/${pokemon.weaknesses[1]}.png">
+            <img class="imgResistance" alt="" src="img/resistant-weaknesses/${pokemon.weaknesses[2]}.png">
+            <img class="imgResistance" alt="" src="img/resistant-weaknesses/${pokemon.weaknesses[3]}.png">
+            <img class="imgResistance" alt="" src="img/resistant-weaknesses/${pokemon.weaknesses[4]}.png"></p>
+
+            
+            </figure>
+            </nav>
+            <button class="close"> close </button>
+            </section>`
+
+        const modalClose = document.querySelector(".close");
+        modalClose.addEventListener("click", () => {
+          modalContainer.classList.toggle("hide");
+        })
+
+
+
+      })
+
+    }
+  });
 
 };
 
-  const differentOrderSpawn = document.getElementById("spawnOrder");
-  differentOrderSpawn.addEventListener("change", () => {
-    dataContainer.innerHTML = "";
-    const spawnTopTen = differentOrderSpawn.value;
-    const spawnChance = pokemonOrder.differentOrder(everyPokemonData, spawnTopTen);
-    cardPokemonTop(spawnChance);
+const differentOrderSpawn = document.getElementById("spawnOrder");
+differentOrderSpawn.addEventListener("change", () => {
+  dataContainer.innerHTML = "";
+  const spawnTopTen = differentOrderSpawn.value;
+  const spawnChance = pokemonOrder.differentOrder(everyPokemonData, spawnTopTen);
+  cardPokemonTop(spawnChance);
 
 })
 
-
-
-
+//Evolution
+function getNextEvolution(elemento) {
+  let nextEvolution = elemento[0]['next-evolution'];
+  const evolutions = [];
+  if (nextEvolution) {
+    evolutions.push(...getNextEvolution(nextEvolution));
+  }
+  evolutions.push(elemento[0]);
+  return evolutions.reverse();
+}
+function getPrevEvolution(elemento) {
+  let prevEvolution = elemento[0]['prev-evolution'];
+  const evolutions = [];
+  if (prevEvolution) {
+    evolutions.push(...getNextEvolution(prevEvolution));
+  }
+  evolutions.push(elemento[0]);
+  return evolutions.reverse();
+}
