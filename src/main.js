@@ -2,6 +2,25 @@
 
 import datapoke from "./data/pokemon/pokemon.js";
 import { pokemonOrder } from "./data.js";
+import {
+  calculateStab,
+  calculateDps,
+  calculateEps,
+} from './data.js';
+
+const obtainNames = (attack) => {
+  const names = attack.map(name => name.name);
+  return names;
+};
+
+const showsAttacks = (arrayAtacks) => {
+  let stabEachPokemon = '';
+  arrayAtacks.forEach((nuevo) => {
+    stabEachPokemon += `<p class="comun-attack">${nuevo}</p>`;
+  });
+  return stabEachPokemon;
+};
+
 
 //refrescar HOME
 document.getElementById("refresh").addEventListener("click", ()=>{
@@ -40,10 +59,10 @@ let cardPokemon = (dataPokemon) => {
       modalContainer.classList.toggle("hide");
       modalContainer.innerHTML =
 
-        ` <section class="modal m${pokemon.type[0]}" id="modal">
-            <nav class="modal-content">
+      ` <section class="modal m${pokemon.type[0]}" id="modal">
+          <nav class="modal-content">
 
-            <figure>
+          <figure>
             <img  src = "${pokemon.img}">
             <p> N° ${pokemon.num}</p>
             <p>${pokemon.name}</p>
@@ -52,26 +71,44 @@ let cardPokemon = (dataPokemon) => {
             <p> HP max: ${pokemon.stats["max-hp"]} </p>
 
             <p><b>Resistant: </b></p>
-              <p><img class="imgResistance" alt="" src="img/resistant-weaknesses/${pokemon.resistant[0]}.png">
+            <p>
+              <img class="imgResistance" alt="" src="img/resistant-weaknesses/${pokemon.resistant[0]}.png">
               <img class="imgResistance" alt="" src="img/resistant-weaknesses/${pokemon.resistant[1]}.png">
               <img class="imgResistance" alt="" src="img/resistant-weaknesses/${pokemon.resistant[2]}.png">
               <img class="imgResistance" alt="" src="img/resistant-weaknesses/${pokemon.resistant[3]}.png">
               <img class="imgResistance" alt="" src="img/resistant-weaknesses/${pokemon.resistant[4]}.png'>
               <img class="imgResistance" alt="" src="img/resistant-weaknesses/${pokemon.resistant[5]}.png">
               <img class="imgResistance" alt="" src="img/resistant-weaknesses/${pokemon.resistant[6]}.png">
-              <img class="imgResistance" alt="" src='img/resistant-weaknesses/${pokemon.resistant[7]}.png'></p>
+              <img class="imgResistance" alt="" src='img/resistant-weaknesses/${pokemon.resistant[7]}.png'>
+            </p>
 
             <p ><b>Weaknesses:</b></p>
-            <p id="imageContainer"><img class="imgResistance" alt="" src="img/resistant-weaknesses/${pokemon.weaknesses[0]}.png">
-            <img class="imgResistance" alt="" src="img/resistant-weaknesses/${pokemon.weaknesses[1]}.png">
-            <img class="imgResistance" alt="" src="img/resistant-weaknesses/${pokemon.weaknesses[2]}.png">
-            <img class="imgResistance" alt="" src="img/resistant-weaknesses/${pokemon.weaknesses[3]}.png">
-            <img class="imgResistance" alt="" src="img/resistant-weaknesses/${pokemon.weaknesses[4]}.png"></p>
+            <p id="imageContainer">
+              <img class="imgResistance" alt="" src="img/resistant-weaknesses/${pokemon.weaknesses[0]}.png">
+              <img class="imgResistance" alt="" src="img/resistant-weaknesses/${pokemon.weaknesses[1]}.png">
+              <img class="imgResistance" alt="" src="img/resistant-weaknesses/${pokemon.weaknesses[2]}.png">
+              <img class="imgResistance" alt="" src="img/resistant-weaknesses/${pokemon.weaknesses[3]}.png">
+              <img class="imgResistance" alt="" src="img/resistant-weaknesses/${pokemon.weaknesses[4]}.png">
+            </p>
 
-            </figure>
-            </nav>
-            <button class="close"> close </button>
-            </section>`
+            <p class="bold comun title">Quick move</p>
+            <section class="comun bold quick-move">
+              <p class="encabezado">Name</p>
+              <p class="encabezado">STAB</p>
+              <p class="encabezado">DPS</p>
+              <p class="encabezado">EPS</p>
+            </section>
+            <section class="quick-move">
+              <section>${showsAttacks(obtainNames(pokemon['quick-move']))}</section>
+              <section>${showsAttacks(calculateStab(pokemon['quick-move'], pokemon.type))}</section>
+              <section>${showsAttacks(calculateDps(pokemon['quick-move'], pokemon.type))}</section>
+              <section>${showsAttacks(calculateEps(pokemon['quick-move']))}</section>
+            </section>
+
+          </figure>
+          </nav>
+          <button class="close"> close </button>
+        </section>`
 
         const modalClose = document.querySelector(".close");
         modalClose.addEventListener("click", () => {
@@ -170,10 +207,10 @@ let cardPokemonTop = (dataPokemon) => {
       modalContainer.classList.toggle("hide");
       modalContainer.innerHTML =
 
-        ` <section class="modal m${pokemon.type[0]}" id="modal">
-            <nav class="modal-content">
+      ` <section class="modal m${pokemon.type[0]}" id="modal">
+          <nav class="modal-content">
 
-            <figure>
+          <figure>
             <img  src = "${pokemon.img}">
             <p> N° ${pokemon.num}</p>
             <p>${pokemon.name}</p>
@@ -182,31 +219,51 @@ let cardPokemonTop = (dataPokemon) => {
             <p> HP max: ${pokemon.stats["max-hp"]} </p>
 
             <p><b>Resistant: </b></p>
-              <p><img class="imgResistance" alt="" src="img/resistant-weaknesses/${pokemon.resistant[0]}.png">
+            <p>
+              <img class="imgResistance" alt="" src="img/resistant-weaknesses/${pokemon.resistant[0]}.png">
               <img class="imgResistance" alt="" src="img/resistant-weaknesses/${pokemon.resistant[1]}.png">
               <img class="imgResistance" alt="" src="img/resistant-weaknesses/${pokemon.resistant[2]}.png">
               <img class="imgResistance" alt="" src="img/resistant-weaknesses/${pokemon.resistant[3]}.png">
               <img class="imgResistance" alt="" src="img/resistant-weaknesses/${pokemon.resistant[4]}.png'>
               <img class="imgResistance" alt="" src="img/resistant-weaknesses/${pokemon.resistant[5]}.png">
               <img class="imgResistance" alt="" src="img/resistant-weaknesses/${pokemon.resistant[6]}.png">
-              <img class="imgResistance" alt="" src='img/resistant-weaknesses/${pokemon.resistant[7]}.png'></p>
+              <img class="imgResistance" alt="" src='img/resistant-weaknesses/${pokemon.resistant[7]}.png'>
+            </p>
 
             <p ><b>Weaknesses:</b></p>
-            <p id="imageContainer"><img class="imgResistance" alt="" src="img/resistant-weaknesses/${pokemon.weaknesses[0]}.png">
-            <img class="imgResistance" alt="" src="img/resistant-weaknesses/${pokemon.weaknesses[1]}.png">
-            <img class="imgResistance" alt="" src="img/resistant-weaknesses/${pokemon.weaknesses[2]}.png">
-            <img class="imgResistance" alt="" src="img/resistant-weaknesses/${pokemon.weaknesses[3]}.png">
-            <img class="imgResistance" alt="" src="img/resistant-weaknesses/${pokemon.weaknesses[4]}.png"></p>
+            <p id="imageContainer">
+              <img class="imgResistance" alt="" src="img/resistant-weaknesses/${pokemon.weaknesses[0]}.png">
+              <img class="imgResistance" alt="" src="img/resistant-weaknesses/${pokemon.weaknesses[1]}.png">
+              <img class="imgResistance" alt="" src="img/resistant-weaknesses/${pokemon.weaknesses[2]}.png">
+              <img class="imgResistance" alt="" src="img/resistant-weaknesses/${pokemon.weaknesses[3]}.png">
+              <img class="imgResistance" alt="" src="img/resistant-weaknesses/${pokemon.weaknesses[4]}.png">
+            </p>
 
-            </figure>
-            </nav>
-            <button class="close"> close </button>
-            </section>`
+            <p class="bold comun title">Quick move</p>
+            <section class="comun bold quick-move">
+              <p class="encabezado">Name</p>
+              <p class="encabezado">STAB</p>
+              <p class="encabezado">DPS</p>
+              <p class="encabezado">EPS</p>
+            </section>
+            <section class="quick-move">
+              <section>${showsAttacks(obtainNames(pokemon['quick-move']))}</section>
+              <section>${showsAttacks(calculateStab(pokemon['quick-move'], pokemon.type))}</section>
+              <section>${showsAttacks(calculateDps(pokemon['quick-move'], pokemon.type))}</section>
+              <section>${showsAttacks(calculateEps(pokemon['quick-move']))}</section>
+            </section>
+
+          </figure>
+          </nav>
+          <button class="close"> close </button>
+        </section>`
 
         const modalClose = document.querySelector(".close");
         modalClose.addEventListener("click", () => {
           modalContainer.classList.toggle("hide");
         })
+
+
 
     })
 
