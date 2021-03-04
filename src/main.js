@@ -1,5 +1,24 @@
 import datapoke from "./data/pokemon/pokemon.js";
 import { pokemonOrder } from "./data.js";
+import {
+  calculateStab,
+  calculateDps,
+  calculateEps,
+} from './data.js';
+
+const obtainNames = (attack) => {
+  const names = attack.map(name => name.name);
+  return names;
+};
+
+const showsAttacks = (arrayAtacks) => {
+  let stabEachPokemon = '';
+  arrayAtacks.forEach((nuevo) => {
+    stabEachPokemon += `<p class="comun-attack">${nuevo}</p>`;
+  });
+  return stabEachPokemon;
+};
+
 
 document.getElementById("refresh").addEventListener("click", () => {
   location.reload();
@@ -15,9 +34,11 @@ let cardPokemon = (dataPokemon) => {
     const container = document.createElement('figure');
     container.className = "container-Card " + pokemon.type[0];
     dataContainer.appendChild(container).innerHTML =
+
       //  utilización de template strings (`)
       `<section class="modal-button"> 
        <img  src = "${pokemon.img}" id="img-card">
+
        <figcaption class="legend">
         <p> N° ${pokemon.num}</p>
         <p>${pokemon.name}</p>
@@ -27,18 +48,14 @@ let cardPokemon = (dataPokemon) => {
         </section>`
 
     const modalContainer = document.querySelector(".show-modal");
-
     const modalButton = container.querySelector("section");
 
     let cardNextEvolution;
     let cardPrevEvolutions;
     const NotEvolution = '<p> Whithout evolution</p>';
-
     if (pokemon.evolution) {
-
       if (pokemon.evolution["next-evolution"]) {
         let nextEvolutions = getNextEvolution(pokemon.evolution["next-evolution"]);
-
         cardNextEvolution = nextEvolutions.map(elemento => {
           return `<div>
         <img  class="image-pokemon" src="https://www.serebii.net/pokemongo/pokemon/${elemento.num}.png">
@@ -54,18 +71,16 @@ let cardPokemon = (dataPokemon) => {
             <img class="image-pokemon"src="https://www.serebii.net/pokemongo/pokemon/${elemento.num}.png">
             <h2 class="subtitle">${elemento.name}</h2>
           <p> Candy Cost ${elemento['candy-cost']} </p></div>`
-
         })
       }
 
     }
 
     modalButton.addEventListener("click", () => {
-
       //modal
       modalContainer.classList.toggle("hide");
       modalContainer.innerHTML =
-
+        
         ` <section class="modal m${pokemon.type[0]}" id="modal">
             <nav class="modal-content">
 
@@ -78,21 +93,41 @@ let cardPokemon = (dataPokemon) => {
             <p> HP max: ${pokemon.stats["max-hp"]} </p>
 
             <p><b>Resistant: </b></p>
+
               <p><img class="imgResistance" alt="" src="img/resistant-weaknesses/${pokemon.resistant[0]}.png">
+
               <img class="imgResistance" alt="" src="img/resistant-weaknesses/${pokemon.resistant[1]}.png">
               <img class="imgResistance" alt="" src="img/resistant-weaknesses/${pokemon.resistant[2]}.png">
               <img class="imgResistance" alt="" src="img/resistant-weaknesses/${pokemon.resistant[3]}.png">
               <img class="imgResistance" alt="" src="img/resistant-weaknesses/${pokemon.resistant[4]}.png'>
               <img class="imgResistance" alt="" src="img/resistant-weaknesses/${pokemon.resistant[5]}.png">
               <img class="imgResistance" alt="" src="img/resistant-weaknesses/${pokemon.resistant[6]}.png">
-              <img class="imgResistance" alt="" src='img/resistant-weaknesses/${pokemon.resistant[7]}.png'></p>
+
+           <img class="imgResistance" alt="" src='img/resistant-weaknesses/${pokemon.resistant[7]}.png'>
+            </p>
 
             <p ><b>Weaknesses:</b></p>
-            <p id="imageContainer"><img class="imgResistance" alt="" src="img/resistant-weaknesses/${pokemon.weaknesses[0]}.png">
-            <img class="imgResistance" alt="" src="img/resistant-weaknesses/${pokemon.weaknesses[1]}.png">
-            <img class="imgResistance" alt="" src="img/resistant-weaknesses/${pokemon.weaknesses[2]}.png">
-            <img class="imgResistance" alt="" src="img/resistant-weaknesses/${pokemon.weaknesses[3]}.png">
-            <img class="imgResistance" alt="" src="img/resistant-weaknesses/${pokemon.weaknesses[4]}.png"></p>
+            <p id="imageContainer">
+              <img class="imgResistance" alt="" src="img/resistant-weaknesses/${pokemon.weaknesses[0]}.png">
+              <img class="imgResistance" alt="" src="img/resistant-weaknesses/${pokemon.weaknesses[1]}.png">
+              <img class="imgResistance" alt="" src="img/resistant-weaknesses/${pokemon.weaknesses[2]}.png">
+              <img class="imgResistance" alt="" src="img/resistant-weaknesses/${pokemon.weaknesses[3]}.png">
+              <img class="imgResistance" alt="" src="img/resistant-weaknesses/${pokemon.weaknesses[4]}.png">
+            </p>
+
+            <p class="bold comun title">Quick move</p>
+            <section class="comun bold quick-move">
+              <p class="encabezado">Name</p>
+              <p class="encabezado">STAB</p>
+              <p class="encabezado">DPS</p>
+              <p class="encabezado">EPS</p>
+            </section>
+            <section class="quick-move">
+              <section>${showsAttacks(obtainNames(pokemon['quick-move']))}</section>
+              <section>${showsAttacks(calculateStab(pokemon['quick-move'], pokemon.type))}</section>
+              <section>${showsAttacks(calculateDps(pokemon['quick-move'], pokemon.type))}</section>
+              <section>${showsAttacks(calculateEps(pokemon['quick-move']))}</section>
+            </section>
 
              <h2>Evolution</h2>
              <td>${cardPrevEvolutions ? cardPrevEvolutions.join('') : ''} </td>
@@ -109,6 +144,7 @@ let cardPokemon = (dataPokemon) => {
       modalClose.addEventListener("click", () => {
         modalContainer.classList.toggle("hide");
       })
+
 
     })
 
@@ -176,13 +212,13 @@ let cardPokemonTop = (dataPokemon) => {
     if (count < 11) {
       const container = document.createElement('figure');
 
+
       container.className = "container-Card " + pokemon.type[0];
 
       dataContainer.appendChild(container).innerHTML =
         //  utilización de template strings (`)
-        `
-     <img  src = "${pokemon.img}" id="img-card">
-       <figcaption class="legend">
+        `<img  src = "${pokemon.img}" id="img-card">
+         <figcaption class="legend">
 
         <p> N° ${pokemon.num}</p>
         <p>${pokemon.name}</p>
@@ -190,6 +226,82 @@ let cardPokemonTop = (dataPokemon) => {
         <p> HP max: ${pokemon.stats["max-hp"]} </p>
 
        </figcaption>
+
+       <button class="modal-button x${pokemon.type[0]}" > More </button>
+       `
+    const modalContainer = document.querySelector(".show-modal");
+    const modalButton = container.querySelector("button");
+    modalButton.addEventListener("click", () => {
+      modalContainer.classList.toggle("hide");
+      modalContainer.innerHTML =
+
+      ` <section class="modal m${pokemon.type[0]}" id="modal">
+          <nav class="modal-content">
+
+          <figure>
+            <img  src = "${pokemon.img}">
+            <p> N° ${pokemon.num}</p>
+            <p>${pokemon.name}</p>
+            <p>${pokemon.about}</p>
+            <p> CP max: ${pokemon.stats["max-cp"]} </p>
+            <p> HP max: ${pokemon.stats["max-hp"]} </p>
+
+            <p><b>Resistant: </b></p>
+            <p>
+              <img class="imgResistance" alt="" src="img/resistant-weaknesses/${pokemon.resistant[0]}.png">
+              <img class="imgResistance" alt="" src="img/resistant-weaknesses/${pokemon.resistant[1]}.png">
+              <img class="imgResistance" alt="" src="img/resistant-weaknesses/${pokemon.resistant[2]}.png">
+              <img class="imgResistance" alt="" src="img/resistant-weaknesses/${pokemon.resistant[3]}.png">
+              <img class="imgResistance" alt="" src="img/resistant-weaknesses/${pokemon.resistant[4]}.png'>
+              <img class="imgResistance" alt="" src="img/resistant-weaknesses/${pokemon.resistant[5]}.png">
+              <img class="imgResistance" alt="" src="img/resistant-weaknesses/${pokemon.resistant[6]}.png">
+              <img class="imgResistance" alt="" src='img/resistant-weaknesses/${pokemon.resistant[7]}.png'>
+            </p>
+
+            <p ><b>Weaknesses:</b></p>
+            <p id="imageContainer">
+              <img class="imgResistance" alt="" src="img/resistant-weaknesses/${pokemon.weaknesses[0]}.png">
+              <img class="imgResistance" alt="" src="img/resistant-weaknesses/${pokemon.weaknesses[1]}.png">
+              <img class="imgResistance" alt="" src="img/resistant-weaknesses/${pokemon.weaknesses[2]}.png">
+              <img class="imgResistance" alt="" src="img/resistant-weaknesses/${pokemon.weaknesses[3]}.png">
+              <img class="imgResistance" alt="" src="img/resistant-weaknesses/${pokemon.weaknesses[4]}.png">
+            </p>
+
+            <p class="bold comun title">Quick move</p>
+            <section class="comun bold quick-move">
+              <p class="encabezado">Name</p>
+              <p class="encabezado">STAB</p>
+              <p class="encabezado">DPS</p>
+              <p class="encabezado">EPS</p>
+            </section>
+            <section class="quick-move">
+              <section>${showsAttacks(obtainNames(pokemon['quick-move']))}</section>
+              <section>${showsAttacks(calculateStab(pokemon['quick-move'], pokemon.type))}</section>
+              <section>${showsAttacks(calculateDps(pokemon['quick-move'], pokemon.type))}</section>
+              <section>${showsAttacks(calculateEps(pokemon['quick-move']))}</section>
+            </section>
+
+             <h2>Evolution</h2>
+             <td>${cardPrevEvolutions ? cardPrevEvolutions.join('') : ''} </td>
+             
+             <td>  ${cardNextEvolution ? cardNextEvolution.join('') : ''}</td>
+             <td> ${cardNextEvolution === undefined && cardPrevEvolutions === undefined ? NotEvolution : ''}</td> 
+
+          </figure>
+          </nav>
+          <button class="close"> close </button>
+        </section>`
+
+        const modalClose = document.querySelector(".close");
+        modalClose.addEventListener("click", () => {
+          modalContainer.classList.toggle("hide");
+        })
+
+
+
+    })
+
+}});
 
        <button class="modal-button x${pokemon.type[0]}" > More </button>  `
 

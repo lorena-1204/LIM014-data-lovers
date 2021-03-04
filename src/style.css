@@ -119,12 +119,9 @@ header>section>span>input {
   text-transform: capitalize;
 }
 
-
 /*modal*/
-
-
 .modal {
- display: flex;
+  display: flex;
   position: fixed;
   top: 0;
   left: 0;
@@ -135,8 +132,8 @@ header>section>span>input {
   background-color: rgba(0, 0, 0, 0.7);
   opacity: 0;
   /* padding: 180px; */
- 
   animation: modal-show 0.5s 1 forwards;
+
 }
 
 .modal-content {
@@ -175,6 +172,7 @@ header>section>span>input {
   background: #ffd903;
 } */
 /*pie de página*/
+
 footer{
     background: black;
     height: 60px;

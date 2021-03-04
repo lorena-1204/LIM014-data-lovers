@@ -16,7 +16,7 @@
     border: solid 10px #67b8ff;
     border-radius: 10px;
   }
-  
+
   .ice{
     border: solid 10px #87f0dd;
     border-radius: 10px;
@@ -45,7 +45,7 @@
     border: solid 10px #fc9ff4;
     border-radius: 10px;
   }
-  
+
   .normal{
     border: solid 10px #c9cac8;
     border-radius: 10px;
@@ -71,7 +71,9 @@
     border-radius: 10px;
   }
   .fire{
-    border: solid 10px  #fd0000;
+
+    border: solid 10px #fd0000;
+
     border-radius: 10px;
   }
   .electric{
@@ -95,6 +97,7 @@
     border: solid 10px #67b8ff;
     border-radius: 10px;
   }
+
   
   .xice{
     border: solid 10px #87f0dd;
@@ -124,7 +127,7 @@
     border: solid 10px #fc9ff4;
     border-radius: 10px;
   }
-  
+
   .normal{
     border: solid 10px #c9cac8;
     border-radius: 10px;
@@ -156,4 +159,14 @@
   .electric{
     border: solid 10px #ffd903;
     border-radius: 10px;
+  }
+  
+
+  .quick-move {
+    display: grid;
+    grid-template-columns: 40% repeat(3, 1fr);
+  }
+
+  .quick-move div {
+    text-align: center;
   }
