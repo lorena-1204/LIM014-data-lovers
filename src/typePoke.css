@@ -1,9 +1,13 @@
+.imgResistance{
+  width: 30px;
+}
+
 /*clases y colores de border Card*/
 .grass{
     border:  solid 10px #54ff48;
     border-radius: 10px;
-
   }
+
   .bug{
     border: solid 10px #c6ff4c;
     border-radius: 10px;
@@ -67,7 +71,9 @@
     border-radius: 10px;
   }
   .fire{
+
     border: solid 10px #fd0000;
+
     border-radius: 10px;
   }
   .electric{
@@ -77,39 +83,35 @@
 
 
   /*clases y colores de boton More */
-
   .xgrass{
-    border: solid 10px #54ff48;
     background: #54ff48;
-    width: 70px;
-    height: 40px;
-    margin-right: -10;
-    margin-top: 10px;
-
   }
+  
+    
 
-  .bug{
+  .xbug{
     border: solid 10px #c6ff4c;
     border-radius: 10px;
   }
-  .water{
+  .xwater{
     border: solid 10px #67b8ff;
     border-radius: 10px;
   }
 
-  .ice{
+  
+  .xice{
     border: solid 10px #87f0dd;
     border-radius: 10px;
   }
-  .flying{
+  .xflying{
     border: solid 10px #abc7ff;
     border-radius: 10px;
   }
-  .dragon{
+  .xdragon{
     border: solid 10px #188bff;
     border-radius: 10px;
   }
-  .steel{
+  .xsteel{
     border: solid 10px #89e2f8;
     border-radius: 10px;
   }
