@@ -1,3 +1,41 @@
+@media screen and (max-width:640px){
+ header>h1 {
+  padding-top: 25px;
+  padding-left: 80px;
+  font-size: 22px;
+  background-size: 60px;
+  background-position: 10px 10px;
+ }
+  .button {
+  width: 110px;
+  height: 25px;
+  border-radius: 8px;
+  margin-top: 10px;
+  margin-right: 2px;
+  font-size: 12px;
+}
+header>section>span>input {
+  width: 150px;
+  height: 28px;
+  border-radius: 8px;
+  background-size: 15%;
+  margin-top: 8px;
+  font-size: 12px;
+}
+.all-button{
+  padding-left: 12px;
+}
+.container-shining {
+  padding-top: 32vh;
+}
+
+}
+
+@keyframes modal-show {
+	0% { opacity: 0; }
+	100% { opacity: 1; }
+}
+
 .imgResistance{
   width: 30px;
 }
@@ -162,11 +200,4 @@
   }
   
 
-  .quick-move {
-    display: grid;
-    grid-template-columns: 40% repeat(3, 1fr);
-  }
-
-  .quick-move div {
-    text-align: center;
-  }
+ 
