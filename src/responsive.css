@@ -46,16 +46,16 @@ header>section>span>input {
     border-radius: 10px;
   }
 
-  .bug{
+.bug{
     border: solid 10px #c6ff4c;
     border-radius: 10px;
   }
-  .water{
+.water{
     border: solid 10px #67b8ff;
     border-radius: 10px;
   }
 
-  .ice{
+.ice{
     border: solid 10px #87f0dd;
     border-radius: 10px;
   }
@@ -121,81 +121,149 @@ header>section>span>input {
 
 
   /*clases y colores de boton More */
+   /*border modal */
+   .ygrass{
+    /* border:  solid 2px #54ff48; */
+    box-shadow:0 0 10px #54ff48; 
+    border-radius: 30px;
+  }
+  
+  /*contenedor de pokemones now */
+  .agrass{
+    border:  solid 4px #54ff48;
+  }
+  .abug{
+    border: solid 4px #c6ff4c;
+  }
+  .awater{
+    border: solid 4px #67b8ff;
+  }
+
+  .aice{
+    border: solid 4px #87f0dd;
+  }
+  .aflying{
+    border: solid 4px #abc7ff;
+  }
+  .adragon{
+    border: solid 4px #188bff;
+  }
+  .asteel{
+    border: solid 4px #89e2f8;
+  }
+  .aghost{
+    border: solid 4px #8590ff;
+  }
+  .apoison{
+    border: solid 4px #df7efd;
+  }
+  .afairy{
+    border: solid 4px #fc9ff4;
+  }
+
+  .anormal{
+    border: solid 4px #c9cac8;
+  }
+  .afighting{
+    border: solid 4px #fd5579;
+  }
+  .apsychic{
+    border: solid 4px #fb8383;
+  }
+  .arock{
+    border: solid 4px #ffde7d;
+  }
+  .adark{
+    border: solid 4px #ab69f7;
+  }
+  .aground{
+    border: solid 4px #ff9060;
+  }
+  .afire{
+    border: solid 4px #fd0000;
+  }
+  .aelectric{
+    border: solid 4px #ffd903;
+  }
+
+
+  /*contenedor de evoluciones */
   .xgrass{
-    background: #54ff48;
+    border: solid 5px #54ff48;
+    border-radius: 10px;
   }
   
     
 
   .xbug{
-    border: solid 10px #c6ff4c;
+    border: solid 5px #c6ff4c;
     border-radius: 10px;
   }
   .xwater{
-    border: solid 10px #67b8ff;
+    border: solid 5px #67b8ff;
     border-radius: 10px;
   }
 
   
   .xice{
-    border: solid 10px #87f0dd;
+    border: solid 5px #87f0dd;
     border-radius: 10px;
   }
   .xflying{
-    border: solid 10px #abc7ff;
+    border: solid 5px #abc7ff;
     border-radius: 10px;
   }
   .xdragon{
-    border: solid 10px #188bff;
+    border: solid 5px #188bff;
     border-radius: 10px;
   }
   .xsteel{
-    border: solid 10px #89e2f8;
+    border: solid 5px #89e2f8;
     border-radius: 10px;
   }
-  .ghost{
-    border: solid 10px #8590ff;
+  .xghost{
+    border: solid 5px #8590ff;
     border-radius: 10px;
   }
-  .poison{
-    border: solid 10px #df7efd;
+  .xpoison{
+    border: solid 5px #df7efd;
     border-radius: 10px;
   }
-  .fairy{
-    border: solid 10px #fc9ff4;
+  .xfairy{
+    border: solid 5px #fc9ff4;
     border-radius: 10px;
   }
 
-  .normal{
-    border: solid 10px #c9cac8;
+  .xnormal{
+    border: solid 5px #c9cac8;
     border-radius: 10px;
   }
-  .fighting{
+  .xfighting{
     border: solid 10px #fd5579;
     border-radius: 10px;
   }
-  .psychic{
-    border: solid 10px #fb8383;
+  .xpsychic{
+    border: solid 5px #fb8383;
     border-radius: 10px;
   }
-  .rock{
-    border: solid 10px #ffde7d;
+  .xrock{
+    border: solid 5px #ffde7d;
     border-radius: 10px;
   }
-  .dark{
-    border: solid 10px #ab69f7;
+  .xdark{
+    border: solid 5px #ab69f7;
     border-radius: 10px;
   }
-  .ground{
-    border: solid 10px #ff9060;
+  .xground{
+    border: solid 5px #ff9060;
     border-radius: 10px;
   }
-  .fire{
-    border: solid 10px #fd0000;
+  .xfire{
+    border: solid 5px #fd0000;
     border-radius: 10px;
   }
-  .electric{
-    border: solid 10px #ffd903;
+  .xelectric{
+    border: solid 5px #ffd903;
     border-radius: 10px;
   }
   
