@@ -36,6 +36,7 @@ let cardPokemon = (dataPokemon) => {
     dataContainer.appendChild(container).innerHTML =
 
       //  utilización de template strings (`)
+
       `<section class="modal-button"> 
        <img  src = "${pokemon.img}" id="img-card" >
 
@@ -52,7 +53,7 @@ let cardPokemon = (dataPokemon) => {
 
     let cardNextEvolution;
     let cardPrevEvolutions;
-    const NotEvolution = '<p> Whithout evolution</p>';
+    const NotEvolution = '<p> Without evolution</p>';
     if (pokemon.evolution) {
       if (pokemon.evolution["next-evolution"]) {
         let nextEvolutions = getNextEvolution(pokemon.evolution["next-evolution"]);
@@ -64,6 +65,7 @@ let cardPokemon = (dataPokemon) => {
         })
       }
 
+      
       if (pokemon.evolution["prev-evolution"]) {
         let prevEvolutions = getPrevEvolution(pokemon.evolution["prev-evolution"]);
         cardPrevEvolutions = prevEvolutions.map(elemento => {
@@ -80,6 +82,7 @@ let cardPokemon = (dataPokemon) => {
       //modal
       modalContainer.classList.toggle("hide");
       modalContainer.innerHTML =
+
         
         ` <section class="modal " id="modal">
             <article class="modal-content y${pokemon.type[0]}">
@@ -111,6 +114,7 @@ let cardPokemon = (dataPokemon) => {
               <img id="imgResistance" alt="" src="img/resistant-weaknesses/${pokemon.resistant[5]}.png">
               <img id="imgResistance" alt="" src="img/resistant-weaknesses/${pokemon.resistant[6]}.png">
               <img id="imgResistance" alt="" src='img/resistant-weaknesses/${pokemon.resistant[7]}.png'>
+
             </p>
             </article>
            
@@ -152,6 +156,7 @@ let cardPokemon = (dataPokemon) => {
             <p id="Evol-img1"> ${cardNextEvolution ? cardNextEvolution.join('') : ''}</p>
             </article>
             </section>
+
 
             <p class="close"> X </p>
             </figure>
@@ -247,7 +252,7 @@ let cardPokemonTop = (dataPokemon) => {
 
       let cardNextEvolution;
       let cardPrevEvolutions;
-      const NotEvolution = '<p> Whithout evolution</p>';
+      const NotEvolution = '<p> Without evolution</p>';
       if (pokemon.evolution) {
         if (pokemon.evolution["next-evolution"]) {
           let nextEvolutions = getNextEvolution(pokemon.evolution["next-evolution"]);
@@ -354,18 +359,14 @@ let cardPokemonTop = (dataPokemon) => {
          
             </section>`
 
+
         const modalClose = document.querySelector(".close");
         modalClose.addEventListener("click", () => {
           modalContainer.classList.toggle("hide");
         })
-
-
-
     })
-
 }
 });
-};
 
 const differentOrderSpawn = document.getElementById("spawnOrder");
 differentOrderSpawn.addEventListener("change", () => {
