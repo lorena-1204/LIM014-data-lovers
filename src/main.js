@@ -36,23 +36,24 @@ let cardPokemon = (dataPokemon) => {
     dataContainer.appendChild(container).innerHTML =
 
       //  utilización de template strings (`)
-      `<section class="modal-button">
-       <img  src = "${pokemon.img}" id="img-card">
+
+      `<section class="modal-button"> 
+       <img  src = "${pokemon.img}" id="img-card" >
 
        <figcaption class="legend">
-        <p> N° ${pokemon.num}</p>
-        <p>${pokemon.name}</p>
+        <p class="num1"> N° ${pokemon.num}</p>
+        <p class="name1">${pokemon.name}</p>
         <p> CP max: ${pokemon.stats["max-cp"]} </p>
         <p> HP max: ${pokemon.stats["max-hp"]} </p>
        </figcaption>
-        </section>`
+      </section>`
 
     const modalContainer = document.querySelector(".show-modal");
     const modalButton = container.querySelector("section");
 
     let cardNextEvolution;
     let cardPrevEvolutions;
-    const NotEvolution = '<p> Whithout evolution</p>';
+    const NotEvolution = '<p> Without evolution</p>';
     if (pokemon.evolution) {
       if (pokemon.evolution["next-evolution"]) {
         let nextEvolutions = getNextEvolution(pokemon.evolution["next-evolution"]);
@@ -82,75 +83,93 @@ let cardPokemon = (dataPokemon) => {
       modalContainer.classList.toggle("hide");
       modalContainer.innerHTML =
 
-        ` <section class="modal m${pokemon.type[0]}" id="modal">
-            <nav class="modal-content">
+        
+        ` <section class="modal " id="modal">
+            <article class="modal-content y${pokemon.type[0]}">
 
-            <figure>
-            <img  src = "${pokemon.img}">
-            <p> N° ${pokemon.num}</p>
-            <p>${pokemon.name}</p>
-            <p>${pokemon.about}</p>
-            <p> CP max: ${pokemon.stats["max-cp"]} </p>
-            <p> HP max: ${pokemon.stats["max-hp"]} </p>
+            <figure class="temple ">
+            <h2 class="num2"> N° ${pokemon.num}</h2> 
+            <article class ="pokeImg a${pokemon.type[0]}"> 
+            <img  src = "${pokemon.img}" class="img"> 
+            </article>
 
-            <p><b>Resistant: </b></p>
+            <h2 class="type"> ${pokemon.type}</h2>
 
-              <p><img class="imgResistance" alt="" src="img/resistant-weaknesses/${pokemon.resistant[0]}.png">
+            <article class=temple-info>
+            <h1 class="name2" >${pokemon.name}</h1> <br>
+            <p> CP max: ${pokemon.stats["max-cp"]} </p> 
+            <p> HP max: ${pokemon.stats["max-hp"]} </p><br>
+            <p>${pokemon.about}</p> <br>
+            </article>
 
-              <img class="imgResistance" alt="" src="img/resistant-weaknesses/${pokemon.resistant[1]}.png">
-              <img class="imgResistance" alt="" src="img/resistant-weaknesses/${pokemon.resistant[2]}.png">
-              <img class="imgResistance" alt="" src="img/resistant-weaknesses/${pokemon.resistant[3]}.png">
-              <img class="imgResistance" alt="" src="img/resistant-weaknesses/${pokemon.resistant[4]}.png'>
-              <img class="imgResistance" alt="" src="img/resistant-weaknesses/${pokemon.resistant[5]}.png">
-              <img class="imgResistance" alt="" src="img/resistant-weaknesses/${pokemon.resistant[6]}.png">
+            <section class="temple-Resistant-Weaknesses ">
 
-           <img class="imgResistance" alt="" src='img/resistant-weaknesses/${pokemon.resistant[7]}.png'>
+            <article class= "temple-iconsResistan">
+            <p>Resistant: </p> <br>
+              <p><img id="imgResistance" alt="" src="img/resistant-weaknesses/${pokemon.resistant[0]}.png">
+              <img id="imgResistance" alt="" src="img/resistant-weaknesses/${pokemon.resistant[1]}.png">
+              <img id="imgResistance" alt="" src="img/resistant-weaknesses/${pokemon.resistant[2]}.png">
+              <img id="imgResistance" alt="" src="img/resistant-weaknesses/${pokemon.resistant[3]}.png">
+              <img id="imgResistance" alt="" src="img/resistant-weaknesses/${pokemon.resistant[4]}.png'>
+              <img id="imgResistance" alt="" src="img/resistant-weaknesses/${pokemon.resistant[5]}.png">
+              <img id="imgResistance" alt="" src="img/resistant-weaknesses/${pokemon.resistant[6]}.png">
+              <img id="imgResistance" alt="" src='img/resistant-weaknesses/${pokemon.resistant[7]}.png'>
+
             </p>
-
-            <p ><b>Weaknesses:</b></p>
+            </article>
+           
+            <article class="temple-iconsWeaknesses">
+            <p ><b>Weaknesses:</b></p><br>
             <p id="imageContainer">
-              <img class="imgResistance" alt="" src="img/resistant-weaknesses/${pokemon.weaknesses[0]}.png">
-              <img class="imgResistance" alt="" src="img/resistant-weaknesses/${pokemon.weaknesses[1]}.png">
-              <img class="imgResistance" alt="" src="img/resistant-weaknesses/${pokemon.weaknesses[2]}.png">
-              <img class="imgResistance" alt="" src="img/resistant-weaknesses/${pokemon.weaknesses[3]}.png">
-              <img class="imgResistance" alt="" src="img/resistant-weaknesses/${pokemon.weaknesses[4]}.png">
+              <img id="imgResistance" alt="" src="img/resistant-weaknesses/${pokemon.weaknesses[0]}.png">
+              <img id="imgResistance" alt="" src="img/resistant-weaknesses/${pokemon.weaknesses[1]}.png">
+              <img id="imgResistance" alt="" src="img/resistant-weaknesses/${pokemon.weaknesses[2]}.png">
+              <img id="imgResistance" alt="" src="img/resistant-weaknesses/${pokemon.weaknesses[3]}.png">
+              <img id="imgResistance" alt="" src="img/resistant-weaknesses/${pokemon.weaknesses[4]}.png">
             </p>
+            </article>
+            </section>
 
-            <p class="bold comun title">Quick move</p>
-            <section class="comun bold quick-move">
+            <section class="aggregate-calculation">
+            <p class="encabezado">Quick move :</p> 
+            <article class="comun bold quick-move">
               <p class="encabezado">Name</p>
               <p class="encabezado">STAB</p>
               <p class="encabezado">DPS</p>
               <p class="encabezado">EPS</p>
-            </section>
-            <section class="quick-move">
+            </article>
+
+            <article class="quick-move">
               <section>${showsAttacks(obtainNames(pokemon['quick-move']))}</section>
               <section>${showsAttacks(calculateStab(pokemon['quick-move'], pokemon.type))}</section>
               <section>${showsAttacks(calculateDps(pokemon['quick-move'], pokemon.type))}</section>
               <section>${showsAttacks(calculateEps(pokemon['quick-move']))}</section>
+            </article>
             </section>
 
-             <h2>Evolution</h2>
-             <td>${cardPrevEvolutions ? cardPrevEvolutions.join('') : ''} </td>
+            <h2 id="title-Evol"> Evolution: </h2><br>
+            <section class="evolutiontable x${pokemon.type[0]}">
+            
+            <article class="itemEvol">
+            <p id="Evol-img">${cardPrevEvolutions ? cardPrevEvolutions.join('') : ''} </p>
+            <p>  <img  src = "${pokemon.img}"> ${cardNextEvolution === undefined && cardPrevEvolutions === undefined ? NotEvolution : ''}</p>
+            <p id="Evol-img1"> ${cardNextEvolution ? cardNextEvolution.join('') : ''}</p>
+            </article>
+            </section>
 
-             <td>  ${cardNextEvolution ? cardNextEvolution.join('') : ''}</td>
-             <td> ${cardNextEvolution === undefined && cardPrevEvolutions === undefined ? NotEvolution : ''}</td>
 
+            <p class="close"> X </p>
             </figure>
             </nav>
-            <p class="close"> X </p>
+         
             </section>`
 
       const modalClose = document.querySelector(".close");
       modalClose.addEventListener("click", () => {
         modalContainer.classList.toggle("hide");
       })
-
-
     })
-
   })
-
 };
 
 cardPokemon(everyPokemonData);
@@ -213,98 +232,141 @@ let cardPokemonTop = (dataPokemon) => {
     if (count < 11) {
       const container = document.createElement('figure');
 
-
       container.className = "container-Card " + pokemon.type[0];
 
       dataContainer.appendChild(container).innerHTML =
         //  utilización de template strings (`)
-        `<img  src = "${pokemon.img}" id="img-card">
-         <figcaption class="legend">
+        `<section class="modal-button"> 
+       <img  src = "${pokemon.img}" id="img-card" >
 
-        <p> N° ${pokemon.num}</p>
-        <p>${pokemon.name}</p>
+       <figcaption class="legend">
+        <p class="num1"> N° ${pokemon.num}</p>
+        <p class="name1">${pokemon.name}</p>
         <p> CP max: ${pokemon.stats["max-cp"]} </p>
         <p> HP max: ${pokemon.stats["max-hp"]} </p>
-
        </figcaption>
+      </section>`
 
-       <button class="modal-button x${pokemon.type[0]}" > More </button>
-       `
-    const modalContainer = document.querySelector(".show-modal");
-    const modalButton = container.querySelector("button");
-    modalButton.addEventListener("click", () => {
-      modalContainer.classList.toggle("hide");
-      modalContainer.innerHTML =
+      const modalContainer = document.querySelector(".show-modal");
+      const modalButton = container.querySelector("section");
 
-      ` <section class="modal m${pokemon.type[0]}" id="modal">
-          <nav class="modal-content">
+      let cardNextEvolution;
+      let cardPrevEvolutions;
+      const NotEvolution = '<p> Without evolution</p>';
+      if (pokemon.evolution) {
+        if (pokemon.evolution["next-evolution"]) {
+          let nextEvolutions = getNextEvolution(pokemon.evolution["next-evolution"]);
+          cardNextEvolution = nextEvolutions.map(elemento => {
+            return `<div>
+        <img  class="image-pokemon" src="https://www.serebii.net/pokemongo/pokemon/${elemento.num}.png">
+          <h2 class="subtitle">${elemento.name}</h2>
+          <p> Candy Cost ${elemento['candy-cost']}</p></div>`
+          })
+        }
 
-          <figure>
-            <img  src = "${pokemon.img}">
-            <p> N° ${pokemon.num}</p>
-            <p>${pokemon.name}</p>
-            <p>${pokemon.about}</p>
-            <p> CP max: ${pokemon.stats["max-cp"]} </p>
-            <p> HP max: ${pokemon.stats["max-hp"]} </p>
+        if (pokemon.evolution["prev-evolution"]) {
+          let prevEvolutions = getPrevEvolution(pokemon.evolution["prev-evolution"]);
+          cardPrevEvolutions = prevEvolutions.map(elemento => {
+            return `<div>
+            <img class="image-pokemon"src="https://www.serebii.net/pokemongo/pokemon/${elemento.num}.png">
+            <h2 class="subtitle">${elemento.name}</h2>
+          <p> Candy Cost ${elemento['candy-cost']} </p></div>`
+          })
+        }
 
-            <p><b>Resistant: </b></p>
-            <p>
-              <img class="imgResistance" alt="" src="img/resistant-weaknesses/${pokemon.resistant[0]}.png">
-              <img class="imgResistance" alt="" src="img/resistant-weaknesses/${pokemon.resistant[1]}.png">
-              <img class="imgResistance" alt="" src="img/resistant-weaknesses/${pokemon.resistant[2]}.png">
-              <img class="imgResistance" alt="" src="img/resistant-weaknesses/${pokemon.resistant[3]}.png">
-              <img class="imgResistance" alt="" src="img/resistant-weaknesses/${pokemon.resistant[4]}.png'>
-              <img class="imgResistance" alt="" src="img/resistant-weaknesses/${pokemon.resistant[5]}.png">
-              <img class="imgResistance" alt="" src="img/resistant-weaknesses/${pokemon.resistant[6]}.png">
-              <img class="imgResistance" alt="" src='img/resistant-weaknesses/${pokemon.resistant[7]}.png'>
+      }
+
+      modalButton.addEventListener("click", () => {
+        //modal
+        modalContainer.classList.toggle("hide");
+        modalContainer.innerHTML =
+
+          ` <section class="modal " id="modal">
+            <article class="modal-content y${pokemon.type[0]}">
+
+            <figure class="temple ">
+            <h2 class="num2"> N° ${pokemon.num}</h2> 
+            <article class ="pokeImg a${pokemon.type[0]}"> 
+            <img  src = "${pokemon.img}" class="img"> 
+            </article>
+
+            <h2 class="type"> ${pokemon.type}</h2>
+
+            <article class=temple-info>
+            <h1 class="name2" >${pokemon.name}</h1> <br>
+            <p> CP max: ${pokemon.stats["max-cp"]} </p> 
+            <p> HP max: ${pokemon.stats["max-hp"]} </p><br>
+            <p>${pokemon.about}</p> <br>
+            </article>
+
+            <section class="temple-Resistant-Weaknesses ">
+
+            <article class= "temple-iconsResistan">
+            <p>Resistant: </p> <br>
+              <p><img id="imgResistance" alt="" src="img/resistant-weaknesses/${pokemon.resistant[0]}.png">
+              <img id="imgResistance" alt="" src="img/resistant-weaknesses/${pokemon.resistant[1]}.png">
+              <img id="imgResistance" alt="" src="img/resistant-weaknesses/${pokemon.resistant[2]}.png">
+              <img id="imgResistance" alt="" src="img/resistant-weaknesses/${pokemon.resistant[3]}.png">
+              <img id="imgResistance" alt="" src="img/resistant-weaknesses/${pokemon.resistant[4]}.png'>
+              <img id="imgResistance" alt="" src="img/resistant-weaknesses/${pokemon.resistant[5]}.png">
+              <img id="imgResistance" alt="" src="img/resistant-weaknesses/${pokemon.resistant[6]}.png">
+              <img id="imgResistance" alt="" src='img/resistant-weaknesses/${pokemon.resistant[7]}.png'>
             </p>
-
-            <p ><b>Weaknesses:</b></p>
+            </article>
+           
+            <article class="temple-iconsWeaknesses">
+            <p ><b>Weaknesses:</b></p><br>
             <p id="imageContainer">
-              <img class="imgResistance" alt="" src="img/resistant-weaknesses/${pokemon.weaknesses[0]}.png">
-              <img class="imgResistance" alt="" src="img/resistant-weaknesses/${pokemon.weaknesses[1]}.png">
-              <img class="imgResistance" alt="" src="img/resistant-weaknesses/${pokemon.weaknesses[2]}.png">
-              <img class="imgResistance" alt="" src="img/resistant-weaknesses/${pokemon.weaknesses[3]}.png">
-              <img class="imgResistance" alt="" src="img/resistant-weaknesses/${pokemon.weaknesses[4]}.png">
+              <img id="imgResistance" alt="" src="img/resistant-weaknesses/${pokemon.weaknesses[0]}.png">
+              <img id="imgResistance" alt="" src="img/resistant-weaknesses/${pokemon.weaknesses[1]}.png">
+              <img id="imgResistance" alt="" src="img/resistant-weaknesses/${pokemon.weaknesses[2]}.png">
+              <img id="imgResistance" alt="" src="img/resistant-weaknesses/${pokemon.weaknesses[3]}.png">
+              <img id="imgResistance" alt="" src="img/resistant-weaknesses/${pokemon.weaknesses[4]}.png">
             </p>
+            </article>
+            </section>
 
-            <p class="bold comun title">Quick move</p>
-            <section class="comun bold quick-move">
+            <section class="aggregate-calculation">
+            <p class="encabezado">Quick move :</p> 
+            <article class="comun bold quick-move">
               <p class="encabezado">Name</p>
               <p class="encabezado">STAB</p>
               <p class="encabezado">DPS</p>
               <p class="encabezado">EPS</p>
-            </section>
-            <section class="quick-move">
+            </article>
+
+            <article class="quick-move">
               <section>${showsAttacks(obtainNames(pokemon['quick-move']))}</section>
               <section>${showsAttacks(calculateStab(pokemon['quick-move'], pokemon.type))}</section>
               <section>${showsAttacks(calculateDps(pokemon['quick-move'], pokemon.type))}</section>
               <section>${showsAttacks(calculateEps(pokemon['quick-move']))}</section>
+            </article>
             </section>
 
-             <h2>Evolution</h2>
-             <td>${cardPrevEvolutions ? cardPrevEvolutions.join('') : ''} </td>
+            <h2 id="title-Evol"> Evolution: </h2><br>
+            <section class="evolutiontable x${pokemon.type[0]}">
+            
+            <article class="itemEvol">
+            <p id="Evol-img">${cardPrevEvolutions ? cardPrevEvolutions.join('') : ''} </p>
+            <p>  <img  src = "${pokemon.img}"> ${cardNextEvolution === undefined && cardPrevEvolutions === undefined ? NotEvolution : ''}</p>
+            <p id="Evol-img1"> ${cardNextEvolution ? cardNextEvolution.join('') : ''}</p>
+            </article>
+            </section>
 
-             <td>  ${cardNextEvolution ? cardNextEvolution.join('') : ''}</td>
-             <td> ${cardNextEvolution === undefined && cardPrevEvolutions === undefined ? NotEvolution : ''}</td>
+            <p class="close"> X </p>
+            </figure>
+            </nav>
+         
+            </section>`
 
-          </figure>
-          </nav>
-          <button class="close"> close </button>
-        </section>`
 
         const modalClose = document.querySelector(".close");
         modalClose.addEventListener("click", () => {
           modalContainer.classList.toggle("hide");
         })
-
-
-
     })
-
-}});
-
-};
+}
+});
 
 const differentOrderSpawn = document.getElementById("spawnOrder");
 differentOrderSpawn.addEventListener("change", () => {
@@ -325,6 +387,7 @@ function getNextEvolution(elemento) {
   evolutions.push(elemento[0]);
   return evolutions.reverse();
 }
+
 function getPrevEvolution(elemento) {
   let prevEvolution = elemento[0]['prev-evolution'];
   const evolutions = [];
