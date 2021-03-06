@@ -31,10 +31,12 @@ header>section>span>input {
 
 /*modal*/
 .modal-content {
-  /* width: 600px;
-  height: 800px; */
-  margin: 1rem auto -12rem;
-  padding: 3px 5px;
+  width: 310px;
+  padding: px 5px;
+}
+
+#modal{
+  padding: 0;
 }
 
 .close{
@@ -43,7 +45,8 @@ header>section>span>input {
 
 .temple{
   font-size: 12px;
-  padding: 24px;
+  padding-top: 15px;
+  padding-left: 0px;
 }
 
 .num2{
@@ -54,53 +57,27 @@ header>section>span>input {
 
 
 .pokeImg{
- height: 150px;
- width: 150px;
- border-radius: 100%;
- background: rgba(255, 255, 255, .4);
- position: relative;
- top: 18px;
+height: 100px;
+ width: 100px;
+ top: 20px;
  left: 0px;
 }
-
-.img{
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  margin:auto; 
-}
-
-.type{
- font-size: 14px;
-}
-
-.pokeImg{
- height: 100px;
- width: 100px;
-}
-
 .img{
   width: 80px;
 }
-
 .type{
  font-size: 14px;
 }
 
 .temple-info{
-  width: 220px;
-
-  left: 240px;
-  bottom: 230px;
-  font-size: 16px;
+  width: 155px;
+  left: 139px;
+  bottom: 160px;
+  font-size: 13px;
 }
 
 .name2{
- text-transform: capitalize;
- font-weight: bold;
- font-size: 24px;
+ font-size: 22px;
 }
 
 #imgResistance{
@@ -109,89 +86,45 @@ header>section>span>input {
 
 .temple-Resistant-Weaknesses{
  font-size: 14px;
-
  padding-top: 190px;
- width: 450px;
+ /* width: 110px; */
 }
 
 .temple-iconsResistan{
-  background: rgba(255, 255, 255, .4);
-  width: 210px;
-  height: 120px;
-  border-radius: 8px;
-  position: absolute;
-  padding:8px 0px 5px 5px;
-  bottom: 280px;
+  width: 140px;
+  height: 80px;
+  bottom: 250px;
 }
 
 .temple-iconsWeaknesses{
-  background: rgba(255, 255, 255, .4);
-  width: 210px;
-  height: 120px;
-  border-radius: 8px;
-  bottom: 280px;
-  position: absolute;
-  padding:8px 0px 5px 8px;
-  left: 230px;
+  width: 140px;
+  height: 80px;
+  bottom: 250px;
+  left: 153px;
 }
 
 .aggregate-calculation{
-  font-size: 16px;
-  text-transform: capitalize;
-  position: relative;
-  bottom: 250px;
-}
-.encabezado{
- text-transform: uppercase;
- font-weight: bold;
-}
-
-.quick-move {
-  display: grid;
-  grid-template-columns: 40% repeat(3, 1fr);
-  border: #00C1EC 1px dashed;
-  border-radius: 2px;
-  line-height: 30px;
-  margin:5px
-}
-
-.quick-move div {
-  text-align: center;
-  font-weight: bold;
-}
-
-#title-Evol{
-  position: relative;
-  bottom: 210px;
+  font-size: 14px;
+  bottom: 230px;
+  left: 10px;
 }
 
 .evolutiontable{
-  background: rgba(255, 255, 255, .2);
-  font-size: 16px;
-  text-transform: capitalize;
-  position: relative;
-  bottom: 210px;
-  display: flex;
+  font-size: 10px;
+  left: 10px;
 }
 
 .itemEvol{
-  display:flex;
   margin-top:30px;
   margin-bottom:40px;
-  
-  /* flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: space-between;
-  align-items: stretch; */
 }
-#Evol-img{
-  margin:10px;
-  padding: 10px;
-}
-#Evol-img1{
-  margin:10px;
+.image-pokemon{
+  width: 70px;
 }
 
+img{
+   width: 70px;
+}
 
 }
 
