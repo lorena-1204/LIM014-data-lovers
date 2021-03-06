@@ -86,8 +86,8 @@
   .xgrass{
     background: #54ff48;
   }
-  
-    
+
+
 
   .xbug{
     border: solid 10px #c6ff4c;
@@ -98,7 +98,7 @@
     border-radius: 10px;
   }
 
-  
+
   .xice{
     border: solid 10px #87f0dd;
     border-radius: 10px;
@@ -160,7 +160,7 @@
     border: solid 10px #ffd903;
     border-radius: 10px;
   }
-  
+
 
   .quick-move {
     display: grid;

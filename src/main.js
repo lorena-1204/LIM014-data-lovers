@@ -36,7 +36,7 @@ let cardPokemon = (dataPokemon) => {
     dataContainer.appendChild(container).innerHTML =
 
       //  utilización de template strings (`)
-      `<section class="modal-button"> 
+      `<section class="modal-button">
        <img  src = "${pokemon.img}" id="img-card">
 
        <figcaption class="legend">
@@ -64,6 +64,7 @@ let cardPokemon = (dataPokemon) => {
         })
       }
 
+      
       if (pokemon.evolution["prev-evolution"]) {
         let prevEvolutions = getPrevEvolution(pokemon.evolution["prev-evolution"]);
         cardPrevEvolutions = prevEvolutions.map(elemento => {
@@ -80,7 +81,7 @@ let cardPokemon = (dataPokemon) => {
       //modal
       modalContainer.classList.toggle("hide");
       modalContainer.innerHTML =
-        
+
         ` <section class="modal m${pokemon.type[0]}" id="modal">
             <nav class="modal-content">
 
@@ -131,9 +132,9 @@ let cardPokemon = (dataPokemon) => {
 
              <h2>Evolution</h2>
              <td>${cardPrevEvolutions ? cardPrevEvolutions.join('') : ''} </td>
-             
+
              <td>  ${cardNextEvolution ? cardNextEvolution.join('') : ''}</td>
-             <td> ${cardNextEvolution === undefined && cardPrevEvolutions === undefined ? NotEvolution : ''}</td> 
+             <td> ${cardNextEvolution === undefined && cardPrevEvolutions === undefined ? NotEvolution : ''}</td>
 
             </figure>
             </nav>
@@ -283,9 +284,9 @@ let cardPokemonTop = (dataPokemon) => {
 
              <h2>Evolution</h2>
              <td>${cardPrevEvolutions ? cardPrevEvolutions.join('') : ''} </td>
-             
+
              <td>  ${cardNextEvolution ? cardNextEvolution.join('') : ''}</td>
-             <td> ${cardNextEvolution === undefined && cardPrevEvolutions === undefined ? NotEvolution : ''}</td> 
+             <td> ${cardNextEvolution === undefined && cardPrevEvolutions === undefined ? NotEvolution : ''}</td>
 
           </figure>
           </nav>
@@ -302,59 +303,6 @@ let cardPokemonTop = (dataPokemon) => {
     })
 
 }});
-
-       <button class="modal-button x${pokemon.type[0]}" > More </button>  `
-
-      const modalContainer = document.querySelector(".show-modal");
-      const modalButton = container.querySelector("button");
-      modalButton.addEventListener("click", () => {
-        modalContainer.classList.toggle("hide");
-        modalContainer.innerHTML =
-
-          ` <section class="modal m${pokemon.type[0]}" id="modal">
-            <nav class="modal-content">
-
-            <figure>
-            <img  src = "${pokemon.img}">
-            <p> N° ${pokemon.num}</p>
-            <p>${pokemon.name}</p>
-            <p>${pokemon.about}</p>
-            <p> CP max: ${pokemon.stats["max-cp"]} </p>
-            <p> HP max: ${pokemon.stats["max-hp"]} </p>
-
-            <p><b>Resistant: </b></p>
-              <p><img class="imgResistance" alt="" src="img/resistant-weaknesses/${pokemon.resistant[0]}.png">
-              <img class="imgResistance" alt="" src="img/resistant-weaknesses/${pokemon.resistant[1]}.png">
-              <img class="imgResistance" alt="" src="img/resistant-weaknesses/${pokemon.resistant[2]}.png">
-              <img class="imgResistance" alt="" src="img/resistant-weaknesses/${pokemon.resistant[3]}.png">
-              <img class="imgResistance" alt="" src="img/resistant-weaknesses/${pokemon.resistant[4]}.png'>
-              <img class="imgResistance" alt="" src="img/resistant-weaknesses/${pokemon.resistant[5]}.png">
-              <img class="imgResistance" alt="" src="img/resistant-weaknesses/${pokemon.resistant[6]}.png">
-              <img class="imgResistance" alt="" src='img/resistant-weaknesses/${pokemon.resistant[7]}.png'></p>
-
-            <p ><b>Weaknesses:</b></p>
-            <p id="imageContainer"><img class="imgResistance" alt="" src="img/resistant-weaknesses/${pokemon.weaknesses[0]}.png">
-            <img class="imgResistance" alt="" src="img/resistant-weaknesses/${pokemon.weaknesses[1]}.png">
-            <img class="imgResistance" alt="" src="img/resistant-weaknesses/${pokemon.weaknesses[2]}.png">
-            <img class="imgResistance" alt="" src="img/resistant-weaknesses/${pokemon.weaknesses[3]}.png">
-            <img class="imgResistance" alt="" src="img/resistant-weaknesses/${pokemon.weaknesses[4]}.png"></p>
-
-            </figure>
-            </nav>
-            <button class="close"> close </button>
-            </section>`
-
-        const modalClose = document.querySelector(".close");
-        modalClose.addEventListener("click", () => {
-          modalContainer.classList.toggle("hide");
-        })
-
-
-
-      })
-
-    }
-  });
 
 };
 
