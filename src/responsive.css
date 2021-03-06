@@ -6,7 +6,7 @@
   background-size: 60px;
   background-position: 10px 10px;
  }
-  .button {
+.button {
   width: 110px;
   height: 25px;
   border-radius: 8px;
@@ -28,6 +28,170 @@ header>section>span>input {
 .container-shining {
   padding-top: 32vh;
 }
+
+/*modal*/
+.modal-content {
+  /* width: 600px;
+  height: 800px; */
+  margin: 1rem auto -12rem;
+  padding: 3px 5px;
+}
+
+.close{
+  font-size: 20px;
+}
+
+.temple{
+  font-size: 12px;
+  padding: 24px;
+}
+
+.num2{
+ font-size: 18px;
+ padding-top:10px;
+ padding-left: 1px;
+}
+
+
+.pokeImg{
+ height: 150px;
+ width: 150px;
+ border-radius: 100%;
+ background: rgba(255, 255, 255, .4);
+ position: relative;
+ top: 18px;
+ left: 0px;
+}
+
+.img{
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin:auto; 
+}
+
+.type{
+ font-size: 14px;
+}
+
+.pokeImg{
+ height: 100px;
+ width: 100px;
+}
+
+.img{
+  width: 80px;
+}
+
+.type{
+ font-size: 14px;
+}
+
+.temple-info{
+  width: 220px;
+
+  left: 240px;
+  bottom: 230px;
+  font-size: 16px;
+}
+
+.name2{
+ text-transform: capitalize;
+ font-weight: bold;
+ font-size: 24px;
+}
+
+#imgResistance{
+  width: 24px;
+}
+
+.temple-Resistant-Weaknesses{
+ font-size: 14px;
+
+ padding-top: 190px;
+ width: 450px;
+}
+
+.temple-iconsResistan{
+  background: rgba(255, 255, 255, .4);
+  width: 210px;
+  height: 120px;
+  border-radius: 8px;
+  position: absolute;
+  padding:8px 0px 5px 5px;
+  bottom: 280px;
+}
+
+.temple-iconsWeaknesses{
+  background: rgba(255, 255, 255, .4);
+  width: 210px;
+  height: 120px;
+  border-radius: 8px;
+  bottom: 280px;
+  position: absolute;
+  padding:8px 0px 5px 8px;
+  left: 230px;
+}
+
+.aggregate-calculation{
+  font-size: 16px;
+  text-transform: capitalize;
+  position: relative;
+  bottom: 250px;
+}
+.encabezado{
+ text-transform: uppercase;
+ font-weight: bold;
+}
+
+.quick-move {
+  display: grid;
+  grid-template-columns: 40% repeat(3, 1fr);
+  border: #00C1EC 1px dashed;
+  border-radius: 2px;
+  line-height: 30px;
+  margin:5px
+}
+
+.quick-move div {
+  text-align: center;
+  font-weight: bold;
+}
+
+#title-Evol{
+  position: relative;
+  bottom: 210px;
+}
+
+.evolutiontable{
+  background: rgba(255, 255, 255, .2);
+  font-size: 16px;
+  text-transform: capitalize;
+  position: relative;
+  bottom: 210px;
+  display: flex;
+}
+
+.itemEvol{
+  display:flex;
+  margin-top:30px;
+  margin-bottom:40px;
+  
+  /* flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: stretch; */
+}
+#Evol-img{
+  margin:10px;
+  padding: 10px;
+}
+#Evol-img1{
+  margin:10px;
+}
+
 
 }
 
@@ -109,9 +273,7 @@ header>section>span>input {
     border-radius: 10px;
   }
   .fire{
-
     border: solid 10px #fd0000;
-
     border-radius: 10px;
   }
   .electric{
@@ -127,6 +289,78 @@ header>section>span>input {
     box-shadow:0 0 10px #54ff48; 
     border-radius: 30px;
   }
+   .ybug{
+    box-shadow:0 0 10px #c6ff4c;
+    border-radius: 30px;
+  }
+  .ywater{
+    box-shadow:0 0 10px #67b8ff;
+    border-radius: 30px;
+  }
+  .yice{
+    box-shadow:0 0 10px#87f0dd;
+    border-radius: 30px;
+  }
+  .yflying{
+    box-shadow:0 0 10px#abc7ff;
+    border-radius: 30px;
+  }
+  .ydragon{
+    box-shadow:0 0 10px #188bff;
+    border-radius: 30px;
+  }
+  .ysteel{
+    box-shadow:0 0 10px #89e2f8;
+    border-radius: 30px;
+  }
+  .yghost{
+    box-shadow:0 0 10px #8590ff;
+    border-radius: 30px;
+  }
+  .ypoison{
+    box-shadow:0 0 10px #df7efd;
+    border-radius: 30px;
+  }
+  .yfairy{
+    box-shadow:0 0 10px #fc9ff4;
+    border-radius: 30px;
+  }
+
+  .ynormal{
+    box-shadow:0 0 10px #c9cac8;
+    border-radius: 30px;
+  }
+  .yfighting{
+    box-shadow:0 0 10px #fd5579;
+    border-radius: 30px;
+  }
+  .ypsychic{
+    box-shadow:0 0 10px #fb8383;
+    border-radius: 30px;
+  }
+  .yrock{
+    box-shadow:0 0 10px #ffde7d;
+    border-radius: 30px;
+  }
+  .ydark{
+    box-shadow:0 0 10px #ab69f7;
+    border-radius: 30px;
+  }
+  .yground{
+    box-shadow:0 0 10px #ff9060;
+    border-radius: 30px;
+  }
+  .yfire{
+    box-shadow:0 0 10px #fd0000;
+    border-radius: 30px;
+  }
+  .yelectric{
+    box-shadow:0 0 10px #ffd903;
+    border-radius: 30px;
+  }
+
+
+
   
   /*contenedor de pokemones now */
   .agrass{
@@ -160,7 +394,6 @@ header>section>span>input {
   .afairy{
     border: solid 4px #fc9ff4;
   }
-
   .anormal{
     border: solid 4px #c9cac8;
   }
@@ -190,82 +423,76 @@ header>section>span>input {
   /*contenedor de evoluciones */
   .xgrass{
     border: solid 5px #54ff48;
-    border-radius: 10px;
+    border-radius: 50px;
   }
   
-    
-
   .xbug{
     border: solid 5px #c6ff4c;
-    border-radius: 10px;
+    border-radius: 50px;
   }
   .xwater{
     border: solid 5px #67b8ff;
-    border-radius: 10px;
+    border-radius: 50px;
   }
-
   
   .xice{
     border: solid 5px #87f0dd;
-    border-radius: 10px;
+    border-radius: 50px;
   }
   .xflying{
     border: solid 5px #abc7ff;
-    border-radius: 10px;
+    border-radius: 50px;
   }
   .xdragon{
     border: solid 5px #188bff;
-    border-radius: 10px;
+    border-radius: 50px;
   }
   .xsteel{
     border: solid 5px #89e2f8;
-    border-radius: 10px;
+    border-radius: 50px;
   }
   .xghost{
     border: solid 5px #8590ff;
-    border-radius: 10px;
+    border-radius: 50px;
   }
   .xpoison{
     border: solid 5px #df7efd;
-    border-radius: 10px;
+    border-radius: 50px;
   }
   .xfairy{
     border: solid 5px #fc9ff4;
-    border-radius: 10px;
+    border-radius: 50px;
   }
 
   .xnormal{
     border: solid 5px #c9cac8;
-    border-radius: 10px;
+    border-radius: 50px;
   }
   .xfighting{
     border: solid 10px #fd5579;
-    border-radius: 10px;
+    border-radius: 50px;
   }
   .xpsychic{
     border: solid 5px #fb8383;
-    border-radius: 10px;
+    border-radius: 50px;
   }
   .xrock{
     border: solid 5px #ffde7d;
-    border-radius: 10px;
+    border-radius: 50px;
   }
   .xdark{
     border: solid 5px #ab69f7;
-    border-radius: 10px;
+    border-radius: 50px;
   }
   .xground{
     border: solid 5px #ff9060;
-    border-radius: 10px;
+    border-radius: 50px;
   }
   .xfire{
     border: solid 5px #fd0000;
-    border-radius: 10px;
+    border-radius: 50px;
   }
   .xelectric{
     border: solid 5px #ffd903;
-    border-radius: 10px;
+    border-radius: 50px;
   }
-  
-
- 
