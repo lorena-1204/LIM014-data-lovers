@@ -8,12 +8,7 @@ export const pokemonOrder = {
         if (selected === "zA"){
             result = everyPokemon.sort(orderByName).reverse();
         }
-        if (selected === "ascendingNumber"){
-            result = everyPokemon.sort(orderByNumber);
-        }
-        if (selected === "descendingNumber"){
-            result = everyPokemon.sort(orderByNumber).reverse();
-        }
+
         if (selected === "ascendingCp"){
             result = everyPokemon.sort(orderByPc);
         }
@@ -26,14 +21,19 @@ export const pokemonOrder = {
         if (selected === "descendingHp"){
             result = everyPokemon.sort(orderByHp).reverse();
         }
-        if (selected === "ascendingspawn"){
+        if (selected === "ascendingSpawn"){
             result = everyPokemon.sort(orderBySpawn);
         }
-        if (selected === "descendingspawn"){
+        if (selected === "descendingSpawn"){
             result = everyPokemon.sort(orderBySpawn).reverse();
         }
 
-        //función para ordenar la data según el nombre
+        return result;
+
+  },
+};
+
+//función para ordenar la data según el nombre
         function orderByName(a,b) {
             if (a.name < b.name) {
               return -1;
@@ -49,18 +49,7 @@ export const pokemonOrder = {
           return a['spawn-chance'] - b['spawn-chance'];
         }
 
-        //función para ordenar la data según el número
-        function orderByNumber(a,b) {
-            if (a.num < b.num) {
-              return -1;
-            }
-            if (a.num > b.num) {
-              return 1;
-            }
-            return 0;
-        }
-
-        //función para ordenar la data según PC
+         //función para ordenar la data según PC
         function orderByPc(a,b) {
             if (parseInt(a.stats["max-cp"]) < parseInt(b.stats["max-cp"])) {
               return -1;
@@ -81,10 +70,7 @@ export const pokemonOrder = {
             }
             return 0;
         }
-        return result;
 
-  },
-};
 
 //Cálculo agregado
 
