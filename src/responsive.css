@@ -55,9 +55,8 @@ header>section>span>input {
  padding-left: 1px;
 }
 
-
 .pokeImg{
-height: 100px;
+ height: 100px;
  width: 100px;
  top: 20px;
  left: 0px;
@@ -147,6 +146,7 @@ img{
     border: solid 10px #c6ff4c;
     border-radius: 10px;
   }
+
 .water{
     border: solid 10px #67b8ff;
     border-radius: 10px;
@@ -216,6 +216,7 @@ img{
 
 
   /*clases y colores de boton More */
+
    /*border modal */
    .ygrass{
     /* border:  solid 2px #54ff48; */
@@ -292,7 +293,7 @@ img{
     border-radius: 30px;
   }
 
-  /*contenedor de pokemones now */
+   /*contenedor de pokemones now */
   .agrass{
     border:  solid 4px #54ff48;
   }
