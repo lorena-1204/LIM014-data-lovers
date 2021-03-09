@@ -83,7 +83,6 @@ let cardPokemon = (dataPokemon) => {
       modalContainer.classList.toggle("hide");
       modalContainer.innerHTML =
 
-        
         ` <section class="modal " id="modal">
             <article class="modal-content y${pokemon.type[0]}">
 
@@ -273,7 +272,6 @@ let cardPokemonTop = (dataPokemon) => {
           <p> Candy Cost ${elemento['candy-cost']} </p></div>`
           })
         }
-
       }
 
       modalButton.addEventListener("click", () => {
@@ -359,14 +357,15 @@ let cardPokemonTop = (dataPokemon) => {
          
             </section>`
 
-
         const modalClose = document.querySelector(".close");
         modalClose.addEventListener("click", () => {
           modalContainer.classList.toggle("hide");
         })
-    })
-}
-});
+      })
+
+    }
+  });
+};
 
 const differentOrderSpawn = document.getElementById("spawnOrder");
 differentOrderSpawn.addEventListener("change", () => {
