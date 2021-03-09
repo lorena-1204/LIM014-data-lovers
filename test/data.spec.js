@@ -15,26 +15,48 @@ describe("orderByName", () => {
     expect(typeof orderByName).toBe("function");
   });
 
-  // it("Order Name", () => {
-  //   const data = [{
-  //     name: 'abra',
-  //   },
-  //   {
-  //     name: 'zubat',
-  //   }]
-  //   const name = "abra";
-  //   const result = [{
-  //     name: 'abra',
-  //   }]
+  it("Order Name", () => {
+    const data = [{
+      name: 'abra',
+    },
+    {
+      name: 'zubat',
+    }]
+    const name = "abra";
+    const result = [{
+      name: 'abra',
+    }]
 
-  //   expect(orderByName(data, name)).toEqual(result);
-  // });
+    expect(orderByName(data, name)).toEqual(result);
+  });
 });
 
 describe("orderBySpawn", () => {
   it("is a function", () => {
     expect(typeof orderBySpawn).toBe("function");
   });
+  
+  it("spawn-chance", () => {
+    const data = [{
+      'spawn-chance': 3,
+    },
+    {
+      'spawn-chance': 2,
+    },
+    {
+      'spawn-chance': 5,
+    }];
+    const result = [{
+      'spawn-chance': 2,
+    },
+    {
+      'spawn-chance': 3,
+    },
+    {
+      'spawn-chance': 5,
+    }];
+    expect(orderBySpawn(data, ['spawn-chance'])).toEqual(result);
+  })
 });
 
 describe("orderByPc", () => {
