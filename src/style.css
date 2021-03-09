@@ -329,14 +329,7 @@ header>section>span>input:hover{
 }
 
 /*pie de página*/
-
-footer{
-    background: black;
-    height: 60px;
+.container-footer{
+  background-image: url("./img/menu/night3.png");
+  padding-top: 10vh;
 }
-
-a{
-    color: white;
-    text-decoration: none;
-}
-

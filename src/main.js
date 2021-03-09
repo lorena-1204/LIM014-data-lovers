@@ -80,7 +80,7 @@ let cardPokemon = (dataPokemon) => {
       //modal
       modalContainer.classList.toggle("hide");
       modalContainer.innerHTML =
-        
+
         ` <section class="modal " id="modal">
             <article class="modal-content y${pokemon.type[0]}">
 
@@ -361,10 +361,10 @@ let cardPokemonTop = (dataPokemon) => {
 
 
 
-    })
+      })
 
-}
-});
+    }
+  });
 };
 
 const differentOrderSpawn = document.getElementById("spawnOrder");
