@@ -1,3 +1,41 @@
+//función para ordenar la data según el nombre
+ export const orderByName = (a, b) => {
+  if (a.name < b.name) {
+    return -1;
+  }
+  if (a.name > b.name) {
+    return 1;
+  }
+  return 0;
+}
+
+//función para ordenar top10
+export const orderBySpawn = (a, b) =>{
+  return a['spawn-chance'] - b['spawn-chance'];
+}
+
+//función para ordenar la data según PC
+export const orderByPc = (a, b) => {
+  if (parseInt(a.stats["max-cp"]) < parseInt(b.stats["max-cp"])) {
+    return -1;
+  }
+  if (parseInt(a.stats["max-cp"]) > parseInt(b.stats["max-cp"])) {
+    return 1;
+  }
+  return 0;
+}
+
+//función para ordenar la data según HP
+export const orderByHp = (a, b) =>{
+  if (parseInt(a.stats["max-hp"]) < parseInt(b.stats["max-hp"])) {
+    return -1;
+  }
+  if (parseInt(a.stats["max-hp"]) > parseInt(b.stats["max-hp"])) {
+    return 1;
+  }
+  return 0;
+}
+
 export const pokemonOrder = {
     differentOrder: (everyPokemon, selected) => {
         let result;
@@ -21,59 +59,17 @@ export const pokemonOrder = {
         if (selected === "descendingHp"){
             result = everyPokemon.sort(orderByHp).reverse();
         }
-        if (selected === "ascendingSpawn"){
+        if (selected === "ascendingspawn"){
             result = everyPokemon.sort(orderBySpawn);
         }
-        if (selected === "descendingSpawn"){
+        if (selected === "descendingspawn"){
             result = everyPokemon.sort(orderBySpawn).reverse();
         }
-
         return result;
-
   },
 };
 
-//función para ordenar la data según el nombre
-        function orderByName(a,b) {
-            if (a.name < b.name) {
-              return -1;
-            }
-            if (a.name > b.name) {
-              return 1;
-            }
-            return 0;
-        }
-
-        //función para ordenar top10
-        function orderBySpawn(a,b) {
-          return a['spawn-chance'] - b['spawn-chance'];
-        }
-
-         //función para ordenar la data según PC
-        function orderByPc(a,b) {
-            if (parseInt(a.stats["max-cp"]) < parseInt(b.stats["max-cp"])) {
-              return -1;
-            }
-            if (parseInt(a.stats["max-cp"]) > parseInt(b.stats["max-cp"])) {
-              return 1;
-            }
-            return 0;
-        }
-
-        //función para ordenar la data según HP
-        function orderByHp(a,b) {
-            if (parseInt(a.stats["max-hp"]) < parseInt(b.stats["max-hp"])) {
-              return -1;
-            }
-            if (parseInt(a.stats["max-hp"]) > parseInt(b.stats["max-hp"])) {
-              return 1;
-            }
-            return 0;
-        }
-
-
 //Cálculo agregado
-
 export const calculateStab = (attack, tipoPokemon) => {
   const result = attack.map((obj) => {
     const damage = Number(obj['base-damage']);
@@ -99,6 +95,7 @@ export const calculateDps = (attack, tipoPokemon) => {
   });
   return result;
 };
+
 
 export const calculateEps = (attack) => {
   const result = attack.map((obj) => {

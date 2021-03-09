@@ -19,7 +19,6 @@ const showsAttacks = (arrayAtacks) => {
   return stabEachPokemon;
 };
 
-
 document.getElementById("refresh").addEventListener("click", () => {
   location.reload();
 });
@@ -36,6 +35,7 @@ let cardPokemon = (dataPokemon) => {
     dataContainer.appendChild(container).innerHTML =
 
       //  utilización de template strings (`)
+
       `<section class="modal-button">
        <img  src = "${pokemon.img}" id="img-card" >
 
@@ -52,7 +52,7 @@ let cardPokemon = (dataPokemon) => {
 
     let cardNextEvolution;
     let cardPrevEvolutions;
-    const NotEvolution = '<p> Whithout evolution</p>';
+    const NotEvolution = '<p> Without evolution</p>';
     if (pokemon.evolution) {
       if (pokemon.evolution["next-evolution"]) {
         let nextEvolutions = getNextEvolution(pokemon.evolution["next-evolution"]);
@@ -63,6 +63,7 @@ let cardPokemon = (dataPokemon) => {
           <p> Candy Cost ${elemento['candy-cost']}</p></div>`
         })
       }
+
 
       if (pokemon.evolution["prev-evolution"]) {
         let prevEvolutions = getPrevEvolution(pokemon.evolution["prev-evolution"]);
@@ -111,6 +112,7 @@ let cardPokemon = (dataPokemon) => {
               <img id="imgResistance" alt="" src="img/resistant-weaknesses/${pokemon.resistant[5]}.png">
               <img id="imgResistance" alt="" src="img/resistant-weaknesses/${pokemon.resistant[6]}.png">
               <img id="imgResistance" alt="" src='img/resistant-weaknesses/${pokemon.resistant[7]}.png'>
+
             </p>
             </article>
 
@@ -247,7 +249,7 @@ let cardPokemonTop = (dataPokemon) => {
 
       let cardNextEvolution;
       let cardPrevEvolutions;
-      const NotEvolution = '<p> Whithout evolution</p>';
+      const NotEvolution = '<p> Without evolution</p>';
       if (pokemon.evolution) {
         if (pokemon.evolution["next-evolution"]) {
           let nextEvolutions = getNextEvolution(pokemon.evolution["next-evolution"]);
@@ -268,7 +270,6 @@ let cardPokemonTop = (dataPokemon) => {
           <p> Candy Cost ${elemento['candy-cost']} </p></div>`
           })
         }
-
       }
 
       modalButton.addEventListener("click", () => {
@@ -358,13 +359,10 @@ let cardPokemonTop = (dataPokemon) => {
         modalClose.addEventListener("click", () => {
           modalContainer.classList.toggle("hide");
         })
+      })
 
-
-
-    })
-
-}
-});
+    }
+  });
 };
 
 const differentOrderSpawn = document.getElementById("spawnOrder");
