@@ -19,7 +19,6 @@ const showsAttacks = (arrayAtacks) => {
   return stabEachPokemon;
 };
 
-
 document.getElementById("refresh").addEventListener("click", () => {
   location.reload();
 });
@@ -37,7 +36,7 @@ let cardPokemon = (dataPokemon) => {
 
       //  utilización de template strings (`)
 
-      `<section class="modal-button"> 
+      `<section class="modal-button">
        <img  src = "${pokemon.img}" id="img-card" >
 
        <figcaption class="legend">
@@ -65,7 +64,7 @@ let cardPokemon = (dataPokemon) => {
         })
       }
 
-      
+
       if (pokemon.evolution["prev-evolution"]) {
         let prevEvolutions = getPrevEvolution(pokemon.evolution["prev-evolution"]);
         cardPrevEvolutions = prevEvolutions.map(elemento => {
@@ -87,16 +86,16 @@ let cardPokemon = (dataPokemon) => {
             <article class="modal-content y${pokemon.type[0]}">
 
             <figure class="temple ">
-            <h2 class="num2"> N° ${pokemon.num}</h2> 
-            <article class ="pokeImg a${pokemon.type[0]}"> 
-            <img  src = "${pokemon.img}" class="img"> 
+            <h2 class="num2"> N° ${pokemon.num}</h2>
+            <article class ="pokeImg a${pokemon.type[0]}">
+            <img  src = "${pokemon.img}" class="img">
             </article>
 
             <h2 class="type"> ${pokemon.type}</h2>
 
             <article class=temple-info>
             <h1 class="name2" >${pokemon.name}</h1> <br>
-            <p> CP max: ${pokemon.stats["max-cp"]} </p> 
+            <p> CP max: ${pokemon.stats["max-cp"]} </p>
             <p> HP max: ${pokemon.stats["max-hp"]} </p><br>
             <p>${pokemon.about}</p> <br>
             </article>
@@ -116,7 +115,7 @@ let cardPokemon = (dataPokemon) => {
 
             </p>
             </article>
-           
+
             <article class="temple-iconsWeaknesses">
             <p ><b>Weaknesses:</b></p><br>
             <p id="imageContainer">
@@ -130,7 +129,7 @@ let cardPokemon = (dataPokemon) => {
             </section>
 
             <section class="aggregate-calculation">
-            <p class="encabezado">Quick move :</p> 
+            <p class="encabezado">Quick move :</p>
             <article class="comun bold quick-move">
               <p class="encabezado">Name</p>
               <p class="encabezado">STAB</p>
@@ -148,7 +147,7 @@ let cardPokemon = (dataPokemon) => {
 
             <h2 id="title-Evol"> Evolution: </h2><br>
             <section class="evolutiontable x${pokemon.type[0]}">
-            
+
             <article class="itemEvol">
             <p id="Evol-img">${cardPrevEvolutions ? cardPrevEvolutions.join('') : ''} </p>
             <p>  <img  src = "${pokemon.img}"> ${cardNextEvolution === undefined && cardPrevEvolutions === undefined ? NotEvolution : ''}</p>
@@ -156,11 +155,10 @@ let cardPokemon = (dataPokemon) => {
             </article>
             </section>
 
-
             <p class="close"> X </p>
             </figure>
             </nav>
-         
+
             </section>`
 
       const modalClose = document.querySelector(".close");
@@ -235,7 +233,7 @@ let cardPokemonTop = (dataPokemon) => {
 
       dataContainer.appendChild(container).innerHTML =
         //  utilización de template strings (`)
-        `<section class="modal-button"> 
+        `<section class="modal-button">
        <img  src = "${pokemon.img}" id="img-card" >
 
        <figcaption class="legend">
@@ -283,16 +281,16 @@ let cardPokemonTop = (dataPokemon) => {
             <article class="modal-content y${pokemon.type[0]}">
 
             <figure class="temple ">
-            <h2 class="num2"> N° ${pokemon.num}</h2> 
-            <article class ="pokeImg a${pokemon.type[0]}"> 
-            <img  src = "${pokemon.img}" class="img"> 
+            <h2 class="num2"> N° ${pokemon.num}</h2>
+            <article class ="pokeImg a${pokemon.type[0]}">
+            <img  src = "${pokemon.img}" class="img">
             </article>
 
             <h2 class="type"> ${pokemon.type}</h2>
 
             <article class=temple-info>
             <h1 class="name2" >${pokemon.name}</h1> <br>
-            <p> CP max: ${pokemon.stats["max-cp"]} </p> 
+            <p> CP max: ${pokemon.stats["max-cp"]} </p>
             <p> HP max: ${pokemon.stats["max-hp"]} </p><br>
             <p>${pokemon.about}</p> <br>
             </article>
@@ -311,7 +309,7 @@ let cardPokemonTop = (dataPokemon) => {
               <img id="imgResistance" alt="" src='img/resistant-weaknesses/${pokemon.resistant[7]}.png'>
             </p>
             </article>
-           
+
             <article class="temple-iconsWeaknesses">
             <p ><b>Weaknesses:</b></p><br>
             <p id="imageContainer">
@@ -325,7 +323,7 @@ let cardPokemonTop = (dataPokemon) => {
             </section>
 
             <section class="aggregate-calculation">
-            <p class="encabezado">Quick move :</p> 
+            <p class="encabezado">Quick move :</p>
             <article class="comun bold quick-move">
               <p class="encabezado">Name</p>
               <p class="encabezado">STAB</p>
@@ -343,7 +341,7 @@ let cardPokemonTop = (dataPokemon) => {
 
             <h2 id="title-Evol"> Evolution: </h2><br>
             <section class="evolutiontable x${pokemon.type[0]}">
-            
+
             <article class="itemEvol">
             <p id="Evol-img">${cardPrevEvolutions ? cardPrevEvolutions.join('') : ''} </p>
             <p>  <img  src = "${pokemon.img}"> ${cardNextEvolution === undefined && cardPrevEvolutions === undefined ? NotEvolution : ''}</p>
@@ -354,7 +352,7 @@ let cardPokemonTop = (dataPokemon) => {
             <p class="close"> X </p>
             </figure>
             </nav>
-         
+
             </section>`
 
         const modalClose = document.querySelector(".close");

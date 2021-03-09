@@ -46,7 +46,7 @@ export const pokemonOrder = {
         if (selected === "zA"){
             result = everyPokemon.sort(orderByName).reverse();
         }
-       
+
         if (selected === "ascendingCp"){
             result = everyPokemon.sort(orderByPc);
         }
@@ -95,6 +95,7 @@ export const calculateDps = (attack, tipoPokemon) => {
   });
   return result;
 };
+
 
 export const calculateEps = (attack) => {
   const result = attack.map((obj) => {

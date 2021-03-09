@@ -1,14 +1,13 @@
-import { 
-  orderByName, 
-  orderBySpawn, 
+import {
+  orderByName,
+  orderBySpawn,
   orderByPc,
-  orderByHp, 
+  orderByHp,
   pokemonOrder,
   calculateStab,
   calculateDps,
   calculateEps,
 } from "../src/data.js";
-
 
 describe("orderByName", () => {
   it("is a function", () => {
@@ -35,7 +34,7 @@ describe("orderBySpawn", () => {
   it("is a function", () => {
     expect(typeof orderBySpawn).toBe("function");
   });
-  
+
   it("spawn-chance", () => {
     const data = [{
       'spawn-chance': 3,
@@ -70,7 +69,6 @@ describe("orderByHp", () => {
     expect(typeof orderByHp).toBe("function");
   })
 })
-
 
 describe("pokemonOrder", () =>{
   it("is a object", () =>{
@@ -303,12 +301,11 @@ describe("differentOrder", () => {
 
 });
 
-
 describe("calculateStab", () => {
   it("is a function", () => {
     expect(typeof calculateStab).toBe("function");
   });
-  
+
 })
 
 describe("calculateDps", () => {
