@@ -15,20 +15,20 @@ describe("orderByName", () => {
     expect(typeof orderByName).toBe("function");
   });
 
-  it("Order Name", () => {
-    const data = [{
-      name: 'abra',
-    },
-    {
-      name: 'zubat',
-    }]
-    const name = "abra";
-    const result = [{
-      name: 'abra',
-    }]
+  // it("Order Name", () => {
+  //   const data = [{
+  //     name: 'abra',
+  //   },
+  //   {
+  //     name: 'zubat',
+  //   }]
+  //   const name = "abra";
+  //   const result = [{
+  //     name: 'abra',
+  //   }]
 
-    expect(orderByName(data, name)).toEqual(result);
-  });
+  //   expect(orderByName(data, name)).toEqual(result);
+  // });
 });
 
 describe("orderBySpawn", () => {
@@ -282,12 +282,11 @@ describe("differentOrder", () => {
 });
 
 
-
-
 describe("calculateStab", () => {
   it("is a function", () => {
     expect(typeof calculateStab).toBe("function");
-  })
+  });
+  
 })
 
 describe("calculateDps", () => {
