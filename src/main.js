@@ -1,6 +1,6 @@
 import datapoke from "./data/pokemon/pokemon.js";
-import { pokemonOrder } from "./data.js";
 import {
+  pokemonOrder,
   calculateStab,
   calculateDps,
   calculateEps,
@@ -329,7 +329,7 @@ let cardPokemonTop = (dataPokemon) => {
 
             <article class="itemEvol">
             <p id="Evol-img">${cardPrevEvolutions ? cardPrevEvolutions.join('') : ''} </p>
-            <p>  <img  src = "${pokemon.img}"> ${cardNextEvolution === undefined && cardPrevEvolutions === undefined ? NotEvolution : ''}</p>
+            <p> <img  src = "${pokemon.img}"> ${cardNextEvolution === undefined && cardPrevEvolutions === undefined ? NotEvolution : ''}</p>
             <p id="Evol-img1"> ${cardNextEvolution ? cardNextEvolution.join('') : ''}</p>
             </article>
             </section>
