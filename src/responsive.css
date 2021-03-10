@@ -32,7 +32,7 @@ header>section>span>input {
 /*modal*/
 .modal-content {
   width: 310px;
-  padding: px 5px;
+  padding: 5px;
 }
 
 #modal{
@@ -220,7 +220,7 @@ img{
    /*border modal */
    .ygrass{
     /* border:  solid 2px #54ff48; */
-    box-shadow:0 0 10px #54ff48; 
+    box-shadow:0 0 10px #54ff48;
     border-radius: 30px;
   }
    .ybug{
@@ -355,7 +355,7 @@ img{
     border: solid 5px #54ff48;
     border-radius: 50px;
   }
-  
+
   .xbug{
     border: solid 5px #c6ff4c;
     border-radius: 50px;
@@ -364,7 +364,7 @@ img{
     border: solid 5px #67b8ff;
     border-radius: 50px;
   }
-  
+
   .xice{
     border: solid 5px #87f0dd;
     border-radius: 50px;

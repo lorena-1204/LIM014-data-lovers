@@ -3,7 +3,7 @@
 
 ***
 ## 1. Definición del producto
-Es una aplicación que complementa al juego Pokémon Go, brindando información adicional  como: Evoluciones, Clasificación, Ataques , etc. 
+Es una aplicación que complementa al juego Pokémon Go, brindando información adicional  como: Evoluciones, Clasificación, Ataques, etc.
 
 ## 2. Investigación de UX
 
@@ -17,7 +17,7 @@ Para poder conocer a nuestros usuarios realizamos la siguiente encuesta:
 * Los usuarios buscan mejorar los ataques de sus pokemones, aumentar la posibilidad de capturarlos.
 * Desean poder utilizar el prudcto, en su tiempo libre.
 
-## 3. Historia de usuario 
+## 3. Historia de usuario
 
 ### Historia N°1
 **¿Cómo?** Jugador de Pokemón Go nivel básico.\
@@ -33,7 +33,7 @@ Para poder conocer a nuestros usuarios realizamos la siguiente encuesta:
 ### Historia N°2
 **¿Cómo?** Yo como jugar de pokemon Go básico\
 **¿Quiero?** Clasificar los pokémons por tipos elementales: agua, acero, dragón, fantasma, fuego, etc.\
-**¿Para?** Elegir adecuadamente que tipo de pokémon usar en mis batallas. 
+**¿Para?** Elegir adecuadamente que tipo de pokémon usar en mis batallas.
 
 **Criterios de aceptación**
 - Que en la pantalla principal se observe un botón que diga tipo.
@@ -51,7 +51,7 @@ Para poder conocer a nuestros usuarios realizamos la siguiente encuesta:
 - Que se visualice sus principales ataques y debilidades del pokémon.
 - Que muestre sus movimientos rápidos y su evolución.
 
-## 4. Prototipo de baja fidelidad 
+## 4. Prototipo de baja fidelidad
 ![Baja-fidelidad](https://github.com/lorena-1204/LIM014-data-lovers/blob/main/src/img/readme/bajaFidelidad.jpg?raw=true)
 
 ## 5. Prototipo de alta fidelidad

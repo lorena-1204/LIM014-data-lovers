@@ -78,7 +78,7 @@ header>section>span>input:hover{
 #container-border{
   /*clase de html*, contenedor general*/
   width: 80%;
-  background:rgb(0, 0, 0); 
+  background:rgb(0, 0, 0);
   margin-left: auto;
   margin-right: auto;
 }
@@ -209,7 +209,7 @@ header>section>span>input:hover{
   left: 0;
   right: 0;
   bottom: 0;
-  margin:auto; 
+  margin:auto;
 }
 
 .type{
@@ -310,7 +310,7 @@ header>section>span>input:hover{
   display:flex;
   margin-top:30px;
   margin-bottom:40px;
-  
+
   /* flex-direction: row;
   flex-wrap: nowrap;
   justify-content: space-between;
