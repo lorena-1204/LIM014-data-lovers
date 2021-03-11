@@ -20,8 +20,32 @@ header>h1 {
   background-repeat: no-repeat;
   background-position: 30px 15px;
 }
+/*Botones- menu hamburguesa*/
+#btn-menu{
+  display: none;
+}
+
+.menu-hamburguesa{
+  display: none;
+  width:30px ;
+  height:30px;
+}
+
+.menu-hamburguesa:hover{
+  cursor: pointer;
+}
+
+.menu{
+  display: flex;  
+  justify-content: center;
+}
 
 /*Botones*/
+.all-button{
+  width: 100%;
+  padding-top: 10px;
+}
+
 .button {
   width: 30vh;
   height: 6vh;
@@ -41,7 +65,7 @@ header>h1 {
   text-shadow: 0 0 5px #f3f3f3;
 }
 
-header>section>span>input {
+header>span>input {
   background-image: url("/src/img/search/search-icon.png");
   background-size: 15%;
   background-repeat: no-repeat;
@@ -57,17 +81,12 @@ header>section>span>input {
   font-size: 2.5vh;
 }
 
-header>section>span>input:hover{
+header>span>input:hover{
   background-color:black;
   border:  solid 3px #00C1EC;
   color: white;
 }
 
-/*botones*/
-.all-button{
-    width: 100%;
-    padding-left: 30px;
-}
 
 /* Contenedor Card */
 .container-shining {
