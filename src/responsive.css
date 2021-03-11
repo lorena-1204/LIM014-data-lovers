@@ -1,140 +1,135 @@
 @media screen and (max-width:640px){
   header>h1 {
-  padding-top: 25px;
-  padding-left: 80px;
-  font-size: 22px;
-  background-size: 60px;
-  background-position: 10px 10px;
+    padding-top: 25px;
+    padding-left: 80px;
+    font-size: 22px;
+    background-size: 60px;
+    background-position: 10px 10px;
+  }
+  .menu-hamburguesa{
+    display: block; 
+    margin-top: -26px;
+    padding: 20px;
+  }
+  .img-menu{
+    width: 30px;
+    position: absolute;
+    top: 20px;
+    right: 15px;
+  }
+  .img-menu:hover{
+    box-shadow:0 0 10px #ffffff;
+  }
+  .menu{
+    position: absolute;
+    bottom: 0px;
+    right: -60px;
+    width:-70%;
+    transition: all 0.5s;
+    flex-direction: column-reverse;
+  }
+  #btn-menu:checked ~ .menu {
+    display: none;
+    margin:0;
+  }
+  .button {
+    width: 120px;
+    height: 25px;
+    border-radius: 8px;
+    margin-top:-50px;
+    font-size: 12px;
+  }
+  header>span>input {
+    width: 200px;
+    height: 35px;
+    border-radius: 8px;
+    background-size: 15%;
+    margin-top: -25px;
+    font-size: 12px;
+  }
+  .container-shining {
+    padding-top: 25vh;
   }
 
- .menu-hamburguesa{
-  display: block; 
-  margin-top: -26px;
-  padding: 20px;
- }
- .img-menu{
-   width: 30px;
-   position: absolute;
-   top: 20px;
-   right: 15px;
- }
- .img-menu:hover{
-   box-shadow:0 0 10px #ffffff;
- }
- .menu{
-   position: absolute;
-   bottom: 0px;
-   right: -60px;
-   width:-70%;
-   transition: all 0.5s;
-   flex-direction: column-reverse;
+ /*modal*/
+ .modal-content {
+   width: 310px;
+   padding: px 5px;
   }
-
-#btn-menu:checked ~ .menu {
-  display: none;
-  margin:0;
-}
-.button {
-  width: 120px;
-  height: 25px;
-  border-radius: 8px;
-  margin-top:-50px;
-  font-size: 12px;
-}
-
-header>span>input {
-  width: 200px;
-  height: 35px;
-  border-radius: 8px;
-  background-size: 15%;
-  margin-top: -25px;
-  font-size: 12px;
-}
-
-.container-shining {
-  padding-top: 25vh;
-}
-
-/*modal*/
-.modal-content {
-  width: 310px;
-  padding: px 5px;
-}
-#modal{
-  padding: 0;
-}
-.close{
-  font-size: 20px;
-}
-.temple{
-  font-size: 12px;
-  padding-top: 15px;
-  padding-left: 0px;
-}
-.num2{
- font-size: 18px;
- padding-top:10px;
- padding-left: 1px;
-}
-.pokeImg{
- height: 100px;
- width: 100px;
- top: 20px;
- left: 0px;
-}
-.img{
-  width: 80px;
-}
-.type{
- font-size: 14px;
-}
-.temple-info{
-  width: 155px;
-  left: 139px;
-  bottom: 160px;
-  font-size: 13px;
-}
-.name2{
- font-size: 22px;
-}
-#imgResistance{
-  width: 24px;
-}
-.temple-Resistant-Weaknesses{
- font-size: 14px;
- padding-top: 190px;
- /* width: 110px; */
-}
-.temple-iconsResistan{
-  width: 140px;
-  height: 80px;
-  bottom: 250px;
-}
-.temple-iconsWeaknesses{
-  width: 140px;
-  height: 80px;
-  bottom: 250px;
-  left: 153px;
-}
-.aggregate-calculation{
-  font-size: 14px;
-  bottom: 230px;
-  left: 10px;
-}
-.evolutiontable{
-  font-size: 10px;
-  left: 10px;
-}
-.itemEvol{
-  margin-top:30px;
-  margin-bottom:40px;
-}
-.image-pokemon{
-  width: 70px;
-}
-img{
-   width: 70px;
-}
+ #modal{
+   padding: 0;
+  }
+  .close{
+    font-size: 20px;
+  }
+  .temple{
+    font-size: 12px;
+    padding-top: 15px;
+    padding-left: 0px;
+  }
+  .num2{
+    font-size: 18px;
+    padding-top:10px;
+    padding-left: 1px;
+  }
+  .pokeImg{
+    height: 100px;
+    width: 100px;
+    top: 20px;
+    left: 0px;
+  }
+ .img{
+   width: 80px;
+ }
+ .type{
+   font-size: 14px;
+  }
+  .temple-info{
+    width: 155px;
+    left: 139px;
+    bottom: 160px;
+    font-size: 13px;
+  }
+  .name2{
+   font-size: 22px;
+  }
+  #imgResistance{
+   width: 24px;
+  }
+ .temple-Resistant-Weaknesses{
+   font-size: 14px;
+   padding-top: 190px;
+ }
+ .temple-iconsResistan{
+   width: 140px;
+   height: 80px;
+   bottom: 250px;
+  }
+  .temple-iconsWeaknesses{
+    width: 140px;
+    height: 80px;
+    bottom: 250px;
+    left: 153px;
+  }
+  .aggregate-calculation{
+    font-size: 14px;
+    bottom: 230px;
+    left: 10px;
+  }
+  .evolutiontable{
+    font-size: 10px;
+    left: 10px;
+  }
+ .itemEvol{
+   margin-top:30px;
+   margin-bottom:40px;
+  }
+  .image-pokemon{
+    width: 70px;
+  }
+  img {
+    width: 70px; 
+  }
 }
 
 @keyframes modal-show {
