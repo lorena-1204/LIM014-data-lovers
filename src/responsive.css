@@ -34,27 +34,22 @@ header>section>span>input {
   width: 310px;
   padding: 5px;
 }
-
 #modal{
   padding: 0;
 }
-
 .close{
   font-size: 20px;
 }
-
 .temple{
   font-size: 12px;
   padding-top: 15px;
   padding-left: 0px;
 }
-
 .num2{
  font-size: 18px;
  padding-top:10px;
  padding-left: 1px;
 }
-
 .pokeImg{
  height: 100px;
  width: 100px;
@@ -67,52 +62,43 @@ header>section>span>input {
 .type{
  font-size: 14px;
 }
-
 .temple-info{
   width: 155px;
   left: 139px;
   bottom: 160px;
   font-size: 13px;
 }
-
 .name2{
  font-size: 22px;
 }
-
 #imgResistance{
   width: 24px;
 }
-
 .temple-Resistant-Weaknesses{
  font-size: 14px;
  padding-top: 190px;
  /* width: 110px; */
 }
-
 .temple-iconsResistan{
   width: 140px;
   height: 80px;
   bottom: 250px;
 }
-
 .temple-iconsWeaknesses{
   width: 140px;
   height: 80px;
   bottom: 250px;
   left: 153px;
 }
-
 .aggregate-calculation{
   font-size: 14px;
   bottom: 230px;
   left: 10px;
 }
-
 .evolutiontable{
   font-size: 10px;
   left: 10px;
 }
-
 .itemEvol{
   margin-top:30px;
   margin-bottom:40px;
@@ -120,11 +106,9 @@ header>section>span>input {
 .image-pokemon{
   width: 70px;
 }
-
 img{
    width: 70px;
 }
-
 }
 
 @keyframes modal-show {
@@ -141,84 +125,78 @@ img{
     border:  solid 10px #54ff48;
     border-radius: 10px;
   }
-
 .bug{
     border: solid 10px #c6ff4c;
     border-radius: 10px;
   }
-
 .water{
     border: solid 10px #67b8ff;
     border-radius: 10px;
   }
-
 .ice{
     border: solid 10px #87f0dd;
     border-radius: 10px;
   }
-  .flying{
+.flying{
     border: solid 10px #abc7ff;
     border-radius: 10px;
   }
-  .dragon{
+.dragon{
     border: solid 10px #188bff;
     border-radius: 10px;
   }
-  .steel{
+.steel{
     border: solid 10px #89e2f8;
     border-radius: 10px;
   }
-  .ghost{
+.ghost{
     border: solid 10px #8590ff;
     border-radius: 10px;
   }
-  .poison{
+.poison{
     border: solid 10px #df7efd;
     border-radius: 10px;
   }
-  .fairy{
+.fairy{
     border: solid 10px #fc9ff4;
     border-radius: 10px;
   }
-
-  .normal{
+.normal{
     border: solid 10px #c9cac8;
     border-radius: 10px;
   }
-  .fighting{
+.fighting{
     border: solid 10px #fd5579;
     border-radius: 10px;
   }
-  .psychic{
+.psychic{
     border: solid 10px #fb8383;
     border-radius: 10px;
   }
-  .rock{
+.rock{
     border: solid 10px #ffde7d;
     border-radius: 10px;
   }
-  .dark{
+.dark{
     border: solid 10px #ab69f7;
     border-radius: 10px;
   }
-  .ground{
+.ground{
     border: solid 10px #ff9060;
     border-radius: 10px;
   }
-  .fire{
+.fire{
     border: solid 10px #fd0000;
     border-radius: 10px;
   }
-  .electric{
+.electric{
     border: solid 10px #ffd903;
     border-radius: 10px;
   }
 
-
-  /*clases y colores de boton More */
-
+/*clases y colores de boton More */
    /*border modal */
-   .ygrass{
+ .ygrass{
     /* border:  solid 2px #54ff48; */
     box-shadow:0 0 10px #54ff48;
     border-radius: 30px;
@@ -259,7 +237,6 @@ img{
     box-shadow:0 0 10px #fc9ff4;
     border-radius: 30px;
   }
-
   .ynormal{
     box-shadow:0 0 10px #c9cac8;
     border-radius: 30px;
@@ -293,7 +270,7 @@ img{
     border-radius: 30px;
   }
 
-   /*contenedor de pokemones now */
+/*contenedor de pokemones now */
   .agrass{
     border:  solid 4px #54ff48;
   }
@@ -303,7 +280,6 @@ img{
   .awater{
     border: solid 4px #67b8ff;
   }
-
   .aice{
     border: solid 4px #87f0dd;
   }
@@ -350,12 +326,11 @@ img{
     border: solid 4px #ffd903;
   }
 
-  /*contenedor de evoluciones */
+/*contenedor de evoluciones */
   .xgrass{
     border: solid 5px #54ff48;
     border-radius: 50px;
   }
-
   .xbug{
     border: solid 5px #c6ff4c;
     border-radius: 50px;
@@ -364,7 +339,6 @@ img{
     border: solid 5px #67b8ff;
     border-radius: 50px;
   }
-
   .xice{
     border: solid 5px #87f0dd;
     border-radius: 50px;
@@ -393,7 +367,6 @@ img{
     border: solid 5px #fc9ff4;
     border-radius: 50px;
   }
-
   .xnormal{
     border: solid 5px #c9cac8;
     border-radius: 50px;

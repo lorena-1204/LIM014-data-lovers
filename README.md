@@ -3,7 +3,8 @@
 
 ***
 ## 1. Definición del producto
-Es una aplicación que complementa al juego Pokémon Go, brindando información adicional  como: Evoluciones, Clasificación, Ataques, etc.
+Es una página web que complementa al juego Pokémon Go, brindando información adicional  como:
++ Evoluciones, Clasificación, Ataques, etc.
 
 ## 2. Investigación de UX
 
@@ -13,7 +14,7 @@ Para poder conocer a nuestros usuarios realizamos la siguiente encuesta:
 + [Resultados](https://docs.google.com/spreadsheets/d/1dhcoh83wKbN1WDNX6gkaRdoqtGpmD3LFyeLYkfIF_VY/edit?usp=forms_web_b#gid=296711079)
 
 ### Conclusiones:
-* Público Objetivo: jugadores de la app Pokémon Go nivel básico e intermedio de 20 a 35 años.
+* Público Objetivo: Jugadores de la app Pokémon Go nivel básico e intermedio de 20 a 35 años.
 * Los usuarios buscan mejorar los ataques de sus pokemones, aumentar la posibilidad de capturarlos.
 * Desean poder utilizar el prudcto, en su tiempo libre.
 
