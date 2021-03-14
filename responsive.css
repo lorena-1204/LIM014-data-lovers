@@ -1,0 +1,421 @@
+@media screen and (max-width:640px){
+  header>h1 {
+    padding-top: 25px;
+    padding-left: 80px;
+    font-size: 22px;
+    background-size: 60px;
+    background-position: 10px 10px;
+  }
+  .menu-hamburguesa{
+    display: block; 
+    margin-top: -26px;
+    padding: 20px;
+  }
+  .img-menu{
+    width: 30px;
+    position: absolute;
+    top: 20px;
+    right: 15px;
+  }
+  .img-menu:hover{
+    box-shadow:0 0 10px #ffffff;
+  }
+  .menu{
+    position: absolute;
+    bottom: 0px;
+    right: -60px;
+    width:-70%;
+    transition: all 0.5s;
+    flex-direction: column-reverse;
+  }
+  #btn-menu:checked ~ .menu {
+    display: none;
+    margin:0;
+  }
+  .button {
+    width: 120px;
+    height: 25px;
+    border-radius: 8px;
+    margin-top:-50px;
+    font-size: 12px;
+  }
+  header>span>input {
+    width: 200px;
+    height: 35px;
+    border-radius: 8px;
+    background-size: 15%;
+    margin-top: -25px;
+    font-size: 12px;
+  }
+  .container-shining {
+    padding-top: 25vh;
+  }
+ /*modal*/
+ .modal-content {
+   width: 310px;
+   padding: px 5px;
+  }
+ #modal{
+   padding: 0;
+  }
+  .close{
+    font-size: 20px;
+  }
+  .temple{
+    font-size: 12px;
+    padding-top: 15px;
+    padding-left: 0px;
+  }
+  .num2{
+    font-size: 18px;
+    padding-top:10px;
+    padding-left: 1px;
+  }
+  .pokeImg{
+    height: 100px;
+    width: 100px;
+    top: 20px;
+    left: 0px;
+  }
+ .img{
+   width: 80px;
+ }
+ .type{
+   font-size: 14px;
+  }
+  .temple-info{
+    width: 155px;
+    left: 139px;
+    bottom: 160px;
+    font-size: 13px;
+  }
+  .name2{
+   font-size: 22px;
+  }
+  #imgResistance{
+   width: 24px;
+  }
+ .temple-Resistant-Weaknesses{
+   font-size: 14px;
+   padding-top: 190px;
+ }
+ .temple-iconsResistan{
+   width: 140px;
+   height: 80px;
+   bottom: 250px;
+  }
+  .temple-iconsWeaknesses{
+    width: 140px;
+    height: 80px;
+    bottom: 250px;
+    left: 153px;
+  }
+  .aggregate-calculation{
+    font-size: 14px;
+    bottom: 230px;
+    left: 10px;
+  }
+  .evolutiontable{
+    font-size: 10px;
+    left: 10px;
+  }
+ .itemEvol{
+   margin-top:30px;
+   margin-bottom:40px;
+  }
+  .image-pokemon{
+    width: 70px;
+  }
+  img {
+    width: 70px; 
+  }
+}
+
+@keyframes modal-show {
+	0% { opacity: 0; }
+	100% { opacity: 1; }
+}
+
+.imgResistance{
+  width: 30px;
+}
+
+/*clases y colores de border Card*/
+.grass{
+    border:  solid 10px #54ff48;
+    border-radius: 10px;
+  }
+.bug{
+    border: solid 10px #c6ff4c;
+    border-radius: 10px;
+  }
+.water{
+    border: solid 10px #67b8ff;
+    border-radius: 10px;
+  }
+.ice{
+    border: solid 10px #87f0dd;
+    border-radius: 10px;
+  }
+.flying{
+    border: solid 10px #abc7ff;
+    border-radius: 10px;
+  }
+.dragon{
+    border: solid 10px #188bff;
+    border-radius: 10px;
+  }
+.steel{
+    border: solid 10px #89e2f8;
+    border-radius: 10px;
+  }
+.ghost{
+    border: solid 10px #8590ff;
+    border-radius: 10px;
+  }
+.poison{
+    border: solid 10px #df7efd;
+    border-radius: 10px;
+  }
+.fairy{
+    border: solid 10px #fc9ff4;
+    border-radius: 10px;
+  }
+.normal{
+    border: solid 10px #c9cac8;
+    border-radius: 10px;
+  }
+.fighting{
+    border: solid 10px #fd5579;
+    border-radius: 10px;
+  }
+.psychic{
+    border: solid 10px #fb8383;
+    border-radius: 10px;
+  }
+.rock{
+    border: solid 10px #ffde7d;
+    border-radius: 10px;
+  }
+.dark{
+    border: solid 10px #ab69f7;
+    border-radius: 10px;
+  }
+.ground{
+    border: solid 10px #ff9060;
+    border-radius: 10px;
+  }
+.fire{
+    border: solid 10px #fd0000;
+    border-radius: 10px;
+  }
+.electric{
+    border: solid 10px #ffd903;
+    border-radius: 10px;
+  }
+
+/*clases y colores de boton More */
+   /*border modal */
+ .ygrass{
+    /* border:  solid 2px #54ff48; */
+    box-shadow:0 0 10px #54ff48; 
+    border-radius: 30px;
+  }
+   .ybug{
+    box-shadow:0 0 10px #c6ff4c;
+    border-radius: 30px;
+  }
+  .ywater{
+    box-shadow:0 0 10px #67b8ff;
+    border-radius: 30px;
+  }
+  .yice{
+    box-shadow:0 0 10px#87f0dd;
+    border-radius: 30px;
+  }
+  .yflying{
+    box-shadow:0 0 10px#abc7ff;
+    border-radius: 30px;
+  }
+  .ydragon{
+    box-shadow:0 0 10px #188bff;
+    border-radius: 30px;
+  }
+  .ysteel{
+    box-shadow:0 0 10px #89e2f8;
+    border-radius: 30px;
+  }
+  .yghost{
+    box-shadow:0 0 10px #8590ff;
+    border-radius: 30px;
+  }
+  .ypoison{
+    box-shadow:0 0 10px #df7efd;
+    border-radius: 30px;
+  }
+  .yfairy{
+    box-shadow:0 0 10px #fc9ff4;
+    border-radius: 30px;
+  }
+  .ynormal{
+    box-shadow:0 0 10px #c9cac8;
+    border-radius: 30px;
+  }
+  .yfighting{
+    box-shadow:0 0 10px #fd5579;
+    border-radius: 30px;
+  }
+  .ypsychic{
+    box-shadow:0 0 10px #fb8383;
+    border-radius: 30px;
+  }
+  .yrock{
+    box-shadow:0 0 10px #ffde7d;
+    border-radius: 30px;
+  }
+  .ydark{
+    box-shadow:0 0 10px #ab69f7;
+    border-radius: 30px;
+  }
+  .yground{
+    box-shadow:0 0 10px #ff9060;
+    border-radius: 30px;
+  }
+  .yfire{
+    box-shadow:0 0 10px #fd0000;
+    border-radius: 30px;
+  }
+  .yelectric{
+    box-shadow:0 0 10px #ffd903;
+    border-radius: 30px;
+  }
+
+/*contenedor de pokemones now */
+  .agrass{
+    border:  solid 4px #54ff48;
+  }
+  .abug{
+    border: solid 4px #c6ff4c;
+  }
+  .awater{
+    border: solid 4px #67b8ff;
+  }
+  .aice{
+    border: solid 4px #87f0dd;
+  }
+  .aflying{
+    border: solid 4px #abc7ff;
+  }
+  .adragon{
+    border: solid 4px #188bff;
+  }
+  .asteel{
+    border: solid 4px #89e2f8;
+  }
+  .aghost{
+    border: solid 4px #8590ff;
+  }
+  .apoison{
+    border: solid 4px #df7efd;
+  }
+  .afairy{
+    border: solid 4px #fc9ff4;
+  }
+  .anormal{
+    border: solid 4px #c9cac8;
+  }
+  .afighting{
+    border: solid 4px #fd5579;
+  }
+  .apsychic{
+    border: solid 4px #fb8383;
+  }
+  .arock{
+    border: solid 4px #ffde7d;
+  }
+  .adark{
+    border: solid 4px #ab69f7;
+  }
+  .aground{
+    border: solid 4px #ff9060;
+  }
+  .afire{
+    border: solid 4px #fd0000;
+  }
+  .aelectric{
+    border: solid 4px #ffd903;
+  }
+
+/*contenedor de evoluciones */
+  .xgrass{
+    border: solid 5px #54ff48;
+    border-radius: 50px;
+  }
+  .xbug{
+    border: solid 5px #c6ff4c;
+    border-radius: 50px;
+  }
+  .xwater{
+    border: solid 5px #67b8ff;
+    border-radius: 50px;
+  } 
+  .xice{
+    border: solid 5px #87f0dd;
+    border-radius: 50px;
+  }
+  .xflying{
+    border: solid 5px #abc7ff;
+    border-radius: 50px;
+  }
+  .xdragon{
+    border: solid 5px #188bff;
+    border-radius: 50px;
+  }
+  .xsteel{
+    border: solid 5px #89e2f8;
+    border-radius: 50px;
+  }
+  .xghost{
+    border: solid 5px #8590ff;
+    border-radius: 50px;
+  }
+  .xpoison{
+    border: solid 5px #df7efd;
+    border-radius: 50px;
+  }
+  .xfairy{
+    border: solid 5px #fc9ff4;
+    border-radius: 50px;
+  }
+  .xnormal{
+    border: solid 5px #c9cac8;
+    border-radius: 50px;
+  }
+  .xfighting{
+    border: solid 10px #fd5579;
+    border-radius: 50px;
+  }
+  .xpsychic{
+    border: solid 5px #fb8383;
+    border-radius: 50px;
+  }
+  .xrock{
+    border: solid 5px #ffde7d;
+    border-radius: 50px;
+  }
+  .xdark{
+    border: solid 5px #ab69f7;
+    border-radius: 50px;
+  }
+  .xground{
+    border: solid 5px #ff9060;
+    border-radius: 50px;
+  }
+  .xfire{
+    border: solid 5px #fd0000;
+    border-radius: 50px;
+  }
+  .xelectric{
+    border: solid 5px #ffd903;
+    border-radius: 50px;
+  }

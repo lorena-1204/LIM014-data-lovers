@@ -1,0 +1,347 @@
+* {
+  margin: 0%;
+}
+
+/*logo*/
+header {
+  width:100%;
+  background-image: url("./img/menu/night3.png");
+  color: white;
+  text-shadow: 0 0 20px #f3f3f3;
+  position:fixed;
+}
+
+header>h1 {
+  padding-top: 35px;
+  padding-left: 140px;
+  padding-bottom: 25px;
+  background-image: url("/src/img/menu/ball.png");
+  background-size: 90px;
+  background-repeat: no-repeat;
+  background-position: 30px 15px;
+}
+/*Botones- menu hamburguesa*/
+#btn-menu{
+  display: none;
+}
+
+.menu-hamburguesa{
+  display: none;
+  width:30px ;
+  height:30px;
+}
+
+.menu-hamburguesa:hover{
+  cursor: pointer;
+}
+
+.menu{
+  display: flex;  
+  justify-content: center;
+}
+
+/*Botones*/
+.all-button{
+  width: 100%;
+  padding-top: 10px;
+}
+
+.button {
+  width: 30vh;
+  height: 6vh;
+  border-radius: 2vh;
+  outline: none;
+  margin-right: 10vh;
+  margin-top: 4vh;
+  font-size: 2.5vh;
+  font-weight: bold;
+  text-align: left;
+}
+
+.button:hover{
+  background-color:black;
+  border:  solid 3px #00C1EC;
+  color: white;
+  text-shadow: 0 0 5px #f3f3f3;
+}
+
+header>span>input {
+  background-image: url("/src/img/search/search-icon.png");
+  background-size: 15%;
+  background-repeat: no-repeat;
+  background-position: center right;
+  border-radius: 2vh;
+  width: 50vh;
+  height: 7vh;
+  outline: none;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5vh;
+  font-size: 2.5vh;
+}
+
+header>span>input:hover{
+  background-color:black;
+  border:  solid 3px #00C1EC;
+  color: white;
+}
+
+/* Contenedor Card */
+.container-shining {
+  background-image: url("./img/menu/night3.png");
+  padding-top: 46vh;
+}
+
+#container-border{
+  /*clase de html*, contenedor general*/
+  width: 80%;
+  background:rgb(0, 0, 0); 
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.the-Cards{
+   /*clase de html, contenedor padre para usar Flexbox*/
+  display: flex;
+  flex-wrap: wrap;
+  justify-content:space-around;
+  align-items: center;
+}
+
+.container-Card{
+  /*clase de mainjs*/
+  background-image:url('img/card4.png');
+  background-repeat:no-repeat;
+  background-position:center center;
+  background-size:120%;
+  width:190px;
+  height:320px;
+  margin:18px;
+}
+
+#img-card{
+  padding: 62px 40px 0px;
+}
+
+.container-Card:hover{
+  transform: scale(1.1);
+}
+
+.legend{
+  justify-content: center;
+  text-align: center;
+  text-transform: capitalize;
+  font-size: 17px;
+}
+
+.num1{
+  font-size: 16px;
+  font-weight: bold;
+  font-family:Arial, Helvetica, sans-serif;
+}
+
+.name1{
+  font-size: 20px;
+  font-weight: bold;
+  font-family:Arial, Helvetica, sans-serif;
+}
+
+/*modal*/
+.modal {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background-color: rgba(0,0,0,0.7);
+  padding: 0 1rem;
+}
+
+.modal-content {
+  background-color: rgb(0, 0, 0);
+  color: white;
+  margin: 2.5rem auto -12rem;
+  padding: 5px 10px;
+  border-radius: 10px;
+  overflow-y: auto;
+  position: relative;
+}
+
+.close{
+  color: rgb(255, 255, 255);
+  font-size: 30px;
+  font-weight: bold;
+  font-family:Arial, Helvetica, sans-serif;
+  text-align: right;
+  position: absolute;
+  top:0;
+  right:0;
+  cursor: pointer;
+}
+
+.close:hover{
+  color: #00C1EC;
+  text-shadow: 0 0 20px #f3f3f3;
+}
+
+.temple{
+  font-size: 16px;
+  padding: 28px;
+  font-family:Arial, Helvetica, sans-serif;
+  position: relative;
+}
+
+.num2{
+  font-size: 20px;
+  font-weight: bold;
+  position: absolute;
+  top:0;
+  left: 0;
+  padding-top:20px;
+  padding-left: 10px;
+}
+
+.pokeImg{
+  height: 150px;
+  width: 150px;
+  border-radius: 100%;
+  background: rgba(255, 255, 255, .4);
+  position: relative;
+  top: 18px;
+  left: 0px;
+}
+
+.img{
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin:auto; 
+}
+
+.type{
+  text-transform: capitalize;
+  font-weight: bold;
+  font-size: 20px;
+  padding-top:30px;
+  padding-left:20px;
+}
+
+.temple-info{
+  width: 220px;
+  position: relative;
+  left: 240px;
+  bottom: 230px;
+  font-size: 16px;
+}
+
+.name2{
+  text-transform: capitalize;
+  font-weight: bold;
+  font-size: 24px;
+}
+
+#imgResistance{
+  width: 39px;
+}
+
+.temple-Resistant-Weaknesses{
+  position: relative;
+  font-size: 18px;
+  font-weight: bold;
+  padding-top: 190px;
+  width: 450px;
+}
+
+.temple-iconsResistan{
+  background: rgba(255, 255, 255, .4);
+  width: 210px;
+  height: 120px;
+  border-radius: 8px;
+  position: absolute;
+  padding:8px 0px 5px 5px;
+  bottom: 280px;
+}
+
+.temple-iconsWeaknesses{
+  background: rgba(255, 255, 255, .4);
+  width: 210px;
+  height: 120px;
+  border-radius: 8px;
+  bottom: 280px;
+  position: absolute;
+  padding:8px 0px 5px 8px;
+  left: 230px;
+}
+
+.aggregate-calculation{
+  font-size: 16px;
+  text-transform: capitalize;
+  position: relative;
+  bottom: 250px;
+}
+
+.encabezado{
+ text-transform: uppercase;
+ font-weight: bold;
+}
+
+.quick-move {
+ display: grid;
+ grid-template-columns: 40% repeat(3, 1fr);
+ border: #00C1EC 1px dashed;  
+ border-radius: 2px;
+ line-height: 30px;
+ margin:5px
+}
+
+.quick-move div {
+  text-align: center;
+  font-weight: bold;
+}
+
+#title-Evol{
+  position: relative;
+  bottom: 210px;
+}
+
+.evolutiontable{
+  background: rgba(255, 255, 255, .2);
+  font-size: 13px;
+  text-transform: capitalize;
+  position: relative;
+  bottom: 210px;
+  display: flex;
+}
+
+.itemEvol{
+  display:flex;
+  margin-top:30px;
+  margin-bottom:40px;
+}
+
+#Evol-img{
+  margin:10px;
+  padding: 10px;
+}
+
+#Evol-img1{
+  margin:10px;
+}
+
+.hide{
+  display: none;
+}
+
+/*pie de página*/
+.container-footer{
+  background-image: url("./img/menu/night3.png");
+  padding-top: 10vh;
+}
