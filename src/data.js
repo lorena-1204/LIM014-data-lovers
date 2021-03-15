@@ -37,37 +37,71 @@ export const orderByHp = (a, b) =>{
 }
 
 export const pokemonOrder = {
-    differentOrder: (everyPokemon, selected) => {
-        let result;
+  differentOrder: (everyPokemon, selected) => {
+    let result;
+    switch(true) {
+      case selected === "aZ":
+        result = everyPokemon.sort(orderByName);
+         break;
+      case selected === "zA":
+        result = everyPokemon.sort(orderByName).reverse();
+        break;
+      case selected === "ascendingCp":
+          result = everyPokemon.sort(orderByPc);
+          break;
+      case selected === "descendingCp":
+          result = everyPokemon.sort(orderByPc).reverse();
+          break; 
+      case selected === "ascendingHp":
+          result = everyPokemon.sort(orderByHp);
+          break;
+      case selected === "descendingHp":
+          result = everyPokemon.sort(orderByHp).reverse();
+          break;
+      case selected === "ascendingspawn":
+          result = everyPokemon.sort(orderBySpawn);
+          break;
+      case selected === "descendingspawn":
+          result = everyPokemon.sort(orderBySpawn).reverse();
+          break;
+      }
+      return result;
+    }
+  };
 
-        if (selected === "aZ"){
-            result = everyPokemon.sort(orderByName);
-        }
-        if (selected === "zA"){
-            result = everyPokemon.sort(orderByName).reverse();
-        }
 
-        if (selected === "ascendingCp"){
-            result = everyPokemon.sort(orderByPc);
-        }
-        if (selected === "descendingCp"){
-            result = everyPokemon.sort(orderByPc).reverse();
-        }
-        if (selected === "ascendingHp"){
-            result = everyPokemon.sort(orderByHp);
-        }
-        if (selected === "descendingHp"){
-            result = everyPokemon.sort(orderByHp).reverse();
-        }
-        if (selected === "ascendingspawn"){
-            result = everyPokemon.sort(orderBySpawn);
-        }
-        if (selected === "descendingspawn"){
-            result = everyPokemon.sort(orderBySpawn).reverse();
-        }
-        return result;
-  },
-};
+// export const pokemonOrder = {
+//     differentOrder: (everyPokemon, selected) => {
+//         let result;
+
+//         if (selected === "aZ"){
+//             result = everyPokemon.sort(orderByName);
+//         }
+//         if (selected === "zA"){
+//             result = everyPokemon.sort(orderByName).reverse();
+//         }
+
+//         if (selected === "ascendingCp"){
+//             result = everyPokemon.sort(orderByPc);
+//         }
+//         if (selected === "descendingCp"){
+//             result = everyPokemon.sort(orderByPc).reverse();
+//         }
+//         if (selected === "ascendingHp"){
+//             result = everyPokemon.sort(orderByHp);
+//         }
+//         if (selected === "descendingHp"){
+//             result = everyPokemon.sort(orderByHp).reverse();
+//         }
+//         if (selected === "ascendingspawn"){
+//             result = everyPokemon.sort(orderBySpawn);
+//         }
+//         if (selected === "descendingspawn"){
+//             result = everyPokemon.sort(orderBySpawn).reverse();
+//         }
+//         return result;
+//   },
+// };
 
 //Cálculo agregado
 export const calculateStab = (attack, tipoPokemon) => {

@@ -13,7 +13,7 @@ const obtainNames = (attack) => {
 
 const showsAttacks = (arrayAtacks) => {
   let stabEachPokemon = '';
-  arrayAtacks.forEach((nuevo) => {
+  arrayAtacks.map((nuevo) => {
     stabEachPokemon += `<p class="comun-attack">${nuevo}</p>`;
   });
   return stabEachPokemon;
@@ -27,7 +27,7 @@ const dataContainer = document.getElementById("card");
 //variable que llama a toda la data
 let everyPokemonData = datapoke.pokemon;
 let cardPokemon = (dataPokemon) => {
-  dataPokemon.forEach((pokemon) => {
+  dataPokemon.map((pokemon) => {
 
     const container = document.createElement('figure');
     container.className = "container-Card " + pokemon.type[0];
@@ -211,7 +211,7 @@ function searchbyName() {
 let cardPokemonTop = (dataPokemon) => {
   let count = 0;
 
-  dataPokemon.forEach(pokemon => {
+  dataPokemon.map(pokemon => {
     count++;
 
     if (count < 11) {
