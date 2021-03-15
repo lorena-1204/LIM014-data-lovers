@@ -6,7 +6,6 @@
 Es una aplicación que complementa al juego Pokémon Go, brindando información adicional  como: Evoluciones, Clasificación, Ataques , etc. 
 
 ## 2. Investigación de UX
-
 Para poder conocer a nuestros usuarios realizamos la siguiente encuesta:
 + [Encuesta](https://docs.google.com/forms/d/1-q0cPj2PysjyYTP9TwW3fSu6Q494wsUmOm6WtpAiNOI/edit?usp=drive_open)
 
