@@ -21,9 +21,9 @@ Para poder conocer a nuestros usuarios realizamos la siguiente encuesta:
 ## 3. Historia de usuario
 
 ### Historia N°1
-**¿Cómo?** Jugador de Pokémon Go nivel básico.\
-**¿Quiero?** Ver los puntos de combate (Cp) y puntos de salud (Hp) de todos los pokémons y ordenarlos alfabéticamente.\
-**¿Para?** Mejorar el poder de mis Pokémons.
+**Como:** Jugador de Pokémon Go nivel básico.\
+**Quiero:** Ver los puntos de combate (Cp) y puntos de salud (Hp) de todos los pokémons y ordenarlos alfabéticamente.\
+**Para:** Mejorar el poder de mis Pokémons.
 
 **Criterios de aceptación**
 - El usuario puede visualizar el nombre, número y la imagen de cada Pokémon.
@@ -31,9 +31,9 @@ Para poder conocer a nuestros usuarios realizamos la siguiente encuesta:
 - El usuario puede ordenar alfabéticamente.
 
 ### Historia N°2
-**¿Cómo?** Jugador de Pokémon Go básico\
-**¿Quiero?** Clasificar los Pokémons por tipos elementales: agua, acero, dragón, fantasma, fuego, etc.\
-**¿Para?** Elegir adecuadamente que tipo de Pokémon usar en mis batallas.
+**Como:** Jugador de Pokémon Go básico\
+**Quiero:** Clasificar los Pokémons por tipos elementales: agua, acero, dragón, fantasma, fuego, etc.\
+**Para:** Elegir adecuadamente que tipo de Pokémon usar en mis batallas.
 
 **Criterios de aceptación**
 - El usuario puede visualizar en la pantalla principal un botón para clasificar a los Pokémons por tipo.
@@ -42,9 +42,9 @@ Para poder conocer a nuestros usuarios realizamos la siguiente encuesta:
 -  El usuario puede seleccionar un tipo de Pokémon y se visualizar todos los Pokémons de ese tipo.
 
 ### Historia N°3
-**¿Cómo?** Jugador de Pokémon Go intermedio.\
-**¿Quiero?** Saber sus principales ataques, debilidades, movimientos rápidos y evolución de mis Pokémons.\
-**¿Para?** Batallar en los gimnasios .
+**Como:** Jugador de Pokémon Go intermedio.\
+**Quiero:** Saber sus principales ataques, debilidades, movimientos rápidos y evolución de mis Pokémons.\
+**Para:** Batallar en los gimnasios .
 
 **Criterios de aceptación**
 - El usuario al seleccionar un Pokémon se abra una pequeña ventana con sus datos principales.
@@ -57,17 +57,19 @@ Para poder conocer a nuestros usuarios realizamos la siguiente encuesta:
 ![Baja-fidelidad](https://github.com/lorena-1204/LIM014-data-lovers/blob/main/src/img/readme/Prototipo%20de%20baja%20fidelidad%20.jpg?raw=true)
 
 ## 5. Prototipo de alta fidelidad
-### Primer Prototipo
-+ Página de Inicio
+### Prototipo Inicial
++ Primer prototipo de la página de Inicio
 
 ![Prototipo-1](https://github.com/lorena-1204/LIM014-data-lovers/blob/main/src/img/readme/Prototipo%201.jpg?raw=true)
-+ Diseños del modal
++ Primeros prototipos del modal
 
 ![Prototipo-2](https://github.com/lorena-1204/LIM014-data-lovers/blob/main/src/img/readme/prototipo%202.jpg?raw=true)
 ![Prototipo-4](https://github.com/lorena-1204/LIM014-data-lovers/blob/main/src/img/readme/prototipo%204.jpg?raw=true)
 
 
 ### Prototipo Final
++ Página de Inicio
 ![PokeP1](https://github.com/lorena-1204/LIM014-data-lovers/blob/main/src/img/readme/PokeP1.png?raw=true)
 
++ Modal
 ![PokeP2](https://github.com/lorena-1204/LIM014-data-lovers/blob/main/src/img/readme/PokeP2.jpg?raw=true)
