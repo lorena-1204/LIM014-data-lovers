@@ -15,7 +15,7 @@ header>h1 {
   padding-top: 35px;
   padding-left: 140px;
   padding-bottom: 25px;
-  background-image: url("/src/img/menu/ball.png");
+  background-image: url("./img/menu/ball.png");
   background-size: 90px;
   background-repeat: no-repeat;
   background-position: 30px 15px;
@@ -36,19 +36,18 @@ header>h1 {
 }
 
 .menu{
-  display: flex;  
+  display: flex;
   justify-content: center;
 }
 
 /*Botones*/
 .all-button{
   width: 100%;
-  padding-top: 10px;
 }
 
 .button {
-  width: 30vh;
-  height: 6vh;
+  width: 25vh;
+  height: 5.0vh;
   border-radius: 2vh;
   outline: none;
   margin-right: 10vh;
@@ -67,12 +66,12 @@ header>h1 {
 
 header>span>input {
   background-image: url("/src/img/search/search-icon.png");
-  background-size: 15%;
+  background-size: 10%;
   background-repeat: no-repeat;
   background-position: center right;
   border-radius: 2vh;
-  width: 50vh;
-  height: 7vh;
+  width: 56vh;
+  height: 6vh;
   outline: none;
   display: block;
   margin-left: auto;
@@ -87,11 +86,10 @@ header>span>input:hover{
   color: white;
 }
 
-
 /* Contenedor Card */
 .container-shining {
   background-image: url("./img/menu/night3.png");
-  padding-top: 46vh;
+  padding-top: 37vh;
 }
 
 #container-border{
@@ -345,4 +343,11 @@ header>span>input:hover{
 .container-footer{
   background-image: url("./img/menu/night3.png");
   padding-top: 10vh;
+}
+
+footer{
+  color:white;
+  font-size: 2.5vh;
+  padding-left: 25px;
+  padding-bottom: 15px;
 }
