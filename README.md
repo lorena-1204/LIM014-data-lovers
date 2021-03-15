@@ -2,6 +2,7 @@
 ![Pokeplanet](https://github.com/lorena-1204/LIM014-data-lovers/blob/main/src/img/readme/planet.PNG?raw=true)
 
 ***
+
 ## 1. Definición del producto
 Es una aplicación que complementa al juego Pokémon Go, brindando información adicional  como: Evoluciones, Clasificación, Ataques , etc. 
 

@@ -15,7 +15,7 @@ header>h1 {
   padding-top: 35px;
   padding-left: 140px;
   padding-bottom: 25px;
-  background-image: url("/src/img/menu/ball.png");
+  background-image: url("./img/menu/ball.png");
   background-size: 90px;
   background-repeat: no-repeat;
   background-position: 30px 15px;
