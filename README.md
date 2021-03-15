@@ -15,15 +15,15 @@ Para poder conocer a nuestros usuarios realizamos la siguiente encuesta:
 
 ### Conclusiones:
 * Público Objetivo: Jugadores de la app Pokémon Go nivel básico e intermedio de 20 a 35 años.
-* Los usuarios buscan mejorar los ataques de sus pokemones, aumentar la posibilidad de capturarlos.
-* Desean poder utilizar el prudcto, en su tiempo libre.
+* Los usuarios buscan mejorar los ataques de sus Pokémons y aumentar la posibilidad de capturarlos.
+* Desean utilizar el producto en su tiempo libre.
 
 ## 3. Historia de usuario
 
 ### Historia N°1
 **¿Cómo?** Jugador de Pokemón Go nivel básico.\
-**¿Quiero?** Ver los puntos de combate (cp) y puntos de salud (hp) de todos los pokémons y ordenarlos íalfabéticamente.
-**¿Para?** Para mejorar el poder de mis pokémons.
+**¿Quiero?** Ver los puntos de combate (Cp) y puntos de salud (Hp) de todos los pokémons y ordenarlos alfabéticamente.
+**¿Para?** Mejorar el poder de mis pokémons.
 
 **Criterios de aceptación**
 - Que se pueda visualizar el nombre, número y la imagen de cada pokémon.
