@@ -58,7 +58,7 @@ Para poder conocer a nuestros usuarios realizamos la siguiente encuesta:
 
 ## 5. Prototipo de alta fidelidad
 ### Prototipo Inicial
-+ Primer prototipo de la página de Inicio
++ Primer prototipo de la página de inicio
 
 ![Prototipo-1](https://github.com/lorena-1204/LIM014-data-lovers/blob/main/src/img/readme/Prototipo%201.jpg?raw=true)
 + Primeros prototipos del modal
@@ -69,7 +69,9 @@ Para poder conocer a nuestros usuarios realizamos la siguiente encuesta:
 
 ### Prototipo Final
 + Página de Inicio
+
 ![PokeP1](https://github.com/lorena-1204/LIM014-data-lovers/blob/main/src/img/readme/PokeP1.png?raw=true)
 
 + Modal
+
 ![PokeP2](https://github.com/lorena-1204/LIM014-data-lovers/blob/main/src/img/readme/PokeP2.jpg?raw=true)
