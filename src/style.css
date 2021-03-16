@@ -36,19 +36,18 @@ header>h1 {
 }
 
 .menu{
-  display: flex;  
+  display: flex;
   justify-content: center;
 }
 
 /*Botones*/
 .all-button{
   width: 100%;
-  padding-top: 10px;
 }
 
 .button {
-  width: 30vh;
-  height: 6vh;
+  width: 25vh;
+  height: 5.0vh;
   border-radius: 2vh;
   outline: none;
   margin-right: 10vh;
@@ -67,12 +66,12 @@ header>h1 {
 
 header>span>input {
   background-image: url("/src/img/search/search-icon.png");
-  background-size: 15%;
+  background-size: 10%;
   background-repeat: no-repeat;
   background-position: center right;
   border-radius: 2vh;
-  width: 50vh;
-  height: 7vh;
+  width: 56vh;
+  height: 6vh;
   outline: none;
   display: block;
   margin-left: auto;
@@ -90,13 +89,13 @@ header>span>input:hover{
 /* Contenedor Card */
 .container-shining {
   background-image: url("./img/menu/night3.png");
-  padding-top: 46vh;
+  padding-top: 37vh;
 }
 
 #container-border{
   /*clase de html*, contenedor general*/
   width: 80%;
-  background:rgb(0, 0, 0); 
+  background:rgb(0, 0, 0);
   margin-left: auto;
   margin-right: auto;
 }
@@ -223,7 +222,7 @@ header>span>input:hover{
   left: 0;
   right: 0;
   bottom: 0;
-  margin:auto; 
+  margin:auto;
 }
 
 .type{
@@ -296,7 +295,7 @@ header>span>input:hover{
 .quick-move {
  display: grid;
  grid-template-columns: 40% repeat(3, 1fr);
- border: #00C1EC 1px dashed;  
+ border: #00C1EC 1px dashed;
  border-radius: 2px;
  line-height: 30px;
  margin:5px
@@ -344,4 +343,11 @@ header>span>input:hover{
 .container-footer{
   background-image: url("./img/menu/night3.png");
   padding-top: 10vh;
+}
+
+footer{
+  color:white;
+  font-size: 2.5vh;
+  padding-left: 25px;
+  padding-bottom: 15px;
 }

@@ -51,7 +51,7 @@ export const pokemonOrder = {
           break;
       case selected === "descendingCp":
           result = everyPokemon.sort(orderByPc).reverse();
-          break; 
+          break;
       case selected === "ascendingHp":
           result = everyPokemon.sort(orderByHp);
           break;
@@ -68,40 +68,6 @@ export const pokemonOrder = {
       return result;
     }
   };
-
-
-// export const pokemonOrder = {
-//     differentOrder: (everyPokemon, selected) => {
-//         let result;
-
-//         if (selected === "aZ"){
-//             result = everyPokemon.sort(orderByName);
-//         }
-//         if (selected === "zA"){
-//             result = everyPokemon.sort(orderByName).reverse();
-//         }
-
-//         if (selected === "ascendingCp"){
-//             result = everyPokemon.sort(orderByPc);
-//         }
-//         if (selected === "descendingCp"){
-//             result = everyPokemon.sort(orderByPc).reverse();
-//         }
-//         if (selected === "ascendingHp"){
-//             result = everyPokemon.sort(orderByHp);
-//         }
-//         if (selected === "descendingHp"){
-//             result = everyPokemon.sort(orderByHp).reverse();
-//         }
-//         if (selected === "ascendingspawn"){
-//             result = everyPokemon.sort(orderBySpawn);
-//         }
-//         if (selected === "descendingspawn"){
-//             result = everyPokemon.sort(orderBySpawn).reverse();
-//         }
-//         return result;
-//   },
-// };
 
 //Cálculo agregado
 export const calculateStab = (attack, tipoPokemon) => {

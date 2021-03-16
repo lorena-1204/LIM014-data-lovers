@@ -7,7 +7,7 @@
     background-position: 10px 10px;
   }
   .menu-hamburguesa{
-    display: block; 
+    display: block;
     margin-top: -26px;
     padding: 20px;
   }
@@ -127,7 +127,7 @@
     width: 70px;
   }
   img {
-    width: 70px; 
+    width: 70px;
   }
 }
 
@@ -218,7 +218,7 @@
    /*border modal */
  .ygrass{
     /* border:  solid 2px #54ff48; */
-    box-shadow:0 0 10px #54ff48; 
+    box-shadow:0 0 10px #54ff48;
     border-radius: 30px;
   }
    .ybug{
@@ -358,7 +358,7 @@
   .xwater{
     border: solid 5px #67b8ff;
     border-radius: 50px;
-  } 
+  }
   .xice{
     border: solid 5px #87f0dd;
     border-radius: 50px;
@@ -419,3 +419,5 @@
     border: solid 5px #ffd903;
     border-radius: 50px;
   }
+  
+
