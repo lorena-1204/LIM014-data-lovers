@@ -63,8 +63,12 @@ Para poder conocer a nuestros usuarios realizamos la siguiente encuesta:
 + Primeros prototipos del modal
 
 ![Prototipo-2](https://github.com/lorena-1204/LIM014-data-lovers/blob/main/src/img/readme/prototipo%202.jpg?raw=true)
+
+![Prototipo-3](https://github.com/lorena-1204/LIM014-data-lovers/blob/main/src/img/readme/prototipo%203.jpg?raw=true)
+
 ![Prototipo-4](https://github.com/lorena-1204/LIM014-data-lovers/blob/main/src/img/readme/prototipo%204.jpg?raw=true)
 
+![Prototipo-5](https://github.com/lorena-1204/LIM014-data-lovers/blob/main/src/img/readme/prototipo%205.jpg?raw=true)
 
 ### Prototipo Final
 + Página de Inicio
