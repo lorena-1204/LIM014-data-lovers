@@ -217,7 +217,6 @@
 /*clases y colores de boton More */
    /*border modal */
  .ygrass{
-    /* border:  solid 2px #54ff48; */
     box-shadow:0 0 10px #54ff48;
     border-radius: 30px;
   }
@@ -419,5 +418,3 @@
     border: solid 5px #ffd903;
     border-radius: 50px;
   }
-  
-

@@ -96,7 +96,6 @@ export const calculateDps = (attack, tipoPokemon) => {
   return result;
 };
 
-
 export const calculateEps = (attack) => {
   const result = attack.map((obj) => {
     const energy = Number(obj.energy);

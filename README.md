@@ -53,7 +53,6 @@ Para poder conocer a nuestros usuarios realizamos la siguiente encuesta:
 - Que el usuario pueda visualizar sus movimientos rápidos y su evolución.
 
 ## 4. Prototipo de baja fidelidad
-
 ![Baja-fidelidad](https://github.com/lorena-1204/LIM014-data-lovers/blob/main/src/img/readme/Prototipo%20de%20baja%20fidelidad%20.jpg?raw=true)
 
 ## 5. Prototipo de alta fidelidad
@@ -69,9 +68,7 @@ Para poder conocer a nuestros usuarios realizamos la siguiente encuesta:
 
 ### Prototipo Final
 + Página de Inicio
-
 ![PokeP1](https://github.com/lorena-1204/LIM014-data-lovers/blob/main/src/img/readme/PokeP1.png?raw=true)
 
 + Modal
-
 ![PokeP2](https://github.com/lorena-1204/LIM014-data-lovers/blob/main/src/img/readme/PokeP2.jpg?raw=true)
